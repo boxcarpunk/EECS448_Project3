@@ -24,12 +24,14 @@ else if(ProjCount != 0)
 {
 	ProjCount++;
 }
+/*
 //Kill Collision
 if(place_meeting(x,y,object2))
 {
 	dead = true;
 	image_yscale = 0.5;
 }
+*/
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {

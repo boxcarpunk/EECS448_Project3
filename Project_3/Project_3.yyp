@@ -71,14 +71,6 @@
             }
         },
         {
-            "Key": "2e0d2876-b3ca-4ca0-bf0b-0043d63a0f88",
-            "Value": {
-                "id": "d9fa1578-7f4b-40bb-9c18-87f1c959a6cd",
-                "resourcePath": "scripts\\MovePlayer\\MovePlayer.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "32b244ab-de8b-4578-ae81-1323efcfdfb2",
             "Value": {
                 "id": "5a957479-6ba9-40cb-aa22-aaa5c13b9956",
@@ -279,14 +271,6 @@
             }
         },
         {
-            "Key": "a9f3ba8a-f1fb-4722-b02c-f02d1e73ccb8",
-            "Value": {
-                "id": "4dcdd8c7-bec1-471a-9773-8ba8dbb87398",
-                "resourcePath": "scripts\\move_and_contact_tiles\\move_and_contact_tiles.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "afd16507-c2ad-4e33-89f2-0e9ed41c83e2",
             "Value": {
                 "id": "0d9d072f-301f-40ab-91be-05ae875b166d",
@@ -348,14 +332,6 @@
                 "id": "cca1f22a-6ea3-4c6e-b30b-cc2621ab3281",
                 "resourcePath": "objects\\o_warp\\o_warp.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "e15d89bd-7d41-4d6b-8417-28e23193fdb8",
-            "Value": {
-                "id": "d898de28-2c5a-473c-8453-b0306072062b",
-                "resourcePath": "scripts\\tile_collide\\tile_collide.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -424,9 +400,6 @@
         }
     ],
     "script_order": [
-        "2e0d2876-b3ca-4ca0-bf0b-0043d63a0f88",
-        "e15d89bd-7d41-4d6b-8417-28e23193fdb8",
-        "a9f3ba8a-f1fb-4722-b02c-f02d1e73ccb8",
         "99b82f7a-2ca0-4f69-86cb-c1cdec515034",
         "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
         "45f0fb53-1b4d-460e-ab22-5e8e8572408b"

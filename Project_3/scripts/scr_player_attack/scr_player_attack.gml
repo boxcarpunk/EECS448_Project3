@@ -9,7 +9,7 @@ if(image_index <=4)
 {
 	with(instance_create_depth(x,y,-10000,obj_hitbox))
 	{
-		image_xscale = object0.image_xscale;
+		image_xscale = inst_78C8041E.image_xscale;
 		/*
 		with(instance_place(x,y,obj_enemy))
 		{

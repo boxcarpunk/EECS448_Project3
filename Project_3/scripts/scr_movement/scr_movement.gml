@@ -23,9 +23,9 @@ if(MDown)
 	MoveDown = 30;
 }
 //Horizontal Collision
-if(place_meeting(x+MoveLeft+MoveRight,y,object1))
+if(place_meeting(x+MoveLeft+MoveRight,y,o_solid))
 {
-	while(!place_meeting(x+sign(MoveLeft+MoveRight),y,object1))
+	while(!place_meeting(x+sign(MoveLeft+MoveRight),y,o_solid))
 	{
 		x+=sign(MoveLeft+MoveRight);
 	}
@@ -33,9 +33,9 @@ if(place_meeting(x+MoveLeft+MoveRight,y,object1))
 	MoveRight = 0;
 }
 //Vertical Collision
-if(place_meeting(x,y+MoveUp+MoveDown,object1))
+if(place_meeting(x,y+MoveUp+MoveDown,o_solid))
 {
-	while(!place_meeting(x,y+sign(MoveUp+MoveDown),object1))
+	while(!place_meeting(x,y+sign(MoveUp+MoveDown),o_solid))
 	{
 		y+=sign(MoveUp+MoveDown);
 	}
