@@ -5,16 +5,6 @@
     "name": "o_warp",
     "eventList": [
         {
-            "id": "6eb76379-22a6-4aa8-9a0b-91cc9e373e41",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "45695996-8fd9-4943-a057-689e2ed2d2f8",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "d6dd817e-be98-4993-9dc1-69ca15ae38e3"
-        },
-        {
             "id": "38836210-d647-4c4a-8cc3-50dc788a43d5",
             "modelName": "GMEvent",
             "mvc": "1.0",
