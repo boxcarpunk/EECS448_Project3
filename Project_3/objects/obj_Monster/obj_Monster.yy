@@ -202,20 +202,6 @@
             "varType": 3
         },
         {
-            "id": "00c0f069-767d-40e6-b92a-79bdc4821278",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "obj_SlimeProjectile",
-            "varName": "ProjectileType",
-            "varType": 5
-        },
-        {
             "id": "de8b5c74-757d-4ebe-ab27-280cdcbdbe9b",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
