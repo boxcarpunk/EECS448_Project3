@@ -41,7 +41,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "11943c96-b531-4262-b339-65039928fba6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1",
+            "varName": "Damage",
+            "varType": 1
+        }
+    ],
     "solid": false,
     "spriteId": "afd16507-c2ad-4e33-89f2-0e9ed41c83e2",
     "visible": true

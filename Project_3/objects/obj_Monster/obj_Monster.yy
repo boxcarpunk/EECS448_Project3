@@ -15,7 +15,7 @@
             "m_owner": "b9b8f4b9-a063-48d0-bdc4-1fc29355702c"
         }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "f2bb67fa-b3c6-44d8-8b9e-6d4c55745620",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
@@ -90,76 +90,6 @@
             "varType": 1
         },
         {
-            "id": "24bc7d5e-9b15-41df-85f5-40b7050cceb3",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": ".5",
-            "varName": "MoveDelay",
-            "varType": 0
-        },
-        {
-            "id": "296b6d51-4ab6-401e-a8d6-3b881c2ac2d1",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "MoveDuration",
-            "varType": 0
-        },
-        {
-            "id": "f0a2181e-c83b-40ec-82ab-37eedc0d1cc4",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "false",
-            "varName": "MoveOrDelay",
-            "varType": 3
-        },
-        {
-            "id": "c436dc17-10ae-45bf-a063-42bfa740a3ff",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "false",
-            "varName": "MoveStart",
-            "varType": 3
-        },
-        {
-            "id": "d98160d5-db06-4c96-bc9f-b1c7600c5185",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "LastMove",
-            "varType": 0
-        },
-        {
             "id": "e2421777-ff3a-40c5-9c31-7443fcd8261c",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -169,9 +99,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "500",
+            "value": "250",
             "varName": "AggroRange",
-            "varType": 0
+            "varType": 1
         },
         {
             "id": "1941f627-9cc3-450e-b1f0-2460becf530e",
@@ -225,7 +155,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "500",
+            "value": "250",
             "varName": "FiringRange",
             "varType": 1
         },
@@ -259,6 +189,6 @@
         }
     ],
     "solid": true,
-    "spriteId": "491f380c-9cc3-474f-b9e5-56851bf15613",
+    "spriteId": "f2bb67fa-b3c6-44d8-8b9e-6d4c55745620",
     "visible": true
 }
