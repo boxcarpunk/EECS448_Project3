@@ -24,14 +24,14 @@ if(instance_place(x, y, char_Col))
 {
 	Health -= 1; //take damage
 }
-
+/*
 //generic collision
 if(collisionID = instance_position(x, y, solid)) //check if colliding with a solid object and store the id if so
 {
 	direction = point_direction(collisionID.x, collisionID.y, x, y); //point from the colliding object to the monster
 	move_outside_solid(direction, -1); //move away from the object until collision has ended
 }
-
+*/
 //if the player is within aggro range
 if(distance_to_object(object0) < AggroRange)
 {

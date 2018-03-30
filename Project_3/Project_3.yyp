@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "48c5af74-8c28-4ecf-977c-bae022c371c7",
+            "Value": {
+                "id": "631cebf7-3b2b-47c2-aca8-3e01db712a39",
+                "resourcePath": "fonts\\NameFont\\NameFont.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "4b7d86e2-c5a6-4992-8cff-c191027c70f4",
             "Value": {
                 "id": "abf6d716-ec42-4c91-9e2f-e8bddcb85320",
@@ -367,11 +375,27 @@
             }
         },
         {
+            "Key": "b334c046-2ee8-45cf-ba1c-4cb74610aeb4",
+            "Value": {
+                "id": "1590dbda-5b1e-4af6-b834-cefa57ffc5f5",
+                "resourcePath": "objects\\obj_Pause\\obj_Pause.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b9b8f4b9-a063-48d0-bdc4-1fc29355702c",
             "Value": {
                 "id": "01323504-a843-4abb-8f6a-10dd9fe02964",
                 "resourcePath": "objects\\obj_Monster\\obj_Monster.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "babbef35-da5f-4caf-be44-566b33345c10",
+            "Value": {
+                "id": "99c59abb-b9bb-4b41-b0f9-a49be9b67e31",
+                "resourcePath": "fonts\\UIFont\\UIFont.yy",
+                "resourceType": "GMFont"
             }
         },
         {
