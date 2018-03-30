@@ -8,19 +8,19 @@ MoveUp = 0;
 MoveDown = 0;
 if(MLeft)
 {
-	MoveLeft = -30;
+	MoveLeft = -15;
 }
 if(MRight)
 {
-	MoveRight = 30;
+	MoveRight = 15;
 }
 if(MUp)
 {
-	MoveUp = -30;
+	MoveUp = -15;
 }
 if(MDown)
 {
-	MoveDown = 30;
+	MoveDown = 15;
 }
 //Horizontal Collision
 if(place_meeting(x+MoveLeft+MoveRight,y,o_solid))
