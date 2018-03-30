@@ -19,30 +19,22 @@ if(direction == 180) //if looking left
 	image_xscale = -1; //set the sprite to look left
 }
 
-//collision detection
-if(instance_place(x, y, object0)) //if colliding with the player
+//hitbox collision
+if(instance_place(x, y, char_Col))
 {
-	if(object0.state = states.attack) //if the player is attacking
-	{
-		Health -= 1; //take one damage
-	}
-	else //if the player isn't attacking
-	{
-		
-	}
+	Health -= 1; //take damage
 }
 
-/*
+//generic collision
+if(collisionID = instance_position(x, y, solid)) //check if colliding with a solid object and store the id if so
+{
+	direction = point_direction(collisionID.x, collisionID.y, x, y); //point from the colliding object to the monster
+	move_outside_solid(direction, -1); //move away from the object until collision has ended
+}
+
 //if the player is within aggro range
 if(distance_to_object(object0) < AggroRange)
 {
 	mp_potential_path(Room0Patrol, object0.x, object0.y, MoveSpeed, 4, 0); //set a path toward the character
 	path_start(Room0Patrol, MoveSpeed, path_action_stop, 0); //start along that path
-
-	//player collision
-	if(position_meeting(x, y, object0))
-	{
-		object0.Health -= MeleeDamage; //make the player take damage
-	}
 }
-*/

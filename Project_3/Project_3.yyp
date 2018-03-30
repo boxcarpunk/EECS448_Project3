@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "1fdc5ea7-ebe2-43c9-b82c-a477cdf5241e",
+            "Value": {
+                "id": "72c0d850-6e69-4140-90ea-b4755a75fbbc",
+                "resourcePath": "scripts\\scr_monster_attack\\scr_monster_attack.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2b7af681-c8ee-4e21-90ea-946717ad9131",
             "Value": {
                 "id": "39ddeb17-7e3e-4b1a-9f07-0f5b1ad59170",
@@ -108,6 +116,14 @@
                 "id": "2d3a0ef8-b294-4135-a113-85e207d1f89f",
                 "resourcePath": "views\\34b14a41-84d2-4557-b531-a4a4963082bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3fc03776-e3b0-4ba2-8398-246f6b91abf4",
+            "Value": {
+                "id": "451394cb-9ef1-41bc-8a76-f3b791137511",
+                "resourcePath": "objects\\obj_MonsterProjectile\\obj_MonsterProjectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -491,7 +507,8 @@
         "99b82f7a-2ca0-4f69-86cb-c1cdec515034",
         "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
         "45f0fb53-1b4d-460e-ab22-5e8e8572408b",
-        "70807cb5-7530-4e2d-a2f8-4d76d12321cf"
+        "70807cb5-7530-4e2d-a2f8-4d76d12321cf",
+        "1fdc5ea7-ebe2-43c9-b82c-a477cdf5241e"
     ],
     "tutorial": ""
 }
