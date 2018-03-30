@@ -6,21 +6,22 @@ MoveLeft = 0;
 MoveRight = 0;
 MoveUp = 0;
 MoveDown = 0;
+var player_speed = 15;
 if(MLeft)
 {
-	MoveLeft = -15;
+	MoveLeft = -player_speed;
 }
 if(MRight)
 {
-	MoveRight = 15;
+	MoveRight = player_speed;
 }
 if(MUp)
 {
-	MoveUp = -15;
+	MoveUp = -player_speed;
 }
 if(MDown)
 {
-	MoveDown = 15;
+	MoveDown = player_speed;
 }
 //Horizontal Collision
 if(place_meeting(x+MoveLeft+MoveRight,y,o_solid))
