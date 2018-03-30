@@ -1,15 +1,5 @@
 //default character
-if(!dead)
-{
-	scr_movement();
-	LAttack = mouse_check_button_pressed(mb_left);
-	RAttack = mouse_check_button_pressed(mb_right);
-}
-if(RAttack)
-{
-	image_index = 0;
-	state=states.attack;
-}
+LAttack = mouse_check_button_pressed(mb_left);
 if((LAttack)&&(ProjCount == 0))
 {
 	var Proj = instance_create_depth(x,y,-10000,object3);
@@ -44,4 +34,12 @@ if((MoveLeft+MoveRight == 0)&&(MoveUp+MoveDown == 0))
 else
 {
 	sprite_index = sprite2;
+}
+if(instance_place(x, y, obj_Monster)) //if colliding with the player
+{
+	PlayerHealth -= 1; //take one damage
+}
+else //if the player isn't attacking
+{
+		
 }

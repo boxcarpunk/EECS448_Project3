@@ -1,4 +1,3 @@
-scr_movement();
 sprite_index = sprite6;
 //Turn Around
 if(MoveLeft+MoveRight!=0)

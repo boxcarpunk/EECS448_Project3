@@ -6,3 +6,4 @@ MoveDown = 0;
 dead = false;
 ProjCount = 0;
 state=states.normal;
+PlayerHealth = 50;

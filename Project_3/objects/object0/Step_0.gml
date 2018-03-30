@@ -1,3 +1,10 @@
+RAttack = mouse_check_button_pressed(mb_right);
+if(RAttack)
+{
+	image_index = 0;
+	state=states.attack;
+}
+scr_movement();
 switch(state)
 {
 	case states.normal:
