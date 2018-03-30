@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "5a4acde6-1aed-4d7e-b93c-f6e002dec932",
+            "Value": {
+                "id": "8696dc17-704e-47c6-8533-c0f406120d11",
+                "resourcePath": "sprites\\PlayerFace\\PlayerFace.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5b28c697-3661-465c-848d-09f8f581d663",
             "Value": {
                 "id": "17ac4676-acee-4f64-a8c6-19e4caac27d7",
