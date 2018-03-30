@@ -32,6 +32,7 @@ if(instance_place(x, y, object0)) //if colliding with the player
 	}
 }
 
+/*
 //if the player is within aggro range
 if(distance_to_object(object0) < AggroRange)
 {
