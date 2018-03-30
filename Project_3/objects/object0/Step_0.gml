@@ -4,6 +4,10 @@ if(RAttack)
 	image_index = 0;
 	state=states.attack;
 }
+if(instance_place(x, y, obj_Monster)) //if colliding with the player
+{
+	PlayerHealth -= 1; //take one damage
+}
 scr_movement();
 switch(state)
 {
