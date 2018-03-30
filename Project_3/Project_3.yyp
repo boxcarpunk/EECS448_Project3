@@ -103,6 +103,22 @@
             }
         },
         {
+            "Key": "4b7d86e2-c5a6-4992-8cff-c191027c70f4",
+            "Value": {
+                "id": "abf6d716-ec42-4c91-9e2f-e8bddcb85320",
+                "resourcePath": "sprites\\char_hurtbox\\char_hurtbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4f0b8561-a8f3-4bbe-98cb-7bcf3754d4d5",
+            "Value": {
+                "id": "0545d082-991d-4155-ad53-2cf05986b566",
+                "resourcePath": "objects\\char_Col\\char_Col.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4feed201-4818-4660-9bca-f4830c8f0ce2",
             "Value": {
                 "id": "99ca0447-5484-42f7-9e53-1cd69f636de9",

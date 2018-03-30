@@ -8,3 +8,5 @@ switch(state)
 		break;
 }
 camera_set_view_pos(view_camera[0], x-370, y-280);
+instance_create_depth(x,y,-1000,char_Col);
+char_Col.image_xscale = inst_78C8041E.image_xscale;
