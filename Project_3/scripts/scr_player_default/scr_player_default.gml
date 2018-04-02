@@ -3,10 +3,9 @@ LAttack = mouse_check_button_pressed(mb_left);
 if((LAttack)&&(ProjCount == 0))
 {
 	var Proj = instance_create_depth(x,y,-10000,object3);
-	Proj.direction=point_direction(x, y, mouse_x, mouse_y);
 	ProjCount++;
 }
-else if(ProjCount == 20)
+else if(ProjCount == MaxProjCount)
 {
 	ProjCount = 0;
 }

@@ -4,9 +4,13 @@ if(RAttack)
 	image_index = 0;
 	state=states.attack;
 }
-if(instance_place(x, y, obj_Monster)) //if colliding with the player
+if(instance_place(x, y, obj_MonsterProjectile)) //if colliding with the player
 {
-	PlayerHealth -= 1; //take one damage
+	PlayerHealth -= obj_MonsterProjectile.Damage; //take one damage
+	with(instance_place(x,y,obj_MonsterProjectile))
+	{
+		instance_destroy();
+	}
 }
 scr_movement();
 switch(state)

@@ -13,6 +13,26 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "3fc03776-e3b0-4ba2-8398-246f6b91abf4"
+        },
+        {
+            "id": "3cc42ca8-50f1-4c33-86c1-0a3c338d9d7a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "3fc03776-e3b0-4ba2-8398-246f6b91abf4"
+        },
+        {
+            "id": "e392dda8-5391-4a73-b9ba-316a28f9591b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 7,
+            "m_owner": "3fc03776-e3b0-4ba2-8398-246f6b91abf4"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -32,20 +52,7 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        {
-            "id": "23b2fe0a-0b9e-40dd-b050-ef4b11400b7f",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "1",
-            "varName": "Damage",
-            "varType": 1
-        }
+        
     ],
     "solid": true,
     "spriteId": "0646c600-dc9c-46af-9303-089db5ac5229",
