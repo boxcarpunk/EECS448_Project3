@@ -13,6 +13,26 @@
             "enumb": 0,
             "eventtype": 3,
             "m_owner": "b9b8f4b9-a063-48d0-bdc4-1fc29355702c"
+        },
+        {
+            "id": "98e61cc1-9f28-4a09-926b-cdadf394e8da",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "b9b8f4b9-a063-48d0-bdc4-1fc29355702c"
+        },
+        {
+            "id": "00baaeff-9a8e-43d5-a860-0cc96dac5ffa",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 1,
+            "eventtype": 2,
+            "m_owner": "b9b8f4b9-a063-48d0-bdc4-1fc29355702c"
         }
     ],
     "maskSpriteId": "f2bb67fa-b3c6-44d8-8b9e-6d4c55745620",
@@ -76,6 +96,34 @@
             "varType": 1
         },
         {
+            "id": "7710c1af-2c12-4134-88e7-e7ade20c1690",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": ".5",
+            "varName": "InvinsibilityCooldown",
+            "varType": 0
+        },
+        {
+            "id": "1eb2afcb-5c47-45ab-9279-408296f5071a",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "CanDamage",
+            "varType": 3
+        },
+        {
             "id": "76a864ce-647d-4785-9d51-d7261ee20758",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -118,20 +166,6 @@
             "varType": 1
         },
         {
-            "id": "1743c458-08ba-499a-b083-80097c53f4c8",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "False",
-            "varName": "FiresProjectile",
-            "varType": 3
-        },
-        {
             "id": "de8b5c74-757d-4ebe-ab27-280cdcbdbe9b",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -156,7 +190,7 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "250",
-            "varName": "FiringRange",
+            "varName": "ProjectileRange",
             "varType": 1
         },
         {
@@ -170,11 +204,11 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "2",
-            "varName": "FiringDelay",
+            "varName": "ProjectileCooldown",
             "varType": 0
         },
         {
-            "id": "14ccc243-47f3-401b-be3d-60a09192ff44",
+            "id": "c197533c-c9ff-47fb-9e6a-b55995eb25f4",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -183,9 +217,9 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "0",
-            "varName": "LastFire",
-            "varType": 0
+            "value": "True",
+            "varName": "CanFire",
+            "varType": 3
         }
     ],
     "solid": true,

@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_MonsterProjectile",
     "eventList": [
-        
+        {
+            "id": "b54c9036-0c1c-4cea-a44f-663e6ecbf069",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "3fc03776-e3b0-4ba2-8398-246f6b91abf4"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -38,7 +47,7 @@
             "varType": 1
         }
     ],
-    "solid": false,
+    "solid": true,
     "spriteId": "0646c600-dc9c-46af-9303-089db5ac5229",
     "visible": true
 }

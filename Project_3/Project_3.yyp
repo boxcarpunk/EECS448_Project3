@@ -82,7 +82,7 @@
             "Key": "1fdc5ea7-ebe2-43c9-b82c-a477cdf5241e",
             "Value": {
                 "id": "72c0d850-6e69-4140-90ea-b4755a75fbbc",
-                "resourcePath": "scripts\\scr_monster_attack\\scr_monster_attack.yy",
+                "resourcePath": "scripts\\scr_monster_projectile_attack\\scr_monster_projectile_attack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -460,6 +460,14 @@
                 "id": "cca1f22a-6ea3-4c6e-b30b-cc2621ab3281",
                 "resourcePath": "objects\\o_warp\\o_warp.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "de2fa020-8ce5-4d69-80ad-31304c9076b1",
+            "Value": {
+                "id": "db883e5a-d477-43ed-b6a5-59656ce22b9e",
+                "resourcePath": "timelines\\timeline0\\timeline0.yy",
+                "resourceType": "GMTimeline"
             }
         },
         {
