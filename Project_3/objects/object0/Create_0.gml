@@ -10,3 +10,5 @@ state=states.normal;
 MaxPlayerHealth = 10;
 PlayerHealth = MaxPlayerHealth;
 currentDepth = depth;
+
+scr_inventory_create(6);
