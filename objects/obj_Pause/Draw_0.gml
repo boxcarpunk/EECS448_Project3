@@ -17,7 +17,7 @@ if(keyboard_check_pressed(vk_escape)){
 	global.pause = not(global.pause);
 }
 else if(keyboard_check_pressed(vk_tab)){
-	global.inventoryOpened = !global.inventoryOpened;
+	global.inventoryIsOpened = !global.inventoryIsOpened;
 }
 
 if(global.pause){
