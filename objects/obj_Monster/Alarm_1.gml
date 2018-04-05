@@ -1,1 +1,1 @@
-CanDamage = true; //damage cooldwon is over
+CanDamage = true; //damage cooldown is over

@@ -38,6 +38,16 @@ if(instance_place(x, y, solid)) //check if colliding with a solid object
 //if the player is within aggro range
 if(distance_to_object(inst_78C8041E) < AggroRange)
 {
-	mp_potential_path(Room0Patrol, inst_78C8041E.x, inst_78C8041E.y, MoveSpeed, 4, 0); //set a path toward the character
-	path_start(Room0Patrol, MoveSpeed, path_action_stop, 0); //start along that path
+	AggroPath = path_add(); //
+	Aggro = true; //the player has entered aggro range
+}
+
+//if the player is outside of aggro range
+if(distance_to_object(inst_78C8041E) > AggroRange)
+{
+	if(Aggro) //if the player has recently come out of aggro range
+	{
+		Aggro = false; //the player is no longer pulling aggro
+		alarm[2] = SearchTime*game_get_speed(gamespeed_fps); //the monster searches for the player (waits for the player to re-enter aggro range)
+	}
 }
