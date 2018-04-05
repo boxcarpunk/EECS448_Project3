@@ -1,5 +1,0 @@
-enum states
-{
-	normal,
-	attack
-}
