@@ -1,2 +1,4 @@
 //when searching is done (the monster has waited for the player to re-enter aggro range)
-path_start(PathName, MoveSpeed, path_action_continue, true); //return to the original patrol
+ReturnPath = path_add(); //create a new path that takes the monster back to the start of their patrol
+mp_potential_path(ReturnPath, path_get_x(PatrolPath, 0), path_get_y(PatrolPath, 0), MoveSpeed, 4, 0); //set a path to the beginning of the patrol
+path_start(ReturnPath, MoveSpeed, path_action_stop, true); //return to the beginning of the patrol
