@@ -57,4 +57,10 @@ if(distance_to_object(inst_78C8041E) > AggroRange)
 		path_delete(AggroPath); //delete the dynamic path since the monster is not following the player anymore
 		alarm[2] = SearchTime*game_get_speed(gamespeed_fps); //the monster searches for the player (waits for the player to re-enter aggro range)
 	}
+	if(Returning && (x == path_get_x(PatrolPath, 0)) && (y == path_get_y(PatrolPath, 0))) //if the monster is returning to its patrol and arrived
+	{
+		Returning = false; //the monster is no longer returning
+		path_delete(ReturnPath); //delete the path that returns to the patrol
+		path_start(PatrolPath, MoveSpeed, path_action_continue, true); //start patrolling again
+	}
 }
