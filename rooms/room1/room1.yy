@@ -2,7 +2,7 @@
 {
     "name": "room1",
     "id": "50bfc123-1038-46c1-a1bb-1d56b8ad4558",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,

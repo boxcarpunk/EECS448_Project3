@@ -28,11 +28,15 @@ else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);
 	scr_inventory_menu(inst_78C8041E.x, inst_78C8041E.y);
 }
+else if(inst_78C8041E.PlayerHealth <=0)
+{
+	instance_deactivate_all(inst_78C8041E);
+	instance_destroy(inst_78C8041E)
+	scr_death_menu();
+}
 else{
 	instance_activate_all();
-}
-
-healthOffset = 5;
+	healthOffset = 5;
 healthLength = 200;
 healthHeight = 20;
 borderWidth = 2;
@@ -114,3 +118,6 @@ if(cooldown1TimeLeft > 0 && cooldown1TimeLeft < 1) {
 	draw_text(ability1X, ability1Y, myText);
 	//-----------End Draw Cooldown Cycle------------
 }
+
+}
+
