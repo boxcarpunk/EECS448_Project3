@@ -14,10 +14,19 @@ if(myHealth < 0)
 if(keyboard_check_pressed(vk_escape)){
 	global.pause = not(global.pause);
 }
+else if(keyboard_check_pressed(vk_tab))
+{
+	global.inventoryIsOpened = not(global.inventoryIsOpened);
+}
 
 if(global.pause){
 	instance_deactivate_all(global.pause);
 	scr_pause_menu();
+}
+else if(global.inventoryIsOpened)
+{
+	instance_deactivate_all(global.inventoryIsOpened);
+	scr_inventory_menu(inst_78C8041E.x, inst_78C8041E.y);
 }
 else{
 	instance_activate_all();

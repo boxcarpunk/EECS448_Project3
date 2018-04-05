@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.pause = false;
+global.inventoryIsOpened = false;
 pause_background = 0;
 surf = 0;
 maxHealth = 100;
