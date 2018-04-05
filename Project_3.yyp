@@ -130,7 +130,7 @@
             "Key": "45f0fb53-1b4d-460e-ab22-5e8e8572408b",
             "Value": {
                 "id": "85b7d886-68a2-4f57-8b97-748323d82aa7",
-                "resourcePath": "scripts\\scr_movement\\scr_movement.yy",
+                "resourcePath": "scripts\\scr_player_movement\\scr_player_movement.yy",
                 "resourceType": "GMScript"
             }
         },

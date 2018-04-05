@@ -15,7 +15,7 @@ with(instance_place(x,y,obj_char_hurtbox))
 		}
 	}
 }
-scr_movement();
+scr_player_movement();
 switch(state)
 {
 	case states.normal:

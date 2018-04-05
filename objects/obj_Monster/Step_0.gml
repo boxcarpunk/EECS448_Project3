@@ -23,6 +23,23 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 {
 	CurrentDamageCooldown++;
 }
+//layer monster and character correctly
+if(inst_78C8041E.y<obj_Monster.y)
+{
+	inst_78C8041E.depth=101;
+}
+else if(inst_78C8041E.y>obj_Monster.y)
+{
+	inst_78C8041E.depth=-101;
+}
+if(inst_78C8041E.x<obj_Monster.x)
+{
+	obj_Monster.image_xscale=-1;
+}
+else if(inst_78C8041E.x>obj_Monster.x)
+{
+	obj_Monster.image_xscale=1;
+}
 //movement
 scr_monster_movement();
 

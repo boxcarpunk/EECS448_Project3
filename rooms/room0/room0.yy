@@ -79,7 +79,7 @@
             "__type": "GMRTileLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Bottom_Wall_Tiles",
             "id": "41aaad20-5291-44fc-be36-5ef9af655b28",
-            "depth": 0,
+            "depth": -200,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -137,7 +137,7 @@
                 ]
             },
             "tilesetId": "cacebbd2-7d95-4826-8cdf-c393f4a7359f",
-            "userdefined_depth": false,
+            "userdefined_depth": true,
             "visible": true,
             "x": 0,
             "y": 0
@@ -146,7 +146,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Player_Instance",
             "id": "54155693-49a6-46d6-92bc-1d46d2942b91",
-            "depth": 100,
+            "depth": -100,
             "grid_x": 68,
             "grid_y": 68,
             "hierarchyFrozen": false,
@@ -232,7 +232,7 @@
                 ]
             },
             "tilesetId": "cacebbd2-7d95-4826-8cdf-c393f4a7359f",
-            "userdefined_depth": false,
+            "userdefined_depth": true,
             "visible": true,
             "x": 0,
             "y": 0

@@ -5,7 +5,7 @@ lineLength = 30;
 lineWidth = 3;
 
 
-depth = -5;
+depth = -300;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
