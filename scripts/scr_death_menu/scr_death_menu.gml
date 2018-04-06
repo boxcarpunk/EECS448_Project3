@@ -62,7 +62,10 @@ for (buttonIndex = 0; buttonIndex < 2; buttonIndex += 1)
 				switch(buttonIndex)
 				{
 				case 0: //Respawn Button
-					//inst_78C8041E.x = ;
+					instance_activate_object(inst_78C8041E);
+					inst_78C8041E.PlayerHealth = inst_78C8041E.MaxPlayerHealth;
+					inst_78C8041E.x = 612;
+					inst_78C8041E.y = 1428;
 					break;
 				case 1: //Quit Button
 					game_end();
