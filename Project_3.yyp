@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "3ccd4242-e2a4-4f10-960d-9ff0a45d2ebf",
+            "Value": {
+                "id": "fe97ebc5-71fe-4e9c-bb85-fd02461549da",
+                "resourcePath": "sprites\\SlimeMovement\\SlimeMovement.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3fc03776-e3b0-4ba2-8398-246f6b91abf4",
             "Value": {
                 "id": "451394cb-9ef1-41bc-8a76-f3b791137511",
