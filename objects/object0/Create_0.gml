@@ -7,7 +7,7 @@ dead = false;
 ProjCount = 0;
 MaxProjCount = 20;
 state=states.normal;
-MaxPlayerHealth = 10;
+MaxPlayerHealth = 1;
 PlayerHealth = MaxPlayerHealth;
 
 scr_inventory_create(6);
