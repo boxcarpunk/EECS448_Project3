@@ -42,8 +42,15 @@ if(distance_to_object(inst_78C8041E) < AggroRange)
 		Aggro = true; //the player has entered aggro range
 		alarm[2] = -1; //the monster stops searching for the player
 	}
-	mp_potential_path(AggroPath, inst_78C8041E.x, inst_78C8041E.y, MoveSpeed, 4, 0); //set a path toward the player
-	path_start(AggroPath, MoveSpeed, path_action_stop, 0); //start along that path
+	if(distance_to_object(inst_78C8041E) < StopRange) //if the player is within the stop range
+	{
+		path_end(); //stop moving
+	}
+	else
+	{
+		mp_potential_path(AggroPath, inst_78C8041E.x, inst_78C8041E.y, MoveSpeed, 4, 0); //set a path toward the player
+		path_start(AggroPath, MoveSpeed, path_action_stop, 0); //start along that path
+	}
 }
 
 //if the player is outside of aggro range
