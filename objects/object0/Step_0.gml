@@ -11,7 +11,7 @@ with(instance_place(x,y,obj_char_hurtbox))
 		inst_78C8041E.PlayerHealth -= obj_MonsterProjectile.Damage; //take one damage
 		with(instance_place(x,y,obj_MonsterProjectile))
 		{
-			instance_destroy();
+			DeleteProjectile = true;
 		}
 	}
 }

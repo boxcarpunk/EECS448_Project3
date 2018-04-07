@@ -1,1 +1,1 @@
-CanFire =true; //projectile cooldown is over
+CanFire = true; //projectile cooldown is over
