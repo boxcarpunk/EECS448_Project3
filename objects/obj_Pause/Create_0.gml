@@ -9,6 +9,6 @@ myHealth = maxHealth;
 timeAbility1Used = -90;
 cooldown1TimeLeft = 0;
 cooldown1 = 5
-
+global.fade = 0.01;
 buttonPressed = -1;
 
