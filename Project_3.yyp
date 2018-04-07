@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "33e81488-f690-4241-8326-0bd8b16972f4",
+            "Value": {
+                "id": "4623d47b-bbc8-421c-888e-ad3f7e9f4e54",
+                "resourcePath": "sprites\\sprite16\\sprite16.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34a20b95-4ae5-45a2-bebf-8e9355907cae",
             "Value": {
                 "id": "318f4494-2d10-4119-a3fd-aa3a90338f1c",
@@ -327,6 +335,14 @@
             }
         },
         {
+            "Key": "8d33c295-bade-4284-a4d2-df53bebeaa03",
+            "Value": {
+                "id": "ac0cda5b-1e2d-47f5-a240-7c34959e18ce",
+                "resourcePath": "sprites\\Kurt_death_down\\Kurt_death_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8e342b04-7966-461b-9260-db5cbbbb1d62",
             "Value": {
                 "id": "63c2fe67-7e22-4648-908a-6fe1e75975f0",
@@ -404,6 +420,14 @@
                 "id": "65115fe2-3dbe-461f-b039-8426dd9a4db7",
                 "resourcePath": "scripts\\scr_inventory_menu\\scr_inventory_menu.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b48c5837-f20e-430e-a9e3-a3ff0d4adc48",
+            "Value": {
+                "id": "1d17d7b7-524d-4bd6-a372-9c38d0011b51",
+                "resourcePath": "sprites\\Kurt_death_animation\\Kurt_death_animation.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

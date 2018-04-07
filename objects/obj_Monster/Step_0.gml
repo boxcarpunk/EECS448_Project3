@@ -47,4 +47,5 @@ scr_monster_movement();
 if(Health <= 0)
 {
 	instance_destroy();
+	
 }
