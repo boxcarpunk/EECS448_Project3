@@ -28,11 +28,11 @@ else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);
 	scr_inventory_menu(inst_78C8041E.x, inst_78C8041E.y);
 }
-else if(inst_78C8041E.PlayerHealth <=0)
+/*else if(inst_78C8041E.PlayerHealth <=0)
 {
-	scr_death_menu(global.fade);
-	global.fade += 0.01;
-}
+	instance_deactivate_object(inst_78C8041E);
+	scr_death_menu();
+}*/
 else{
 	instance_activate_all();
 	healthOffset = 5;
