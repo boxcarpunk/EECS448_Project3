@@ -74,6 +74,7 @@ if(fade >= 1)
 					case 0: //Respawn Button
 						instance_activate_object(inst_78C8041E);
 						inst_78C8041E.PlayerHealth = inst_78C8041E.MaxPlayerHealth;
+						room_goto(room0);
 						inst_78C8041E.x = 612;
 						inst_78C8041E.y = 1428;
 						global.fade = 0.01;

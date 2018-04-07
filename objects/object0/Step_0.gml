@@ -5,6 +5,7 @@ if(PlayerHealth>0){
 		image_index = 0;
 		state=states.attack;
 	}
+	instance_create_depth(x,y,-1000,obj_char_hurtbox);
 	with(instance_place(x,y,obj_char_hurtbox))
 	{
 		if(place_meeting(x, y, obj_MonsterProjectile)) //if colliding with the player
@@ -12,6 +13,7 @@ if(PlayerHealth>0){
 			inst_78C8041E.PlayerHealth -= obj_MonsterProjectile.Damage; //take one damage
 			with(instance_place(x,y,obj_MonsterProjectile))
 			{
+				Damage = 0;
 				DeleteProjectile = true;
 			}
 		}
@@ -27,7 +29,7 @@ if(PlayerHealth>0){
 			break;
 	}
 	camera_set_view_pos(view_camera[0], x-370, y-280);
-	instance_create_depth(x,y,-1000,obj_char_hurtbox);
+
 	obj_char_hurtbox.image_xscale = inst_78C8041E.image_xscale;
 }
 else if (PlayerHealth = 0)

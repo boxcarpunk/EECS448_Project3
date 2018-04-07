@@ -1,4 +1,4 @@
-sprite_index = sprite6;
+sprite_index = sprite16;
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {
