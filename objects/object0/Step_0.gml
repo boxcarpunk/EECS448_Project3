@@ -36,6 +36,8 @@ else if (PlayerHealth = 0)
 	//PlayerHealth=MaxPlayerHealth;
 	PlayerHealth = PlayerHealth-1;
 
+
+
 }	
 else if (PlayerHealth<0)
 {
