@@ -9,15 +9,11 @@ if(PlayerHealth>0){
 	{
 		if(place_meeting(x, y, obj_MonsterProjectile)) //if colliding with the player
 		{
-<<<<<<< HEAD
 			inst_78C8041E.PlayerHealth -= obj_MonsterProjectile.Damage; //take one damage
 			with(instance_place(x,y,obj_MonsterProjectile))
 			{
-				instance_destroy();
+				DeleteProjectile = true;
 			}
-=======
-			DeleteProjectile = true;
->>>>>>> 3bdaee7888122bb89394c33c274bdec5989e4dbd
 		}
 	}
 	scr_player_movement();
