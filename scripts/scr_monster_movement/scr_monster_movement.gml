@@ -20,11 +20,9 @@ if(direction == 180) //if looking left
 }
 
 //hitbox collision
-if(instance_place(x, y, obj_hitbox) && CanDamage)
+if(instance_place(x, y, obj_hitbox))
 {
 	Health -= 1; //take damage
-	CanDamage = false; //don't let the monster take damage for a bit
-	alarm[1] = InvincibilityCooldown*game_get_speed(gamespeed_fps); //set the time until the monster can take damage again
 }
 
 //generic collision

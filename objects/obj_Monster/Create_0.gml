@@ -1,8 +1,6 @@
 Health = 3; //amount of health the monster has
-FullDamageCooldown = 20;
-CurrentDamageCooldown = FullDamageCooldown;
-InvincibilityCooldown = 0.5; //amount of time (in seconds) the monster will be invincible after being hit
-CanDamage = true; //flag indicating whether the monster can be damaged or not (toggles invincibility)
+FullDamageCooldown = 20; //
+CurrentDamageCooldown = FullDamageCooldown; //
 MoveSpeed = 4; //movement speed (in pixels per step) of the monster 
 AggroRange = 250; //range at which the monster will start engaging the player
 MeleeDamage = 1; //amount of damage the monster does by touching the player

@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "1d1a9283-a3cc-4b88-8b6b-ed3c36f51cfe",
+            "Value": {
+                "id": "30127da5-6ee5-4523-9b59-766bb042d4c8",
+                "resourcePath": "sprites\\SlimeDeath\\SlimeDeath.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2b7af681-c8ee-4e21-90ea-946717ad9131",
             "Value": {
                 "id": "39ddeb17-7e3e-4b1a-9f07-0f5b1ad59170",
@@ -371,6 +379,14 @@
             "Value": {
                 "id": "e1ca306d-7e15-487f-8dd7-b09a23680055",
                 "resourcePath": "sprites\\sprite9\\sprite9.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "97fd29c8-b00b-454d-8c58-082a0c36c1e5",
+            "Value": {
+                "id": "ff48bffe-017d-4c88-a9c8-1a907efbb2db",
+                "resourcePath": "sprites\\SlimeballExplosion\\SlimeballExplosion.yy",
                 "resourceType": "GMSprite"
             }
         },
