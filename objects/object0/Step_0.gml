@@ -5,7 +5,9 @@ if(PlayerHealth>0){
 		image_index = 0;
 		state=states.attack;
 	}
+	scr_player_movement();
 	instance_create_depth(x,y,-1000,obj_char_hurtbox);
+	obj_char_hurtbox.image_xscale = inst_78C8041E.image_xscale;
 	with(instance_place(x,y,obj_char_hurtbox))
 	{
 		if(place_meeting(x, y, obj_MonsterProjectile)) //if colliding with the player
@@ -18,7 +20,6 @@ if(PlayerHealth>0){
 			}
 		}
 	}
-	scr_player_movement();
 	switch(state)
 	{
 		case states.normal:
@@ -30,7 +31,6 @@ if(PlayerHealth>0){
 	}
 	camera_set_view_pos(view_camera[0], x-370, y-280);
 
-	obj_char_hurtbox.image_xscale = inst_78C8041E.image_xscale;
 }
 else if (PlayerHealth = 0)
 {
@@ -52,3 +52,15 @@ else if (PlayerHealth<0)
 	}
 }
 
+if(keyboard_check_pressed(vk_enter))
+{
+	obj_char_hurtbox.visible = true;
+}
+if(keyboard_check_pressed(vk_end))
+{
+	obj_char_hurtbox.visible = true;
+}
+with(instance_place(x,y,obj_char_hurtbox))
+{
+	instance_destroy();
+}
