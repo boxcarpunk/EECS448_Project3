@@ -30,7 +30,7 @@ else if(global.inventoryIsOpened){
 }
 else if(inst_78C8041E.PlayerHealth <=0)
 {
-	scr_death_menu(global.fade);
+	scr_death_menu();
 	global.fade += 0.01;
 }
 else{
@@ -68,6 +68,7 @@ draw_rectangle_color(ability1X - abilityBoxSize/2,ability1Y - abilityBoxSize/2,a
 draw_rectangle_color(ability1X - abilityBoxSize/2+2,ability1Y - abilityBoxSize/2+2,ability1X + abilityBoxSize/2-2,ability1Y + abilityBoxSize/2-2, abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,false);
 draw_sprite(sprite4,0,ability1X+2,ability1Y+4);
 	
+
 //-----------Draw Cooldown Cycle------------
 //find the cooldown for the ability
 

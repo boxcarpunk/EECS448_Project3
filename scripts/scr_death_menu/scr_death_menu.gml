@@ -1,18 +1,15 @@
-///@arg fade
-
 //draw a darker cover over the background
-fade = argument0;
-if(fade>=0.9)
+if(global.fade>=1)
 {
 	instance_deactivate_object(inst_78C8041E);
 }
 
-draw_set_alpha(fade);
+draw_set_alpha(global.fade);
 draw_set_color(c_black);
-draw_rectangle(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]),0);
-draw_text(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),"People");
-	
-if(fade >= 1)
+draw_rectangle(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]),camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]),0);	
+draw_set_alpha(1);
+
+if(global.fade >= 1)
 {
 	//draw Pause Menu
 	draw_set_color(c_white);
@@ -78,8 +75,6 @@ if(fade >= 1)
 						inst_78C8041E.x = 612;
 						inst_78C8041E.y = 1428;
 						global.fade = 0.01;
-						break;
-
 						break;
 					case 1: //Quit Button
 						game_end();
