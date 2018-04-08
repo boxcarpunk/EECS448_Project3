@@ -28,21 +28,21 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 }
 
 //layer monster and character correctly
-if(inst_78C8041E.y<obj_Monster.y)
+if(inst_78C8041E.y<self.y)
 {
-	obj_Monster.depth=-10;
+	self.depth=-10;
 }
-else if(inst_78C8041E.y>obj_Monster.y)
+else if(inst_78C8041E.y>self.y)
 {
-	obj_Monster.depth=10;
+	self.depth=10;
 }
-if(inst_78C8041E.x<obj_Monster.x)
+if(inst_78C8041E.x<self.x)
 {
-	obj_Monster.image_xscale=-1;
+	self.image_xscale=-1;
 }
-else if(inst_78C8041E.x>obj_Monster.x)
+else if(inst_78C8041E.x>self.x)
 {
-	obj_Monster.image_xscale=1;
+	self.image_xscale=1;
 }
 
 //movement
