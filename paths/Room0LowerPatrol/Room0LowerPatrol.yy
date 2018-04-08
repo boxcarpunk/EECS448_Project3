@@ -5,7 +5,7 @@
     "name": "Room0LowerPatrol",
     "closed": true,
     "hsnap": 0,
-    "kind": 1,
+    "kind": 0,
     "points": [
         {
             "id": "8ffbbc0e-f3db-4675-ad14-5f0fddbcc583",
