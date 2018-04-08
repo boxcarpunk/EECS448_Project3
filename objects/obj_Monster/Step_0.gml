@@ -12,13 +12,13 @@ with(instance_place(x,y,obj_enemy_hurtbox))
 {
 	if(place_meeting(x, y, object3)) //if colliding with character projectile
 	{
+		with(instance_place(x,y,object3))
+		{
+			instance_destroy(); //destroy character projectile
+		}
 		with(instance_place(x,y,obj_Monster))
 		{
 			Health--; //take one damage
-			with(instance_place(x,y,object3))
-			{
-				instance_destroy(); //destroy character projectile
-			}
 		}
 	}
 }
