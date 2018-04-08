@@ -37,9 +37,6 @@ else if (PlayerHealth = 0)
 	sprite_index = Kurt_death_animation;
 	//PlayerHealth=MaxPlayerHealth;
 	PlayerHealth = PlayerHealth-1;
-
-
-
 }	
 else if (PlayerHealth<0)
 {
