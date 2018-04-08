@@ -71,11 +71,35 @@
             }
         },
         {
+            "Key": "190ff08e-0538-4442-9c6b-a23febc0cb1d",
+            "Value": {
+                "id": "a12ae802-893a-4f21-8204-fa779b9986bb",
+                "resourcePath": "paths\\Room1UpperPatrol\\Room1UpperPatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "1cd7a088-3257-4263-9182-cb99553be05a",
             "Value": {
                 "id": "ca5a859f-0fc8-4120-bf8a-41f244229dd3",
                 "resourcePath": "objects\\obj_hitbox\\obj_hitbox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "1d1a9283-a3cc-4b88-8b6b-ed3c36f51cfe",
+            "Value": {
+                "id": "30127da5-6ee5-4523-9b59-766bb042d4c8",
+                "resourcePath": "sprites\\SlimeDeath\\SlimeDeath.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "266b67b4-c154-4d19-8576-c6e6d6b86b66",
+            "Value": {
+                "id": "6160204f-b0d6-4f91-bfc4-f403d148fba1",
+                "resourcePath": "paths\\Room1LowerLeftPatrol\\Room1LowerLeftPatrol.yy",
+                "resourceType": "GMPath"
             }
         },
         {
@@ -95,6 +119,14 @@
             }
         },
         {
+            "Key": "33e81488-f690-4241-8326-0bd8b16972f4",
+            "Value": {
+                "id": "4623d47b-bbc8-421c-888e-ad3f7e9f4e54",
+                "resourcePath": "sprites\\sprite16\\sprite16.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34a20b95-4ae5-45a2-bebf-8e9355907cae",
             "Value": {
                 "id": "318f4494-2d10-4119-a3fd-aa3a90338f1c",
@@ -108,6 +140,14 @@
                 "id": "2d3a0ef8-b294-4135-a113-85e207d1f89f",
                 "resourcePath": "views\\34b14a41-84d2-4557-b531-a4a4963082bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3ccd4242-e2a4-4f10-960d-9ff0a45d2ebf",
+            "Value": {
+                "id": "fe97ebc5-71fe-4e9c-bb85-fd02461549da",
+                "resourcePath": "sprites\\SlimeMovement\\SlimeMovement.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -138,7 +178,7 @@
             "Key": "45f0fb53-1b4d-460e-ab22-5e8e8572408b",
             "Value": {
                 "id": "85b7d886-68a2-4f57-8b97-748323d82aa7",
-                "resourcePath": "scripts\\scr_movement\\scr_movement.yy",
+                "resourcePath": "scripts\\scr_player_movement\\scr_player_movement.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -234,7 +274,7 @@
             "Key": "5d931127-1395-4f02-8316-d8c5b933f0a8",
             "Value": {
                 "id": "31b961f0-67eb-420e-9b7e-42b3dd5d85fa",
-                "resourcePath": "paths\\Room0Patrol\\Room0Patrol.yy",
+                "resourcePath": "paths\\Room0UpperPatrol\\Room0UpperPatrol.yy",
                 "resourceType": "GMPath"
             }
         },
@@ -351,6 +391,14 @@
             }
         },
         {
+            "Key": "8d33c295-bade-4284-a4d2-df53bebeaa03",
+            "Value": {
+                "id": "ac0cda5b-1e2d-47f5-a240-7c34959e18ce",
+                "resourcePath": "sprites\\Kurt_death_down\\Kurt_death_down.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8e342b04-7966-461b-9260-db5cbbbb1d62",
             "Value": {
                 "id": "63c2fe67-7e22-4648-908a-6fe1e75975f0",
@@ -391,11 +439,35 @@
             }
         },
         {
+            "Key": "97fd29c8-b00b-454d-8c58-082a0c36c1e5",
+            "Value": {
+                "id": "ff48bffe-017d-4c88-a9c8-1a907efbb2db",
+                "resourcePath": "sprites\\SlimeballExplosion\\SlimeballExplosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99b82f7a-2ca0-4f69-86cb-c1cdec515034",
             "Value": {
                 "id": "a638b109-93aa-4686-af3d-b1f4e4827e1c",
                 "resourcePath": "scripts\\scr_player_attack\\scr_player_attack.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a4ceeb77-b24b-4898-b9db-115512826885",
+            "Value": {
+                "id": "3d465697-5193-43db-bfc6-02ec704723fd",
+                "resourcePath": "scripts\\scr_death_menu\\scr_death_menu.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a7ada5cd-0656-4b6a-9616-6fb7ada76ad5",
+            "Value": {
+                "id": "55327dae-fd00-497c-82fa-cb7cdd7fdc3a",
+                "resourcePath": "paths\\Room1DoorPatrol\\Room1DoorPatrol.yy",
+                "resourceType": "GMPath"
             }
         },
         {
@@ -428,6 +500,14 @@
                 "id": "65115fe2-3dbe-461f-b039-8426dd9a4db7",
                 "resourcePath": "scripts\\scr_inventory_menu\\scr_inventory_menu.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b48c5837-f20e-430e-a9e3-a3ff0d4adc48",
+            "Value": {
+                "id": "1d17d7b7-524d-4bd6-a372-9c38d0011b51",
+                "resourcePath": "sprites\\Kurt_death_animation\\Kurt_death_animation.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -575,6 +655,14 @@
             }
         },
         {
+            "Key": "ef789be0-ae8b-4b49-93af-49c8bb1b084c",
+            "Value": {
+                "id": "51792291-7918-43a1-ae17-be1f8252cea0",
+                "resourcePath": "paths\\Room1LowerRightPatrol\\Room1LowerRightPatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "f081a2dc-f6fb-4db3-9db4-75515f6666a6",
             "Value": {
                 "id": "6389e081-fea7-4ed5-bcad-331228715597",
@@ -615,6 +703,14 @@
             }
         },
         {
+            "Key": "f5d95c20-c957-4299-a3e0-0d6554c147e7",
+            "Value": {
+                "id": "707302f1-660a-4da0-b74f-8fd63707d9d7",
+                "resourcePath": "paths\\Room0LowerPatrol\\Room0LowerPatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "f91f9478-ea15-4543-9cc5-2685788e0f97",
             "Value": {
                 "id": "5f4a7c8f-77f7-497f-8e9f-b82c5561f02a",
@@ -643,7 +739,8 @@
         "72d36aaf-0c66-4a9d-8eaf-529b6b304b9e",
         "f4508ba4-03ae-44a3-a452-da770d5ed2d7",
         "44da3b1f-4576-476c-ab3b-3821a8fbc0eb",
-        "54324033-c0d5-43ca-b2f9-fc6458099afd"
+        "54324033-c0d5-43ca-b2f9-fc6458099afd",
+        "a4ceeb77-b24b-4898-b9db-115512826885"
     ],
     "tutorial": ""
 }

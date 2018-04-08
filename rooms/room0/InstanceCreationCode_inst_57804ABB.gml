@@ -1,5 +1,5 @@
 //set the patrol path for the monster
-PathName = Room0Patrol;
+PatrolPath = Room0UpperPatrol;
 
 //starts the monster's patrol
-path_start(PathName, MoveSpeed, path_action_continue, true);
+path_start(PatrolPath, MoveSpeed, path_action_continue, true);

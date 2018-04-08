@@ -20,11 +20,9 @@ if(direction == 180) //if looking left
 }
 
 //hitbox collision
-if(instance_place(x, y, obj_hitbox) && CanDamage)
+if(instance_place(x, y, obj_hitbox))
 {
 	Health -= 1; //take damage
-	CanDamage = false; //don't let the monster take damage for a bit
-	alarm[1] = InvincibilityCooldown*game_get_speed(gamespeed_fps); //set the time until the monster can take damage again
 }
 
 //generic collision
@@ -38,16 +36,36 @@ if(instance_place(x, y, solid)) //check if colliding with a solid object
 //if the player is within aggro range
 if(distance_to_object(inst_78C8041E) < AggroRange)
 {
-	AggroPath = path_add(); //
-	Aggro = true; //the player has entered aggro range
+	if(!Aggro) //if the player just entered aggro range
+	{
+		AggroPath = path_add(); //create a new dynamic path, used to follow the player
+		Aggro = true; //the player has entered aggro range
+		alarm[2] = -1; //the monster stops searching for the player
+	}
+	if(distance_to_object(inst_78C8041E) < StopRange) //if the player is within the stop range
+	{
+		path_end(); //stop moving
+	}
+	else
+	{
+		mp_potential_path(AggroPath, inst_78C8041E.x, inst_78C8041E.y, MoveSpeed, 4, 0); //set a path toward the player
+		path_start(AggroPath, MoveSpeed, path_action_stop, 0); //start along that path
+	}
 }
 
 //if the player is outside of aggro range
 if(distance_to_object(inst_78C8041E) > AggroRange)
 {
-	if(Aggro) //if the player has recently come out of aggro range
+	if(Aggro) //if the player has just come out of aggro range
 	{
 		Aggro = false; //the player is no longer pulling aggro
+		path_delete(AggroPath); //delete the dynamic path since the monster is not following the player anymore
 		alarm[2] = SearchTime*game_get_speed(gamespeed_fps); //the monster searches for the player (waits for the player to re-enter aggro range)
+	}
+	if(Returning && (x == path_get_x(PatrolPath, 0)) && (y == path_get_y(PatrolPath, 0))) //if the monster is returning to its patrol and arrived
+	{
+		Returning = false; //the monster is no longer returning
+		path_delete(ReturnPath); //delete the path that returns to the patrol
+		path_start(PatrolPath, MoveSpeed, path_action_continue, true); //start patrolling again
 	}
 }

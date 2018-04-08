@@ -23,11 +23,50 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 {
 	CurrentDamageCooldown++;
 }
+
+//layer monster and character correctly
+if(inst_78C8041E.y<obj_Monster.y)
+{
+	inst_78C8041E.depth=10;
+}
+else if(inst_78C8041E.y>obj_Monster.y)
+{
+	inst_78C8041E.depth=-10;
+}
+if(inst_78C8041E.x<obj_Monster.x)
+{
+	obj_Monster.image_xscale=-1;
+}
+else if(inst_78C8041E.x>obj_Monster.x)
+{
+	obj_Monster.image_xscale=1;
+}
+
 //movement
-scr_monster_movement();
+if(Health > 0)
+{
+	scr_monster_movement();
+}
 
 //death condition
 if(Health <= 0)
 {
-	instance_destroy();
+	//don't let the monster move or attack
+	MoveSpeed = 0;
+	MeleeDamage = 0;
+	ProjectileDamage = 0;
+	ProjectileRange = 0;
+	path_end();
+	
+	if(sprite_index != SlimeDeath) //if the death animation is not playing
+	{
+		sprite_index = SlimeDeath; //switch to the death animation
+		image_index = 0; //start at the beginning of the animation
+	}
+	image_speed = 1; //play the animation
+	
+	if(image_index > 7) //if the animation is done playing
+	{
+		instance_destroy(); //destroy the monster
+	}
 }
