@@ -10,7 +10,7 @@ draw_rectangle(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0
 draw_set_color(c_white);
 draw_set_alpha(1);
 draw_set_font(TitleFont);
-draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2,camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/6,"Pause");
+draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2,camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/6,"Dungeon 448");
 	
 //--------------Draw Buttons--------------
 //button dimensions
@@ -22,13 +22,13 @@ buttonOffset = buttonHeight + 20;
 	
 //button vars
 buttonPressed = argument0;
-if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Resume")) {
-	global.pause = false;
+if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Play")) {
+	global.displayTitleMenu = false;
 }
 
-if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 1, buttonPressed, "Quit")) {
+if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Quit")) {
 	game_end();
 }
 
-draw_set_alpha(prevAlpha);
 draw_set_color(prevColor);
+draw_set_alpha(prevAlpha);
