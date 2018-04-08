@@ -36,7 +36,8 @@ else if(inst_78C8041E.PlayerHealth <=0)
 	scr_death_menu(buttonPressed);
 }
 else{
-	instance_activate_all();
+	//instance_activate_all();
+	instance_activate_region(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]),true);
 	
 	fadeStartTime = 0;
 	healthOffset = 5;

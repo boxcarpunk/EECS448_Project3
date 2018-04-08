@@ -1,6 +1,9 @@
 //projectile attack
-instance_create_depth(x,y,-1000,obj_enemy_hurtbox);
-obj_enemy_hurtbox.image_xscale = obj_Monster.image_xscale;
+//instance_create_depth(x,y,-1000,obj_enemy_hurtbox);
+//obj_enemy_hurtbox.image_xscale = obj_Monster.image_xscale;
+myHurtbox.image_xscale = image_xscale
+myHurtbox.x = x;
+myHurtbox.y = y;
 if(CanFire && (distance_to_object(inst_78C8041E) < ProjectileRange)) //if the player is within range and cooldown is over
 {
 	CanFire = false; //reset the cooldown flag
@@ -8,7 +11,7 @@ if(CanFire && (distance_to_object(inst_78C8041E) < ProjectileRange)) //if the pl
 	ProjectileID.Damage = ProjectileDamage; //sets the projectile's damage
 	alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 }
-with(instance_place(x,y,obj_enemy_hurtbox))
+with(instance_place(x,y,myHurtbox))
 {
 	if(place_meeting(x, y, object3)) //if colliding with character projectile
 	{
@@ -73,6 +76,4 @@ if(Health <= 0)
 	{
 		instance_destroy(); //destroy the monster
 	}
-
-
 }

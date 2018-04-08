@@ -11,3 +11,4 @@ CanFire = true; //flag indicating whether the monster can fire a projectile
 Aggro = false; //flag indicating whether the player is in aggro range
 SearchTime = 2; //amount of time the monster will search for the player (time between disengaging and continuing patrol)
 Returning = false; //flag that indicates whether the monster is returning to its patrol
+myHurtbox = instance_create_depth(x,y,-1000,obj_enemy_hurtbox);
