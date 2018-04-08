@@ -54,7 +54,7 @@ if(Health > 0)
 //death condition
 if(Health <= 0)
 {
-	Health=0; 
+	Health = 0; //sets health back to 0 in case it went below 0
 	//don't let the monster move or attack
 	MoveSpeed = 0;
 	MeleeDamage = 0;
@@ -73,6 +73,4 @@ if(Health <= 0)
 	{
 		instance_destroy(); //destroy the monster
 	}
-
-
 }
