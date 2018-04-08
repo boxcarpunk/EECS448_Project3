@@ -27,11 +27,11 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 //layer monster and character correctly
 if(inst_78C8041E.y<obj_Monster.y)
 {
-	inst_78C8041E.depth=10;
+	obj_Monster.depth=-10;
 }
 else if(inst_78C8041E.y>obj_Monster.y)
 {
-	inst_78C8041E.depth=-10;
+	obj_Monster.depth=10;
 }
 if(inst_78C8041E.x<obj_Monster.x)
 {
