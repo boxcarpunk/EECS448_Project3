@@ -2,18 +2,9 @@
     "id": "e88d3e91-a739-46de-b272-ceb2928ee5c9",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_enemy_hurtbox",
+    "name": "obj_Enemy_Hurtbox",
     "eventList": [
-        {
-            "id": "cf1779e6-ad38-4bcb-8754-2219752efdd3",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 77,
-            "eventtype": 8,
-            "m_owner": "e88d3e91-a739-46de-b272-ceb2928ee5c9"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

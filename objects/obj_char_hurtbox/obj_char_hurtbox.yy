@@ -2,7 +2,7 @@
     "id": "4f0b8561-a8f3-4bbe-98cb-7bcf3754d4d5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_char_hurtbox",
+    "name": "obj_Char_Hurtbox",
     "eventList": [
         {
             "id": "a0245bac-e4a0-4560-bbde-b19eecd08237",

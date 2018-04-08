@@ -1,9 +1,16 @@
-//collision
-if(place_meeting(x, y, other)) //check if colliding with a solid object
+if(instance_place(x, y, obj_Solid) )
 {
-	DeleteProjectile = true;
+	with(instance_place(x, y, obj_Solid))
+	{
+		if(isWater == false)
+		{
+			with(instance_place(x,y,obj_MonsterProjectile))
+			{
+				DeleteProjectile = true;
+			}
+		}
+	}
 }
-
 //death animation
 if(DeleteProjectile)
 {

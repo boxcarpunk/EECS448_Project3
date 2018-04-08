@@ -1,4 +1,4 @@
-sprite_index = sprite16;
+sprite_index = s_PlayerAttack;
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {
@@ -6,12 +6,12 @@ if(MoveLeft+MoveRight!=0)
 }
 if(image_index <=4)
 {
-	with(instance_create_depth(x,y,-10000,obj_hitbox))
+	with(instance_create_depth(x,y,-10000,obj_Hitbox))
 	{
 		image_xscale = inst_78C8041E.image_xscale;
-		with(instance_place(x,y,obj_enemy_hurtbox))
+		with(instance_place(x,y,obj_Enemy_Hurtbox))
 		{
-			if(place_meeting(x,y,obj_hitbox))
+			if(place_meeting(x,y,obj_Hitbox))
 			{
 				with(instance_place(x,y,obj_Monster))
 				{

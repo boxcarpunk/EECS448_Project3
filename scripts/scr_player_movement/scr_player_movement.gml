@@ -24,9 +24,9 @@ if(MDown)
 	MoveDown = player_speed;
 }
 //Horizontal Collision
-if(place_meeting(x+MoveLeft+MoveRight,y,o_solid))
+if(place_meeting(x+MoveLeft+MoveRight,y,obj_Solid))
 {
-	while(!place_meeting(x+sign(MoveLeft+MoveRight),y,o_solid))
+	while(!place_meeting(x+sign(MoveLeft+MoveRight),y,obj_Solid))
 	{
 		x+=sign(MoveLeft+MoveRight);
 	}
@@ -34,9 +34,9 @@ if(place_meeting(x+MoveLeft+MoveRight,y,o_solid))
 	MoveRight = 0;
 }
 //Vertical Collision
-if(place_meeting(x,y+MoveUp+MoveDown,o_solid))
+if(place_meeting(x,y+MoveUp+MoveDown,obj_Solid))
 {
-	while(!place_meeting(x,y+sign(MoveUp+MoveDown),o_solid))
+	while(!place_meeting(x,y+sign(MoveUp+MoveDown),obj_Solid))
 	{
 		y+=sign(MoveUp+MoveDown);
 	}

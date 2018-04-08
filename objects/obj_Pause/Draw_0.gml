@@ -1,15 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+dead = inst_78C8041E.PlayerHealth <=0;
 depth = -300;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-if(keyboard_check_pressed(vk_escape)){
+if(keyboard_check_pressed(vk_escape) && !dead && !global.inventoryIsOpened){
 	global.pause = not(global.pause);
 }
-else if(keyboard_check_pressed(vk_tab)){
+else if(keyboard_check_pressed(vk_tab) && !dead){
 	global.inventoryIsOpened = !global.inventoryIsOpened;
 }
 
@@ -26,7 +26,7 @@ else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);
 	scr_inventory_menu();
 }
-else if(inst_78C8041E.PlayerHealth <=0)
+else if(dead)
 {
 	
 	if(fadeStartTime == 0){
@@ -36,7 +36,6 @@ else if(inst_78C8041E.PlayerHealth <=0)
 	scr_death_menu(buttonPressed);
 }
 else{
-	//instance_activate_all();
 	instance_activate_region(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]),true);
 	
 	fadeStartTime = 0;
@@ -55,8 +54,8 @@ else{
 	
 		//draw player profile
 		draw_rectangle_color(camera_get_view_x(view_camera[0]) + profileOffsetX,camera_get_view_y(view_camera[0]) + profileOffsetY - borderWidth, camera_get_view_x(view_camera[0]) + profileSize + profileOffsetX + borderWidth*2,camera_get_view_y(view_camera[0]) + profileSize + profileOffsetY + borderWidth,borderColor, borderColor,borderColor, borderColor, false);
-		draw_sprite_ext(PlayerFace, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth, camera_get_view_y(view_camera[0]) + profileOffsetY, profileSize/sprite_get_width(PlayerFace), profileSize/sprite_get_width(PlayerFace),0,c_white,1 );
-	
+		draw_sprite_ext(s_profile, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth, camera_get_view_y(view_camera[0]) + profileOffsetY, profileSize/sprite_get_width(s_Player), profileSize/sprite_get_width(s_Player),0,c_white,1 );
+
 		//draw player name
 		playerName = "Alex Bardas";
 		textOffsetX = 3
@@ -73,7 +72,7 @@ else{
 		ability1Y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])- abilityBoxSize/2 - 30;
 		draw_rectangle_color(ability1X - abilityBoxSize/2,ability1Y - abilityBoxSize/2,ability1X + abilityBoxSize/2,ability1Y + abilityBoxSize/2, borderColor,borderColor,borderColor,borderColor,false);
 		draw_rectangle_color(ability1X - abilityBoxSize/2+2,ability1Y - abilityBoxSize/2+2,ability1X + abilityBoxSize/2-2,ability1Y + abilityBoxSize/2-2, abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,false);
-		draw_sprite(sprite4,0,ability1X+2,ability1Y+4);
+		draw_sprite(s_FireBall,0,ability1X+2,ability1Y+4);
 		scr_cooldown_box(ability1X, ability1Y, abilityBoxSize, abilityBoxSize, (inst_78C8041E.MaxProjCount - inst_78C8041E.ProjCount)/inst_78C8041E.MaxProjCount, 1);
 	
 	

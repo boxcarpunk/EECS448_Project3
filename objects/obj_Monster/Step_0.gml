@@ -13,9 +13,9 @@ if(CanFire && (distance_to_object(inst_78C8041E) < ProjectileRange)) //if the pl
 }
 with(instance_place(x,y,myHurtbox))
 {
-	if(place_meeting(x, y, object3)) //if colliding with character projectile
+	if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
 	{
-		with(instance_place(x,y,object3))
+		with(instance_place(x,y,obj_PlayerProjectile))
 		{
 			instance_destroy(); //destroy character projectile
 		}
@@ -37,7 +37,7 @@ if(inst_78C8041E.y < y)
 }
 else if(inst_78C8041E.y > y)
 {
-	depth=10;
+	depth=0;
 }
 if(inst_78C8041E.x < x)
 {

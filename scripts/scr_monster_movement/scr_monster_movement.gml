@@ -20,7 +20,7 @@ if(direction == 180) //if looking left
 }
 
 //hitbox collision
-if(instance_place(x, y, obj_hitbox))
+if(instance_place(x, y, obj_Hitbox))
 {
 	Health -= 1; //take damage
 }

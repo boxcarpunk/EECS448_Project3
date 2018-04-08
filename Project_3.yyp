@@ -82,7 +82,7 @@
             "Key": "1cd7a088-3257-4263-9182-cb99553be05a",
             "Value": {
                 "id": "ca5a859f-0fc8-4120-bf8a-41f244229dd3",
-                "resourcePath": "objects\\obj_hitbox\\obj_hitbox.yy",
+                "resourcePath": "objects\\obj_Hitbox\\obj_Hitbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -122,7 +122,7 @@
             "Key": "33e81488-f690-4241-8326-0bd8b16972f4",
             "Value": {
                 "id": "4623d47b-bbc8-421c-888e-ad3f7e9f4e54",
-                "resourcePath": "sprites\\sprite16\\sprite16.yy",
+                "resourcePath": "sprites\\s_PlayerAttack\\s_PlayerAttack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -202,7 +202,7 @@
             "Key": "4f0b8561-a8f3-4bbe-98cb-7bcf3754d4d5",
             "Value": {
                 "id": "0545d082-991d-4155-ad53-2cf05986b566",
-                "resourcePath": "objects\\obj_char_hurtbox\\obj_char_hurtbox.yy",
+                "resourcePath": "objects\\obj_Char_Hurtbox\\obj_Char_Hurtbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -226,7 +226,7 @@
             "Key": "52b1ac1c-71fe-4ec1-94b8-1baf8c75365f",
             "Value": {
                 "id": "bae57429-182b-4a8a-b0a4-91b9dceb5fb9",
-                "resourcePath": "sprites\\sprite2\\sprite2.yy",
+                "resourcePath": "sprites\\s_PlayerMovement\\s_PlayerMovement.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -250,16 +250,8 @@
             "Key": "5911f521-f8ec-48b5-98cc-3008095ac98e",
             "Value": {
                 "id": "05e4ba5b-73ef-458a-adb9-7c68b8ef3d92",
-                "resourcePath": "objects\\o_solid\\o_solid.yy",
+                "resourcePath": "objects\\obj_Solid\\obj_Solid.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "5a4acde6-1aed-4d7e-b93c-f6e002dec932",
-            "Value": {
-                "id": "8696dc17-704e-47c6-8533-c0f406120d11",
-                "resourcePath": "sprites\\PlayerFace\\PlayerFace.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -276,6 +268,14 @@
                 "id": "31b961f0-67eb-420e-9b7e-42b3dd5d85fa",
                 "resourcePath": "paths\\Room0UpperPatrol\\Room0UpperPatrol.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "629d3c47-9485-44cd-afac-494d25617fcd",
+            "Value": {
+                "id": "7997e3b4-e0c3-4b24-8c6a-932fc396644f",
+                "resourcePath": "sprites\\s_profile\\s_profile.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -338,7 +338,7 @@
             "Key": "79fd2ace-5327-4bba-91b5-e2a85081936e",
             "Value": {
                 "id": "05e223d4-443b-484d-b39b-8eb8a57d2939",
-                "resourcePath": "objects\\object3\\object3.yy",
+                "resourcePath": "objects\\obj_PlayerProjectile\\obj_PlayerProjectile.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -346,7 +346,7 @@
             "Key": "7bc16064-8ce2-48ff-b6f3-7e3f49acf609",
             "Value": {
                 "id": "d4c869d4-e1ad-46f8-b59a-9fb5c3282a45",
-                "resourcePath": "objects\\object0\\object0.yy",
+                "resourcePath": "objects\\obj_Player\\obj_Player.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -482,7 +482,7 @@
             "Key": "afd16507-c2ad-4e33-89f2-0e9ed41c83e2",
             "Value": {
                 "id": "0d9d072f-301f-40ab-91be-05ae875b166d",
-                "resourcePath": "sprites\\sprite4\\sprite4.yy",
+                "resourcePath": "sprites\\s_FireBall\\s_FireBall.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -586,7 +586,7 @@
             "Key": "d6dd817e-be98-4993-9dc1-69ca15ae38e3",
             "Value": {
                 "id": "cca1f22a-6ea3-4c6e-b30b-cc2621ab3281",
-                "resourcePath": "objects\\o_warp\\o_warp.yy",
+                "resourcePath": "objects\\obj_Warp\\obj_Warp.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -626,7 +626,7 @@
             "Key": "e88d3e91-a739-46de-b272-ceb2928ee5c9",
             "Value": {
                 "id": "1ed282a1-e200-4dc5-9bab-2a4d793839ce",
-                "resourcePath": "objects\\obj_enemy_hurtbox\\obj_enemy_hurtbox.yy",
+                "resourcePath": "objects\\obj_Enemy_Hurtbox\\obj_Enemy_Hurtbox.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -674,7 +674,7 @@
             "Key": "f215b28f-0e09-4a29-b509-9317b5cb02d5",
             "Value": {
                 "id": "dd1acd5b-5e47-4ce5-a8d6-d53228a4f05c",
-                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourcePath": "sprites\\s_Player\\s_Player.yy",
                 "resourceType": "GMSprite"
             }
         },

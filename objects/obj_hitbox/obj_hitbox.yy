@@ -2,7 +2,7 @@
     "id": "1cd7a088-3257-4263-9182-cb99553be05a",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_hitbox",
+    "name": "obj_Hitbox",
     "eventList": [
         {
             "id": "10b90c4a-b08f-4a19-8f48-ecd1c1c4c0ff",

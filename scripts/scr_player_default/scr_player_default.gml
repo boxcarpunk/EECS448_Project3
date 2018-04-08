@@ -2,7 +2,7 @@
 LAttack = mouse_check_button_pressed(mb_left);
 if((LAttack)&&(ProjCount == 0))
 {
-	var Proj = instance_create_depth(x,y,-10000,object3);
+	var Proj = instance_create_depth(x,y,-10000,obj_PlayerProjectile);
 	ProjCount++;
 }
 else if(ProjCount == MaxProjCount)
@@ -20,9 +20,9 @@ if(MoveLeft+MoveRight!=0)
 }
 if((MoveLeft+MoveRight == 0)&&(MoveUp+MoveDown == 0))
 {
-	sprite_index = sprite5;
+	sprite_index = s_Player;
 }
 else
 {
-	sprite_index = sprite2;
+	sprite_index = s_PlayerMovement;
 }

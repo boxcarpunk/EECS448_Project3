@@ -13,4 +13,4 @@ Aggro = false; //flag indicating whether the player is in aggro range
 SearchTime = 2; //amount of time the monster will search for the player (time between disengaging and continuing patrol)
 Returning = false; //flag that indicates whether the monster is returning to its patrol
 GettingHelp = false; //flag that indicates whether the monster is getting help or not
-myHurtbox = instance_create_depth(x,y,-1000,obj_enemy_hurtbox);
+myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);
