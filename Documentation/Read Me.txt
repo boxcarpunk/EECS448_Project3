@@ -1,0 +1,2 @@
+Made in GameMaker Studio 2.
+To play, launch the .exe in the EECS448_Project3 folder.
