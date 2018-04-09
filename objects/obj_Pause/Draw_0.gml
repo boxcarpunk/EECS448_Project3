@@ -6,36 +6,42 @@ depth = -300;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-if(keyboard_check_pressed(vk_escape) && !dead && !global.inventoryIsOpened){
+if(keyboard_check_pressed(vk_escape) && !dead && !global.inventoryIsOpened)//if escape key is pressed and no other interface is open
+{
 	global.pause = not(global.pause);
 }
-else if(keyboard_check_pressed(vk_tab) && !dead){
+else if(keyboard_check_pressed(vk_tab) && !dead)//if tab key is pressed and no other interface is open
+{
 	global.inventoryIsOpened = !global.inventoryIsOpened;
 }
 
 if(global.displayTitleMenu)
 {
-	instance_deactivate_all(global.displayTitleMenu);
-	scr_title_menu(buttonPressed);
+	instance_deactivate_all(global.displayTitleMenu);//deactivates all objects
+	scr_title_menu(buttonPressed);//displays title menu
 }
-else if(global.pause){
-	instance_deactivate_all(global.pause);
-	scr_pause_menu(buttonPressed);
+else if(global.pause)
+{
+	instance_deactivate_all(global.pause);//deactivates all objects
+	scr_pause_menu(buttonPressed);//displays pause menu
 }
 else if(global.inventoryIsOpened){
-	instance_deactivate_all(global.inventoryIsOpened);
-	scr_inventory_menu();
+	instance_deactivate_all(global.inventoryIsOpened);//deactivates all objects
+	scr_inventory_menu();//displays inventory menu
 }
-else if(dead)
+else if(dead)//if player has died
 {
-	
-	if(fadeStartTime == 0){
+	//fade to black screen
+	if(fadeStartTime == 0)
+	{
 		fadeStartTime = current_time;	
 	}
 	global.fade = (current_time - fadeStartTime)/1000 / 1.5;
-	scr_death_menu(buttonPressed);
+	scr_death_menu(buttonPressed);//displays death menu
 }
-else{
+else
+{
+	//activates the objects within region shown by the camera
 	instance_activate_region(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]),true);
 	
 	fadeStartTime = 0;
@@ -48,7 +54,8 @@ else{
 	profileOffsetY = healthOffset + healthHeight;
 	profileSize = 60;
 
-	if(!global.pause && !global.displayTitleMenu){
+	if(!global.pause && !global.displayTitleMenu)
+	{
 		//draw player health bar
 		scr_slider(camera_get_view_x(view_camera[0]) + profileSize + healthOffset + profileOffsetX, camera_get_view_y(view_camera[0]) + profileSize + healthOffset, borderWidth,  healthLength, healthHeight, inst_78C8041E.PlayerHealth/inst_78C8041E.MaxPlayerHealth, borderColor, c_red, c_green);
 	
@@ -57,7 +64,7 @@ else{
 		draw_sprite_ext(s_profile, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth, camera_get_view_y(view_camera[0]) + profileOffsetY, profileSize/sprite_get_width(s_Player), profileSize/sprite_get_width(s_Player),0,c_white,1 );
 
 		//draw player name
-		playerName = "Alex Bardas";
+		playerName = "Kurt Slagle";
 		textOffsetX = 3
 		draw_set_color(borderColor);
 		draw_set_alpha(1);
