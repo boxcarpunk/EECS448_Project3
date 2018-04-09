@@ -1,0 +1,123 @@
+/*@description If the player hitbox collides with the enemy hurtbox, the enemy health is decreased
+*@param none
+*@return none
+*/
+scr_player_attack()
+
+/*@description Handles player fireball shooting and changes sprites when the player turns around.
+*@param none
+*@return none
+*/
+scr_player_default()
+
+/*@description Handles player speed, movement, and collision.
+*@param none
+*@return none
+*/
+scr_player_movement()
+
+/*@description Draws the pause menu the its buttons.
+*@param none
+*@return none
+*/
+scr_pause_menu
+
+/*@description Draws the player health bar
+*@param none
+*@return none
+*/
+scr_slider()
+
+/*@description Handles monster sprites and movement paths
+*@param none
+*@return none
+*/
+scr_monster_movement()
+
+/*@description Draws the inventory menu, centered at the given coordinates
+*@param x coordinate
+*@param y coordinate
+*@return none
+*/
+scr_inventory_menu()
+
+/*@description Creates an inventory array of the given size 
+*@param size
+*@return none
+*/
+scr_inventory_create()
+
+/*@description Controls the cooldown box for the player's fireball ability
+*@param center x
+*@param center y
+*@param length
+*@param width
+*@param cooldowntime
+*@param max count
+*@return none
+*/
+scr_cooldown_box()
+
+/*@description Creates a button at the specified coordinates
+*@param x coordinate
+*@param y coordinate
+*@param width
+*@param height
+*@param index
+*@param isPressed
+*@param text
+*@return none
+*/
+scr_button()
+
+/*@description Creates the title menu and its buttons
+*@param none
+*@return none
+*/
+scr_title_menu()
+
+/*@description Draws text on the screen at the specified coordinates
+*@param x coordinate
+*@param y coordinate
+*@param text
+*@param text color
+*@param outline color
+*@return none
+*/
+scr_draw_outlined_text
+
+/*@description Darkens the screen the draws the death screen and its buttons
+*@param none
+*@return none
+*/
+scr_death_menu()
+
+///@description A solid collision object
+obj_Solid
+
+///@description Warps the player to the desired room
+obj_Warp
+
+///@description The enemy monster object
+obj_Monster
+
+///@description The players hitbox where damage is dealt
+obj_Hitbox
+
+///@description The players fireball projectile
+obj_PlayerProjectile
+
+///@description The player object
+obj_Player
+
+///@description The players hurtbox where damage is taken
+obj_Char_Hurtbox
+
+///@description The monsters slimeball projectile
+obj_MonsterProjectile
+
+///@description The pause object that controls all interfaces and the HUD
+obj_Pause
+
+///@description The monsters hurtbox where damage is taken
+obj_Enemy_Hurtbox
