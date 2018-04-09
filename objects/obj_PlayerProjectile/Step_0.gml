@@ -7,7 +7,9 @@ if(instance_place(x, y, obj_Solid))//if colliding with collision object
 	{
 		if(isWater == false)
 		{
-			instance_destroy(obj_PlayerProjectile);//destroys the projectile if the collision object is not water
+			with(instance_place(x,y, obj_PlayerProjectile)){
+				instance_destroy(self);//destroys the projectile if the collision object is not water
+			}
 		}
 	}
 }
