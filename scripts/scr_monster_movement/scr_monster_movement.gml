@@ -89,7 +89,15 @@ else //if the monster is running toward another monster
 	Comrade = instance_find(obj_Monster, 0); //find a friend
 	if(Comrade == self) //if the monster found was yourself
 	{
-		Comrade = instance_find(obj_Monster, 1); //find a different friend
+		if(instance_number(obj_Monster) == 1) //if this is the last monster
+		{
+			GettingHelp = false; //there is no help for you
+			Comrade = instance_find(obj_Monster, 0); //you are your only friend now...
+		}
+		else
+		{
+			Comrade = instance_find(obj_Monster, 1); //find a different friend
+		}
 	}
 	
 	if(distance_to_object(Comrade) > 100) //if the monster is still sufficently far away
