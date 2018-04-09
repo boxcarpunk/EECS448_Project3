@@ -1,2 +1,2 @@
-Something about tilesets..
+The tilesets used were default assets in GameMaker Studio 2.
 All other code and assets were created by the members of Team 6.
