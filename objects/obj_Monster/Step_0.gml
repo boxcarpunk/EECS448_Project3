@@ -31,19 +31,19 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 }
 
 //layer monster and character correctly
-if(inst_78C8041E.y < y)
+if(inst_78C8041E.y < self.y)
 {
 	depth=-10;
 }
-else if(inst_78C8041E.y > y)
+else if(inst_78C8041E.y > self.y)
 {
 	depth=0;
 }
-if(inst_78C8041E.x < x)
+if(inst_78C8041E.x < self.x)
 {
 	image_xscale=-1;
 }
-else if(inst_78C8041E.x > x)
+else if(inst_78C8041E.x > self.x)
 {
 	image_xscale=1;
 }
