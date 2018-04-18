@@ -24,6 +24,7 @@ else if(global.pause)
 {
 	instance_deactivate_all(global.pause);//deactivates all objects
 	scr_pause_menu(buttonPressed);//displays pause menu
+	
 }
 else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);//deactivates all objects
@@ -53,11 +54,11 @@ else
 	profileOffsetX = 2;
 	profileOffsetY = healthOffset + healthHeight;
 	profileSize = 60;
-
+	player = instance_find(obj_Player,0);
 	if(!global.pause && !global.displayTitleMenu)
 	{
 		//draw player health bar
-		scr_slider(camera_get_view_x(view_camera[0]) + profileSize + healthOffset + profileOffsetX, camera_get_view_y(view_camera[0]) + profileSize + healthOffset, borderWidth,  healthLength, healthHeight, inst_78C8041E.PlayerHealth/inst_78C8041E.MaxPlayerHealth, borderColor, c_red, c_green);
+		scr_slider(camera_get_view_x(view_camera[0]) + profileSize + healthOffset + profileOffsetX, camera_get_view_y(view_camera[0]) + profileSize + healthOffset, borderWidth,  healthLength, healthHeight, player.PlayerHealth/player.MaxPlayerHealth, borderColor, c_red, c_green);
 	
 		//draw player profile
 		draw_rectangle_color(camera_get_view_x(view_camera[0]) + profileOffsetX,camera_get_view_y(view_camera[0]) + profileOffsetY - borderWidth, camera_get_view_x(view_camera[0]) + profileSize + profileOffsetX + borderWidth*2,camera_get_view_y(view_camera[0]) + profileSize + profileOffsetY + borderWidth,borderColor, borderColor,borderColor, borderColor, false);
@@ -80,10 +81,10 @@ else
 		draw_rectangle_color(ability1X - abilityBoxSize/2,ability1Y - abilityBoxSize/2,ability1X + abilityBoxSize/2,ability1Y + abilityBoxSize/2, borderColor,borderColor,borderColor,borderColor,false);
 		draw_rectangle_color(ability1X - abilityBoxSize/2+2,ability1Y - abilityBoxSize/2+2,ability1X + abilityBoxSize/2-2,ability1Y + abilityBoxSize/2-2, abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,false);
 		draw_sprite(s_FireBall,0,ability1X+2,ability1Y+4);
-		scr_cooldown_box(ability1X, ability1Y, abilityBoxSize, abilityBoxSize, (inst_78C8041E.MaxProjCount - inst_78C8041E.ProjCount)/inst_78C8041E.MaxProjCount, 1);
+		scr_cooldown_box(ability1X, ability1Y, abilityBoxSize, abilityBoxSize, (player.MaxProjCount - player.ProjCount)/player.MaxProjCount, 1);
 	
 	
-		if(inst_78C8041E.PlayerHealth > 0){
+		if(instance_find(obj_Player,0).PlayerHealth > 0){
 			//draw all monster health bars
 			monsterHealthXOffset = -10;
 			monsterHealthYOffset = -35;
@@ -93,7 +94,7 @@ else
 			for (i = 0; i < instance_number(obj_Monster); i += 1)
 			{
 				monster = instance_find(obj_Monster,i);
-				scr_slider(monster.x+monsterHealthXOffset, monster.y+monsterHealthYOffset, monsterBorderWidth, monsterHealthLength, monsterHealthHeight, monster.Health/3, c_black, c_red, c_green);
+				scr_slider(monster.x+monsterHealthXOffset, monster.y+monsterHealthYOffset, monsterBorderWidth, monsterHealthLength, monsterHealthHeight, monster.Health/monster.MaxHealth, c_black, c_red, c_green);
 			}
 		}
 	}

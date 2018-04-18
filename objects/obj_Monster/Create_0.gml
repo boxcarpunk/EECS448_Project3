@@ -1,4 +1,5 @@
-Health = 3; //amount of health the monster has
+MaxHealth = 3;
+Health = MaxHealth; //amount of health the monster has
 FullDamageCooldown = 20; //
 CurrentDamageCooldown = FullDamageCooldown; //
 MoveSpeed = 4; //movement speed (in pixels per step) of the monster 

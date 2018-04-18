@@ -1,4 +1,4 @@
-//center x, center y, length, width, cooldownTime, maxCount, sprite, sprite size, inside color, background color
+//center x, center y, length, width, cooldownTime, maxCount
 abilityX = argument0;
 abilityY = argument1;
 abilityBoxLength = argument2;
@@ -7,10 +7,6 @@ cooldownTimeLeft = argument4;
 maxCount = argument5;
 prevAlpha = draw_get_alpha();
 prevColor = draw_get_color();
-//sprite = argument6;
-//spriteSize = argument7;
-//insideColor = argument8;
-//backgroundColor = argument9;
 //-----------Draw Cooldown Cycle------------
 //find the cooldown for the ability
 if(cooldownTimeLeft > 0 && cooldownTimeLeft < 1) {
