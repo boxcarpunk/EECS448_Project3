@@ -1,10 +1,14 @@
+NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the nearest player
+
+//goes around the entire event, the monster will only do something if there is a player
+if(NearestPlayer != noone)
+{
+
 //projectile attack
-//instance_create_depth(x,y,-1000,obj_enemy_hurtbox);
-//obj_enemy_hurtbox.image_xscale = obj_Monster.image_xscale;
 myHurtbox.image_xscale = image_xscale
 myHurtbox.x = x;
 myHurtbox.y = y;
-if(CanFire && (distance_to_object(inst_78C8041E) < ProjectileRange)) //if the player is within range and cooldown is over
+if(CanFire && (distance_to_object(NearestPlayer) < ProjectileRange)) //if the player is within range and cooldown is over
 {
 	CanFire = false; //reset the cooldown flag
 	ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
@@ -31,19 +35,19 @@ if(CurrentDamageCooldown!=FullDamageCooldown)
 }
 
 //layer monster and character correctly
-if(inst_78C8041E.y < self.y)
+if(NearestPlayer.y < self.y)
 {
 	depth=-10;
 }
-else if(inst_78C8041E.y > self.y)
+else if(NearestPlayer.y > self.y)
 {
 	depth=0;
 }
-if(inst_78C8041E.x < self.x)
+if(NearestPlayer.x < self.x)
 {
 	image_xscale=-1;
 }
-else if(inst_78C8041E.x > self.x)
+else if(NearestPlayer.x > self.x)
 {
 	image_xscale=1;
 }
@@ -65,15 +69,17 @@ if(Health <= 0)
 	ProjectileRange = 0;
 	path_end();
 	
-	if(sprite_index != SlimeDeath) //if the death animation is not playing
+	if(sprite_index != DeathAnimation) //if the death animation is not playing
 	{
-		sprite_index = SlimeDeath; //switch to the death animation
+		sprite_index = DeathAnimation; //switch to the death animation
 		image_index = 0; //start at the beginning of the animation
 	}
 	image_speed = 1; //play the animation
 	
-	if(image_index > 7) //if the animation is done playing
+	if(image_index > DeathEndFrame) //if the animation is done playing
 	{
 		instance_destroy(); //destroy the monster
 	}
+}
+
 }

@@ -1,3 +1,5 @@
+NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the nearest player
+
 //movement animation
 if(path_speed == 0)
 {
@@ -27,7 +29,7 @@ if(instance_place(x, y, obj_Hitbox))
 
 if(!GettingHelp) //if the monster is not running toward another monster
 {
-	if(distance_to_object(inst_78C8041E) < AggroRange) //if the player is within aggro range
+	if(distance_to_object(NearestPlayer) < AggroRange) //if the player is within aggro range
 	{
 		if(!Aggro) //if the player just entered aggro range
 		{
@@ -35,9 +37,9 @@ if(!GettingHelp) //if the monster is not running toward another monster
 			Aggro = true; //the player has entered aggro range
 			alarm[2] = -1; //the monster stops searching for the player
 		}
-		if(distance_to_object(inst_78C8041E) < StopRange) //if the player is within the stop range
+		if(distance_to_object(NearestPlayer) < StopRange) //if the player is within the stop range
 		{
-			if(distance_to_object(inst_78C8041E) < FleeRange) //if the player is within flee range
+			if(distance_to_object(NearestPlayer) < FleeRange) //if the player is within flee range
 			{
 				if(instance_number(obj_Monster) == 1) //if this is the last monster
 				{
@@ -63,12 +65,12 @@ if(!GettingHelp) //if the monster is not running toward another monster
 		}
 		else
 		{
-			mp_potential_path(AggroPath, inst_78C8041E.x, inst_78C8041E.y, MoveSpeed, 4, 0); //set a path toward the player
+			mp_potential_path(AggroPath, NearestPlayer.x, NearestPlayer.y, MoveSpeed, 4, 0); //set a path toward the player
 			path_start(AggroPath, MoveSpeed, path_action_stop, 0); //start along that path
 		}
 	}
 
-	if(distance_to_object(inst_78C8041E) > AggroRange) //if the player is outside of aggro range
+	if(distance_to_object(NearestPlayer) > AggroRange) //if the player is outside of aggro range
 	{
 		if(Aggro) //if the player has just come out of aggro range
 		{

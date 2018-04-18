@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "bbbec45d-d989-4b44-9987-541837dc75de",
+            "Value": {
+                "id": "aed504c1-cfea-4604-98ef-7daa26ae8041",
+                "resourcePath": "objects\\obj_Slime\\obj_Slime.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c8ddb4e7-be1a-4962-b7f1-8d7fdd8c95bf",
             "Value": {
                 "id": "bd485752-553e-4559-b002-567ccd6f1e65",
