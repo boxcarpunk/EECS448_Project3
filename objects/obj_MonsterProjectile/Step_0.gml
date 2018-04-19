@@ -14,12 +14,12 @@ if(instance_place(x, y, obj_Solid) )
 //death animation
 if(DeleteProjectile)
 {
-	if(sprite_index != SlimeballExplosion) //if not playing the death animation
+	if(sprite_index != DestructionSprite) //if not playing the death animation
 	{
 		speed = 0; //do not move
 		Damage = 0; //do not do damage
 		
-		sprite_index = SlimeballExplosion; //switch to the death animation
+		sprite_index = DestructionSprite; //switch to the death animation
 		image_index = 1; //play from the beginning of the animation
 		image_speed = 1; //play the animation
 	}
