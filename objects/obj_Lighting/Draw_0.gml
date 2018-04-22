@@ -1,5 +1,27 @@
 /// @description You can write your code in this editor
 
-var size = (random(1)*0.05)-0.1;
-draw_sprite_ext(sprite20,0, x+34,y+34, 2.6+size,2.6+size,0,c_orange,0.13);
-draw_sprite_ext(sprite21,0, x-34,y-34, 5.6+size,5.6+size,0,c_orange,0.13);
+//remember alpha and color - prevents other object from going invisible
+prevAlpha = draw_get_alpha();
+prevColor = draw_get_color();
+
+//creates the surface that will be drawn
+if( !surface_exists(lighting_surf) )
+{
+	lighting_surf = surface_create(room_width>>light_scale_shift,room_height>>light_scale_shift);
+}
+
+//sets and clears the lightmap
+surface_set_target(lighting_surf);
+draw_clear_alpha($5c5c5c,1);
+
+//resets the surface
+surface_reset_target();
+
+//draws the surface to "darken" the room
+gpu_set_blendmode_ext(bm_dest_colour,bm_src_colour);
+draw_surface_stretched_ext(lighting_surf,0,0, room_width,room_height,c_white,1);
+gpu_set_blendmode(bm_normal);
+
+//resets alpha and color
+draw_set_alpha(prevAlpha);
+draw_set_color(prevColor);

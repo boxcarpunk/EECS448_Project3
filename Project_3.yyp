@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "66133286-a5f8-46fc-940c-5eb7e2e88c23",
+            "Value": {
+                "id": "49470694-522d-4425-9597-524c3d47eeb4",
+                "resourcePath": "objects\\obj_TorchGlow\\obj_TorchGlow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "67a00a86-6e81-4fbb-9675-4557e884552c",
             "Value": {
                 "id": "9484acf1-4f6a-48b5-8213-311306f861a7",
@@ -492,6 +500,14 @@
                 "id": "55327dae-fd00-497c-82fa-cb7cdd7fdc3a",
                 "resourcePath": "paths\\Room1DoorPatrol\\Room1DoorPatrol.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "a7ddde67-2e91-4409-aebc-a8cbe7174d5f",
+            "Value": {
+                "id": "4001a9ff-d546-47f2-a8d2-8056d39ef774",
+                "resourcePath": "scripts\\scr_lighting\\scr_lighting.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -772,6 +788,7 @@
         "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
         "45f0fb53-1b4d-460e-ab22-5e8e8572408b",
         "d927ec65-86e5-478b-a4f3-d6b8dfb596ba",
+        "a7ddde67-2e91-4409-aebc-a8cbe7174d5f",
         "c8ddb4e7-be1a-4962-b7f1-8d7fdd8c95bf",
         "70807cb5-7530-4e2d-a2f8-4d76d12321cf",
         "b349aaf7-b94a-461a-93aa-8b7e1204f164",
