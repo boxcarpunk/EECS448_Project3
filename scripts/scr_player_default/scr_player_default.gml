@@ -2,7 +2,7 @@
 LAttack = mouse_check_button_pressed(mb_left);
 if((LAttack)&&(ProjCount == 0))
 {
-	var Proj = instance_create_depth(x,y,-10000,obj_PlayerProjectile);
+	var Proj = instance_create_depth(x,y,inst_78C8041E.depth,obj_PlayerProjectile);
 	ProjCount++;
 }
 else if(ProjCount == MaxProjCount)
