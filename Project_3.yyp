@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "6b3326bb-60f0-461b-892c-6db1732fecbb",
+            "Value": {
+                "id": "95b58290-181c-49f4-bacf-a65f1e37c5b9",
+                "resourcePath": "sprites\\s_wasd_keys\\s_wasd_keys.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6b4196fe-0686-485e-a4ca-14f2e0cb0e3e",
             "Value": {
                 "id": "660ddc15-e7a3-4b9a-944b-791fe07f95dc",
@@ -348,6 +356,14 @@
                 "id": "d4c869d4-e1ad-46f8-b59a-9fb5c3282a45",
                 "resourcePath": "objects\\obj_Player\\obj_Player.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "81910615-902c-4dd5-9288-a575d5b574e2",
+            "Value": {
+                "id": "23d3d8ca-7d03-45c7-915f-e0f2dce83715",
+                "resourcePath": "sprites\\s_tab_key\\s_tab_key.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -455,6 +471,14 @@
             }
         },
         {
+            "Key": "99e29056-4db8-481b-b353-0ccd40fa94e7",
+            "Value": {
+                "id": "495181e5-a86f-4b20-aeb9-3f52fb978ecb",
+                "resourcePath": "scripts\\scr_help_screen\\scr_help_screen.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a4ceeb77-b24b-4898-b9db-115512826885",
             "Value": {
                 "id": "3d465697-5193-43db-bfc6-02ec704723fd",
@@ -532,6 +556,22 @@
                 "id": "aed504c1-cfea-4604-98ef-7daa26ae8041",
                 "resourcePath": "objects\\obj_Slime\\obj_Slime.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "be8ef6b1-08cb-43af-b93e-6d76aad276e2",
+            "Value": {
+                "id": "78cd2b2a-7f0c-45c6-9ad9-b4f48ebdeb38",
+                "resourcePath": "sprites\\s_left_mouse\\s_left_mouse.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bff07db2-36d7-41d7-ac4d-5d76d3da6d3a",
+            "Value": {
+                "id": "cdb8b807-c000-42ff-9831-7c34c866e336",
+                "resourcePath": "sprites\\s_right_mouse\\s_right_mouse.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -740,7 +780,8 @@
         "f4508ba4-03ae-44a3-a452-da770d5ed2d7",
         "44da3b1f-4576-476c-ab3b-3821a8fbc0eb",
         "54324033-c0d5-43ca-b2f9-fc6458099afd",
-        "a4ceeb77-b24b-4898-b9db-115512826885"
+        "a4ceeb77-b24b-4898-b9db-115512826885",
+        "99e29056-4db8-481b-b353-0ccd40fa94e7"
     ],
     "tutorial": ""
 }

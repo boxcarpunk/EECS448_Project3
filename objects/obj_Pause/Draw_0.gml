@@ -9,6 +9,9 @@ draw_set_valign(fa_middle);
 if(keyboard_check_pressed(vk_escape) && !dead && !global.inventoryIsOpened)//if escape key is pressed and no other interface is open
 {
 	global.pause = not(global.pause);
+	if(!global.pause){
+		global.help = false;
+	}
 }
 else if(keyboard_check_pressed(vk_tab) && !dead)//if tab key is pressed and no other interface is open
 {
@@ -65,7 +68,7 @@ else
 		draw_sprite_ext(s_profile, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth, camera_get_view_y(view_camera[0]) + profileOffsetY, profileSize/sprite_get_width(s_Player), profileSize/sprite_get_width(s_Player),0,c_white,1 );
 
 		//draw player name
-		playerName = "Kurt Slagle";
+		playerName = instance_find(obj_Player, 0).name;
 		textOffsetX = 3
 		draw_set_color(borderColor);
 		draw_set_alpha(1);
