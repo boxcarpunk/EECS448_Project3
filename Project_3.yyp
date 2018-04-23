@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "2b311602-4979-4351-96f7-8e959530a476",
+            "Value": {
+                "id": "918bcb23-5764-422e-9b74-2a581cfdefd1",
+                "resourcePath": "sprites\\Frank_No_Movin\\Frank_No_Movin.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2b7af681-c8ee-4e21-90ea-946717ad9131",
             "Value": {
                 "id": "39ddeb17-7e3e-4b1a-9f07-0f5b1ad59170",
@@ -148,6 +156,14 @@
                 "id": "2d3a0ef8-b294-4135-a113-85e207d1f89f",
                 "resourcePath": "views\\34b14a41-84d2-4557-b531-a4a4963082bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "351ae960-4a75-4d8a-84e7-fbfe473c6318",
+            "Value": {
+                "id": "55058679-e623-40b2-be7b-da00a32f9b01",
+                "resourcePath": "sprites\\Frank_Movement\\Frank_Movement.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -215,6 +231,14 @@
             }
         },
         {
+            "Key": "50919ca4-d4b2-4d62-9b4a-5814397538e0",
+            "Value": {
+                "id": "0e19b27d-7b15-4929-99e7-0a9050981f11",
+                "resourcePath": "sprites\\ClokedFigure\\ClokedFigure.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "50bfc123-1038-46c1-a1bb-1d56b8ad4558",
             "Value": {
                 "id": "9e687b9f-bad7-4813-a91c-b714a0c0df99",
@@ -258,7 +282,7 @@
             "Key": "5b28c697-3661-465c-848d-09f8f581d663",
             "Value": {
                 "id": "17ac4676-acee-4f64-a8c6-19e4caac27d7",
-                "resourcePath": "sprites\\sprite6\\sprite6.yy",
+                "resourcePath": "sprites\\s1_PlayerAttack\\s1_PlayerAttack.yy",
                 "resourceType": "GMSprite"
             }
         },
