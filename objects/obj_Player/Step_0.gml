@@ -31,7 +31,62 @@ if(PlayerHealth>0){ //if the player is not dead
 			scr_player_attack();
 			break;
 	}
-	camera_set_view_pos(view_camera[0], x-370, y-280);
+	
+mid = true;
+
+
+	if(x-370 < 0 && y-280 < 0)
+	{
+		camera_set_view_pos(view_camera[0], 0, 0);
+		mid = false;
+	}
+	else if(x-370 < 0 && y+295 > room_height)
+	{
+		camera_set_view_pos(view_camera[0], 0, room_height-580);
+		mid = false;
+	}
+	else if(x+410 > room_width&& y-280 < 0)
+	{
+		camera_set_view_pos(view_camera[0], room_width-780, 0);
+		mid = false;
+	}
+	else if(x+410 > room_width && y+295 > room_height)
+	{
+		camera_set_view_pos(view_camera[0], room_width-780, room_height-580);
+		mid = false;
+	}
+	else
+		{
+		if(x-370 < 0)
+		{
+			camera_set_view_pos(view_camera[0], 0, y-280);
+			mid = false;
+		}
+	
+		if(x+410 > room_width)
+		{
+			camera_set_view_pos(view_camera[0], room_width-780, y-280);
+			mid = false;
+		}
+	
+		if(y-280 < 0)
+		{
+			camera_set_view_pos(view_camera[0], x-370, 0);
+			mid = false;
+		}
+	
+		if(y+295 > room_height)
+		{
+			camera_set_view_pos(view_camera[0], x-370, room_height-580);
+			mid = false;
+		}
+	}
+
+	if(mid)
+	{
+		camera_set_view_pos(view_camera[0], x-370, y-280);
+	}
+	
 	myHurtbox.x = x
 	myHurtbox.y = y
 
