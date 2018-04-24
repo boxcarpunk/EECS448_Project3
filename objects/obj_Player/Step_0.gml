@@ -106,6 +106,8 @@ else if (dying) //after player died
 		}
 	}
 }
+
+
 /*
 with(instance_place(x,y,obj_Char_Hurtbox))
 {

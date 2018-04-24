@@ -14,13 +14,25 @@ draw_set_alpha(1);
 draw_set_font(TitleFont);
 draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2,camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/4,"Inventory");
 
-var boxSize = 64;
+
+var boxSize = 64;//size of inventory box
+
+//get coordinates to draw the boxes at
 var _x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2 - (array_length_1d(global.inventory)-1)/2 * boxSize;
 var _y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/2;
 
-for(var i=0; i< array_length_1d(global.inventory); i++)
+for(var i=0; i< array_length_1d(global.inventory); i++)//for each slot in array
 {
-	var box_x = _x+i*boxSize;
-	var box_y = _y;
-	draw_sprite(s_inventory_box, 0, box_x, box_y);
+	var box_x = _x+i*boxSize;//spaces the boxes out in the x direction
+	var box_y = _y;//gets the y value to draw the boxes at. Can be modified to add multiple rows if desired
+	draw_sprite(s_inventory_box, 0, box_x, box_y);//draws the empty inventory slot boxes
+	
+	instance_activate_object(global.inventory[i]);//activates the object (previously deactivated in pause object)
+	
+	var _item = global.inventory[i];//gets the item
+	
+	if (instance_exists(_item))//if item exists (and is not deactivated)
+	{
+		draw_sprite(sprite20,0, box_x, box_y);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
+	}
 }

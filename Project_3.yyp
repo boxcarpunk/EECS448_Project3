@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0b218c62-1f4a-4eee-bb34-25ab75276dfa",
+            "Value": {
+                "id": "b28369eb-472b-4fc5-a1e0-20d93e3edead",
+                "resourcePath": "views\\0b218c62-1f4a-4eee-bb34-25ab75276dfa.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0ecd8cd5-de03-4fa6-80f2-9569225d89be",
             "Value": {
                 "id": "7f98c7f4-ef18-4589-ad07-9133f8676355",
@@ -300,6 +308,14 @@
                 "id": "17ac4676-acee-4f64-a8c6-19e4caac27d7",
                 "resourcePath": "sprites\\s1_PlayerAttack\\s1_PlayerAttack.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5d3b1d8d-f7e2-4008-b4b6-fdee1752a9b6",
+            "Value": {
+                "id": "2dd1139d-1ab6-44f2-9c7d-be0fd164d1d0",
+                "resourcePath": "scripts\\scr_inventory_add\\scr_inventory_add.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -839,13 +855,14 @@
         "a7ddde67-2e91-4409-aebc-a8cbe7174d5f",
         "c8ddb4e7-be1a-4962-b7f1-8d7fdd8c95bf",
         "70807cb5-7530-4e2d-a2f8-4d76d12321cf",
-        "b349aaf7-b94a-461a-93aa-8b7e1204f164",
-        "f081a2dc-f6fb-4db3-9db4-75515f6666a6",
         "72d36aaf-0c66-4a9d-8eaf-529b6b304b9e",
         "f4508ba4-03ae-44a3-a452-da770d5ed2d7",
         "44da3b1f-4576-476c-ab3b-3821a8fbc0eb",
         "54324033-c0d5-43ca-b2f9-fc6458099afd",
-        "a4ceeb77-b24b-4898-b9db-115512826885"
+        "a4ceeb77-b24b-4898-b9db-115512826885",
+        "5d3b1d8d-f7e2-4008-b4b6-fdee1752a9b6",
+        "f081a2dc-f6fb-4db3-9db4-75515f6666a6",
+        "b349aaf7-b94a-461a-93aa-8b7e1204f164"
     ],
     "tutorial": ""
 }

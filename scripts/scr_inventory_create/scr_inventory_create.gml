@@ -1,10 +1,10 @@
 ///@arg size
 var inventory_size = argument0;
-global.inventory = [];
+global.inventory = [];//initializes inventory array
 
-var i = 0;
-repeat(inventory_size)
+//creates array of desired size
+for(var i = 0; i < inventory_size; i++)
 {
-	global.inventory[i] = noone;
+	global.inventory[i] = noone;//initializes all slots to noone
 	i++;
 }

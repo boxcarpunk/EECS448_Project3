@@ -28,6 +28,10 @@ else if(global.pause)
 }
 else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);//deactivates all objects
+	for(var i = 0; i < array_length_1d(global.inventory); i++)
+	{
+		instance_activate_object(global.inventory[i]);
+	}
 	scr_inventory_menu();//displays inventory menu
 }
 else if(dead)//if player has died
