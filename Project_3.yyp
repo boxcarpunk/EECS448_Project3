@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "1e9713ef-7e2d-4f86-989f-691e72a095e8",
+            "Value": {
+                "id": "c0a28945-bda1-419e-bcf7-6dbd79e7591c",
+                "resourcePath": "sprites\\SlimeBossDeath\\SlimeBossDeath.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "266b67b4-c154-4d19-8576-c6e6d6b86b66",
             "Value": {
                 "id": "6160204f-b0d6-4f91-bfc4-f403d148fba1",
@@ -111,19 +119,19 @@
             }
         },
         {
-            "Key": "2b311602-4979-4351-96f7-8e959530a476",
-            "Value": {
-                "id": "918bcb23-5764-422e-9b74-2a581cfdefd1",
-                "resourcePath": "sprites\\Frank_No_Movin\\Frank_No_Movin.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "2b7af681-c8ee-4e21-90ea-946717ad9131",
             "Value": {
                 "id": "39ddeb17-7e3e-4b1a-9f07-0f5b1ad59170",
                 "resourcePath": "views\\2b7af681-c8ee-4e21-90ea-946717ad9131.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3202813c-e9b1-4610-bc1f-04dd884cccfb",
+            "Value": {
+                "id": "a0ed53a9-8580-4ad8-a0f7-0ab232c9534b",
+                "resourcePath": "objects\\obj_SlimeBossProjectile\\obj_SlimeBossProjectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -244,6 +252,14 @@
                 "id": "9e687b9f-bad7-4813-a91c-b714a0c0df99",
                 "resourcePath": "rooms\\room1\\room1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "51fbe2b1-6e28-4ba9-a1e0-19c888a6b5d1",
+            "Value": {
+                "id": "5e8ee809-c83c-4ed5-8feb-4a2035f2d49c",
+                "resourcePath": "sprites\\SlimeBossSprite\\SlimeBossSprite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -476,6 +492,14 @@
                 "id": "ab705945-fbdb-449a-bab6-c6bdeb42560c",
                 "resourcePath": "sprites\\sprite3\\sprite3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "975075bb-3481-4c67-a257-c289d2a7f896",
+            "Value": {
+                "id": "6146596e-450e-4ebf-bf43-df7873f4c708",
+                "resourcePath": "objects\\obj_SlimeBoss\\obj_SlimeBoss.yy",
+                "resourceType": "GMObject"
             }
         },
         {
