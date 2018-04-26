@@ -191,19 +191,19 @@
             }
         },
         {
-            "Key": "3fba76ab-c5bc-41fa-8dc3-142034069e3c",
-            "Value": {
-                "id": "ef5bf00f-7a1e-4510-ab64-4950fddb8eeb",
-                "resourcePath": "scripts\\scr_char_select\\scr_char_select.yy",
-                "resourceType": "GMScript"
-			}
-		},
-		{
             "Key": "35d222b2-8636-43d4-8dc1-59eade18f034",
             "Value": {
                 "id": "6bac4ef0-546f-4be3-8858-b4492d73c365",
                 "resourcePath": "sprites\\DrBardas_death_animation\\DrBardas_death_animation.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3fba76ab-c5bc-41fa-8dc3-142034069e3c",
+            "Value": {
+                "id": "ef5bf00f-7a1e-4510-ab64-4950fddb8eeb",
+                "resourcePath": "scripts\\scr_char_select\\scr_char_select.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "c9e5bdff-ab2f-42bb-be09-9691a05c8f8c",
+            "Value": {
+                "id": "cbf92dbb-aaf3-481e-bc77-7fedefc6a9ac",
+                "resourcePath": "objects\\obj_item\\obj_item.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cacebbd2-7d95-4826-8cdf-c393f4a7359f",
             "Value": {
                 "id": "71a8dbe5-2d49-4716-8b1d-da1b49cd0fcb",
@@ -834,7 +842,7 @@
             "Key": "d9de701c-96e2-49da-a8d4-12d5ffa952e6",
             "Value": {
                 "id": "87946c12-ef77-4558-8144-27938d9a481c",
-                "resourcePath": "sprites\\key\\key.yy",
+                "resourcePath": "sprites\\s_key\\s_key.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -858,7 +866,7 @@
             "Key": "e6043717-d369-4c9e-a761-e3ab0b8c1d0b",
             "Value": {
                 "id": "d1e05166-3bd8-4daf-942d-ebd9b99957a7",
-                "resourcePath": "sprites\\spellbook\\spellbook.yy",
+                "resourcePath": "sprites\\s_spellbook\\s_spellbook.yy",
                 "resourceType": "GMSprite"
             }
         },
