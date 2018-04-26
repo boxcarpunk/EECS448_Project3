@@ -11,7 +11,7 @@ if(!variable_global_exists("help") || !global.help)
 {
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	draw_set_font(TitleFont);
+	draw_set_font(HeadingFont);
 	draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2,camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/6,"Pause");
 	
 	//--------------Draw Buttons--------------
