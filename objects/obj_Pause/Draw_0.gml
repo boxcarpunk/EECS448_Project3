@@ -31,6 +31,10 @@ else if(global.pause)
 }
 else if(global.inventoryIsOpened){
 	instance_deactivate_all(global.inventoryIsOpened);//deactivates all objects
+	for(var i = 0; i < array_length_1d(global.inventory); i++)
+	{
+		instance_activate_object(global.inventory[i]);
+	}
 	scr_inventory_menu();//displays inventory menu
 }
 else if(dead)//if player has died
@@ -46,7 +50,7 @@ else if(dead)//if player has died
 else
 {
 	//activates the objects within region shown by the camera
-	instance_activate_region(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]),true);
+	instance_activate_region(camera_get_view_x(view_camera[0])-100,camera_get_view_y(view_camera[0])-100,camera_get_view_width(view_camera[0])+100,camera_get_view_height(view_camera[0])+100,true);
 	
 	fadeStartTime = 0;
 	healthOffset = 5;

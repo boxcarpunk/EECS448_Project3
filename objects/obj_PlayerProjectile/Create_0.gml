@@ -3,4 +3,3 @@
 image_angle = point_direction(x, y, mouse_x, mouse_y);
 self.direction=point_direction(x, y, mouse_x, mouse_y);
 self.speed=15;
-self.depth = 0;
