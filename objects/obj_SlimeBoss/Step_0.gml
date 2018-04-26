@@ -1,0 +1,134 @@
+NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the nearest player
+move_bounce_solid(false); //bounce off all solid objects upon collision
+
+//the monster will only do something if there is a player
+if(NearestPlayer != noone)
+{
+
+	//projectile attack
+	myHurtbox.image_xscale = image_xscale
+	myHurtbox.x = x;
+	myHurtbox.y = y;
+	if(CanFire) //if the player is within range and cooldown is over
+	{
+		CanFire = false; //reset the cooldown flag
+		
+		ProjectileAngle = irandom_range(0,45); //the angle that the projectile will fire, starts at a random angle between 0 and 45
+		for(i = 0; i < 8; i++) //shoot 8 projectiles
+		{
+			ProjectileID = instance_create_depth(x, y, -10000, obj_SlimeBossProjectile); //makes the projectile and stores its id
+			ProjectileID.Damage = ProjectileDamage; //sets the projectile's damage
+			ProjectileID.ProjectileSprite = ProjectileSprite; //set the projectile's sprite
+			ProjectileID.DestructionSprite = ProjectileDestruction; //set the projectile's death sprite
+			ProjectileID.DeathEndFrame = ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
+			ProjectileID.direction = ProjectileAngle; //point the projectile in the right direction
+			ProjectileID.image_angle = ProjectileAngle*-32; //make sure the image also points in the correct direction
+			
+			ProjectileAngle += 45; //increase the angle by 45 degrees
+		}
+		
+		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
+	}
+	with(instance_place(x,y,myHurtbox))
+	{
+		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
+		{
+			with(instance_place(x,y,obj_PlayerProjectile))
+			{
+				instance_destroy(); //destroy character projectile
+			}
+			with(instance_place(x,y,obj_Monster))
+			{
+				Health--; //take one damage
+			}
+		}
+	}
+	if(CurrentDamageCooldown!=FullDamageCooldown)
+	{
+		CurrentDamageCooldown++;
+	}
+
+	//layer monster and character correctly
+	if(NearestPlayer.y < self.y)
+	{
+		depth=-10;
+	}
+	else if(NearestPlayer.y > self.y)
+	{
+		depth=0;
+	}
+	if(NearestPlayer.x < self.x)
+	{
+		image_xscale=-1;
+	}
+	else if(NearestPlayer.x > self.x)
+	{
+		image_xscale=1;
+	}
+
+	//movement
+	if(Health > 0)
+	{
+		mp_potential_path(MovePath, NearestPlayer.x, NearestPlayer.y, MoveSpeed, 4, 0); //move toward the player
+		path_start(MovePath, MoveSpeed, path_action_stop, 0); //move along the path
+		
+		//movement animation
+		if(path_speed == 0)
+		{
+			image_speed = 0; //do not loop animations
+			image_index = 1; //go to the default position
+		}
+		else
+		{
+			image_speed = 1; //loop the animation
+		}
+
+		//sprite direction
+		if(direction == 0) //if looking right
+		{
+			image_xscale = 1; //set the sprite to look right
+		}
+		if(direction == 180) //if looking left
+		{
+			image_xscale = -1; //set the sprite to look left
+		}
+	}
+	
+	//collision
+	CollisionID = instance_place(self.x, self.y, other); //detect a collision with any other object
+	if(CollisionID != noone) //if you are colliding with another object
+	{
+		CollisionDirection = point_direction(CollisionID.x, CollisionID.y, self.x, self.y); //point from the colliding object to the monster
+		motion_set(CollisionDirection, MoveSpeed); //move away from the colliding object
+	}
+	else
+	{
+		motion_set(0,0); //do not move without a path anymore
+	}
+
+	//death condition
+	if(Health <= 0)
+	{
+		Health = 0; //sets health back to 0 in case it went below 0
+		
+		//don't let the monster move or attack
+		MoveSpeed = 0;
+		MeleeDamage = 0;
+		ProjectileDamage = 0;
+		Can_Fire = false;
+		path_end();
+	
+		if(sprite_index != DeathAnimation) //if the death animation is not playing
+		{
+			sprite_index = DeathAnimation; //switch to the death animation
+			image_index = 0; //start at the beginning of the animation
+		}
+		image_speed = 1; //play the animation
+	
+		if(image_index > DeathEndFrame) //if the animation is done playing
+		{
+			instance_destroy(); //destroy the monster
+		}
+	}
+
+}

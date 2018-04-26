@@ -1,5 +1,15 @@
 /// @description Insert description here
 
-room_goto(targetRoom);
-inst_78C8041E.x=targetX;
-inst_78C8041E.y=targetY;
+NearestPlayer = instance_nearest(self.x, self.y, obj_Player);
+if(drop)
+{
+		room_goto(targetRoom);
+	//NearestPlayer.x=targetX;
+	//NearestPlayer.y;
+}
+else
+{
+	room_goto(targetRoom);
+	NearestPlayer.x=targetX;
+	NearestPlayer.y=targetY;
+}

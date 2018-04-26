@@ -48,5 +48,14 @@ if(MoveLeft+MoveRight!=0)
 {
 	image_xscale = sign(MoveLeft+MoveRight)*-1;
 }
-x += MoveLeft+MoveRight;
-y += MoveUp+MoveDown;
+
+if(abs(MoveLeft+MoveRight)==abs(MoveUp+MoveDown))
+{
+	x+=sign(MoveLeft+MoveRight)*player_speed/sqrt(2);
+	y+=sign(MoveUp+MoveDown)*player_speed/sqrt(2);
+}
+else
+{
+	x+=MoveLeft+MoveRight;
+	y+=MoveUp+MoveDown;
+}
