@@ -191,6 +191,14 @@
             }
         },
         {
+            "Key": "35d222b2-8636-43d4-8dc1-59eade18f034",
+            "Value": {
+                "id": "6bac4ef0-546f-4be3-8858-b4492d73c365",
+                "resourcePath": "sprites\\DrBardas_death_animation\\DrBardas_death_animation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3fc03776-e3b0-4ba2-8398-246f6b91abf4",
             "Value": {
                 "id": "451394cb-9ef1-41bc-8a76-f3b791137511",
@@ -439,6 +447,14 @@
             }
         },
         {
+            "Key": "7c6977b4-cb9a-442a-82ce-6039b8aa2116",
+            "Value": {
+                "id": "73ed51e3-2819-4aad-a12f-7bf4c5ad792e",
+                "resourcePath": "sprites\\fireball_purple\\fireball_purple.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "81910615-902c-4dd5-9288-a575d5b574e2",
             "Value": {
                 "id": "23d3d8ca-7d03-45c7-915f-e0f2dce83715",
@@ -527,6 +543,14 @@
             }
         },
         {
+            "Key": "94a09f8b-d1b5-47ec-a850-6ef446b3fb3c",
+            "Value": {
+                "id": "844a22dd-391e-4f11-9bbd-5cc6da33123b",
+                "resourcePath": "sprites\\fireball_green\\fireball_green.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "973366d9-ef77-4271-b319-191855e775b9",
             "Value": {
                 "id": "ab705945-fbdb-449a-bab6-c6bdeb42560c",
@@ -572,9 +596,9 @@
                 "id": "495181e5-a86f-4b20-aeb9-3f52fb978ecb",
                 "resourcePath": "scripts\\scr_help_screen\\scr_help_screen.yy",
                 "resourceType": "GMScript"
-	    }
-	},
-	{
+            }
+        },
+        {
             "Key": "a3451ca7-dab5-423e-8929-5c8a9c0ae691",
             "Value": {
                 "id": "a0ab057f-a15c-4b1d-8a7e-9fca43767e9e",
@@ -659,6 +683,14 @@
             "Value": {
                 "id": "25a7d515-26ae-4bb1-91ff-ff8a7f8f2e0f",
                 "resourcePath": "sprites\\s_interact\\s_interact.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b789c660-02b1-46f7-aaff-ffab3166dfc0",
+            "Value": {
+                "id": "afd4090e-26ec-4726-a182-a73e2b42b3af",
+                "resourcePath": "sprites\\fireball_blue\\fireball_blue.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -783,10 +815,34 @@
             }
         },
         {
+            "Key": "d9de701c-96e2-49da-a8d4-12d5ffa952e6",
+            "Value": {
+                "id": "87946c12-ef77-4558-8144-27938d9a481c",
+                "resourcePath": "sprites\\key\\key.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da1da2f1-e9c5-43b4-86d4-7dafa836286e",
             "Value": {
                 "id": "28a724dd-c74b-4540-9578-422ebb29ce77",
                 "resourcePath": "sprites\\enemy_hurtbox\\enemy_hurtbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dc264f16-7f86-44d3-9ad4-6810e36522e1",
+            "Value": {
+                "id": "d0596789-c688-4c4c-8e13-35a1de534cae",
+                "resourcePath": "sprites\\fireball_red\\fireball_red.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e6043717-d369-4c9e-a761-e3ab0b8c1d0b",
+            "Value": {
+                "id": "d1e05166-3bd8-4daf-942d-ebd9b99957a7",
+                "resourcePath": "sprites\\spellbook\\spellbook.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -884,6 +940,14 @@
                 "id": "707302f1-660a-4da0-b74f-8fd63707d9d7",
                 "resourcePath": "paths\\Room0LowerPatrol\\Room0LowerPatrol.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "f8a4e12b-97c4-43a3-ba07-dab04e66e2d2",
+            "Value": {
+                "id": "85b77385-0800-4132-963d-2441d25f9cbf",
+                "resourcePath": "sprites\\DrBardas_death_down\\DrBardas_death_down.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
