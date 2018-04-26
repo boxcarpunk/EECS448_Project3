@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "0b7a0e21-d0a2-4b2c-b543-59cf4b092a79",
+            "Value": {
+                "id": "53ed0934-c1bc-48f5-923c-4757faed64f6",
+                "resourcePath": "objects\\obj_interact\\obj_interact.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
             "Value": {
                 "id": "a275bfa6-21ba-4d93-b621-e92845d18687",
@@ -619,6 +627,14 @@
             "Value": {
                 "id": "1d17d7b7-524d-4bd6-a372-9c38d0011b51",
                 "resourcePath": "sprites\\Kurt_death_animation\\Kurt_death_animation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b60941a9-a312-4d8e-bb5d-f561fef65f6e",
+            "Value": {
+                "id": "25a7d515-26ae-4bb1-91ff-ff8a7f8f2e0f",
+                "resourcePath": "sprites\\s_interact\\s_interact.yy",
                 "resourceType": "GMSprite"
             }
         },
