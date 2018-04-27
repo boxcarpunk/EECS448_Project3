@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "6ac0cb0b-2f65-4353-8fbf-002b94570b93",
+            "Value": {
+                "id": "12bb4d6b-eee5-46e0-a103-0b314044daba",
+                "resourcePath": "views\\6ac0cb0b-2f65-4353-8fbf-002b94570b93.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6b3326bb-60f0-461b-892c-6db1732fecbb",
             "Value": {
                 "id": "95b58290-181c-49f4-bacf-a65f1e37c5b9",
@@ -447,17 +455,18 @@
             }
         },
         {
-<<<<<<< HEAD
             "Key": "7c6977b4-cb9a-442a-82ce-6039b8aa2116",
             "Value": {
                 "id": "3e573756-8ec1-4708-988b-e3958ebb5b1e",
                 "resourcePath": "sprites\\fireball_purple\\fireball_purple.yy",
-=======
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "81910615-902c-4dd5-9288-a575d5b574e2",
             "Value": {
                 "id": "23d3d8ca-7d03-45c7-915f-e0f2dce83715",
                 "resourcePath": "sprites\\s_tab_key\\s_tab_key.yy",
->>>>>>> dbb3f34fbafefd02755d38fe9148174e7358416f
                 "resourceType": "GMSprite"
             }
         },
@@ -595,9 +604,9 @@
                 "id": "495181e5-a86f-4b20-aeb9-3f52fb978ecb",
                 "resourcePath": "scripts\\scr_help_screen\\scr_help_screen.yy",
                 "resourceType": "GMScript"
-	    }
-	},
-	{
+            }
+        },
+        {
             "Key": "a3451ca7-dab5-423e-8929-5c8a9c0ae691",
             "Value": {
                 "id": "a0ab057f-a15c-4b1d-8a7e-9fca43767e9e",
@@ -678,17 +687,18 @@
             }
         },
         {
-<<<<<<< HEAD
-            "Key": "b789c660-02b1-46f7-aaff-ffab3166dfc0",
-            "Value": {
-                "id": "5c4555bb-5d5e-4c9c-a147-f97fd2ac400f",
-                "resourcePath": "sprites\\fireball_blue\\fireball_blue.yy",
-=======
             "Key": "b60941a9-a312-4d8e-bb5d-f561fef65f6e",
             "Value": {
                 "id": "25a7d515-26ae-4bb1-91ff-ff8a7f8f2e0f",
                 "resourcePath": "sprites\\s_interact\\s_interact.yy",
->>>>>>> dbb3f34fbafefd02755d38fe9148174e7358416f
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b789c660-02b1-46f7-aaff-ffab3166dfc0",
+            "Value": {
+                "id": "5c4555bb-5d5e-4c9c-a147-f97fd2ac400f",
+                "resourcePath": "sprites\\fireball_blue\\fireball_blue.yy",
                 "resourceType": "GMSprite"
             }
         },
