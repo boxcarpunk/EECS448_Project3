@@ -3,7 +3,7 @@
 NearestPlayer = instance_nearest(self.x, self.y, obj_Player);
 if(drop)
 {
-		room_goto(targetRoom);
+	room_goto(targetRoom);
 	//NearestPlayer.x=targetX;
 	//NearestPlayer.y;
 }

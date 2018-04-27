@@ -11,7 +11,7 @@ draw_text(camera_get_view_x(view_camera[0]),camera_get_view_y(view_camera[0]),"P
 //draw Pause Menu
 draw_set_color(c_white);
 draw_set_alpha(1);
-draw_set_font(TitleFont);
+draw_set_font(HeadingFont);
 draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2,camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/4,"Inventory");
 
 
@@ -24,12 +24,12 @@ var _y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[
 MLeft = keyboard_check(ord("A"));
 MRight = keyboard_check(ord("D"));
 
-if(keyboard_check_pressed(vk_right))
+if(keyboard_check_pressed(ord("D")))
 {
 	MLeft = !MLeft;
 	global.item_index = min(global.item_index+1, array_length_1d(global.inventory)-1);
 }
-if(keyboard_check_pressed(vk_left))
+if(keyboard_check_pressed(ord("A")))
 {
 	MRight = !MRight;
 	global.item_index = max(global.item_index-1, 0);
@@ -47,7 +47,7 @@ for(var i=0; i< array_length_1d(global.inventory); i++)//for each slot in array
 	
 	if(global.inventory[i] != noone)//if item exists (and is not deactivated)
 	{
-		draw_sprite(sprite20,0, box_x, box_y);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
+		draw_sprite(global.inventory[i].sprite_index,0, box_x, box_y);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
 	}
 	
 	if(i == global.item_index)
