@@ -9,9 +9,9 @@ if(NearestPlayer != noone)
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
 	myHurtbox.y = y;
-	if(CanFire) //if the player is within range and cooldown is over
+	if(CanAttack) //if the cooldown is over
 	{
-		CanFire = false; //reset the cooldown flag
+		CanAttack = false; //reset the cooldown flag
 		
 		ProjectileAngle = irandom_range(0,45); //the angle that the projectile will fire, starts at a random angle between 0 and 45
 		for(i = 0; i < 8; i++) //shoot 8 projectiles
@@ -115,7 +115,7 @@ if(NearestPlayer != noone)
 		MoveSpeed = 0;
 		MeleeDamage = 0;
 		ProjectileDamage = 0;
-		Can_Fire = false;
+		CanAttack = false;
 		path_end();
 	
 		if(sprite_index != DeathAnimation) //if the death animation is not playing

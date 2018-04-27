@@ -11,7 +11,7 @@ MovePath = path_add(); //create a new path for the boss
 //projectile
 ProjectileDamage = 1; //amount of damage the monster's projectiles do
 ProjectileCooldown = .25; //amount of time (in seconds) between firing a projectile
-CanFire = true; //flag indicating whether the monster can fire a projectile
+CanAttack = true; //flag indicating whether the monster can fire a projectile
 
 //sprites
 DeathAnimation = SlimeBossDeath; //the sprite that the monster will use when it dies
