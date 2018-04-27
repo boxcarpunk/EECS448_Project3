@@ -2,7 +2,7 @@
     "id": "dc264f16-7f86-44d3-9ad4-6810e36522e1",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "fireball_red",
+    "name": "RedProjectileSprite",
     "For3D": false,
     "HTile": false,
     "VTile": false,

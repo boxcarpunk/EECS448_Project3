@@ -2,7 +2,7 @@
     "id": "7c6977b4-cb9a-442a-82ce-6039b8aa2116",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "fireball_purple",
+    "name": "PurpleProjectileSprite",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -1,1 +1,1 @@
-CanFire = true; //projectile cooldown is over
+CanAttack = true; //attack cooldown is over

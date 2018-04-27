@@ -3,24 +3,9 @@ NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the neares
 //the monster will only do something if there is a player
 if(NearestPlayer != noone)
 {
-
-	//projectile attack
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
 	myHurtbox.y = y;
-	if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange)) //if the player is within range and cooldown is over
-	{
-		CanAttack = false; //reset the cooldown flag
-		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
-		with(ProjectileID)
-		{
-			Damage = other.ProjectileDamage; //sets the projectile's damage
-			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
-			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
-			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
-		}
-		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
-	}
 	with(instance_place(x,y,myHurtbox))
 	{
 		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
@@ -61,7 +46,7 @@ if(NearestPlayer != noone)
 	//movement
 	if(Health > 0)
 	{
-		scr_monster_movement();
+		//random teleporting code
 	}
 
 	//death condition
@@ -87,23 +72,19 @@ if(NearestPlayer != noone)
 			instance_destroy(); //destroy the monster
 		}
 	}
-
-	//boss spawn condition
-	if((instance_number(obj_Slime) > 3) && (room.BossSpawned == false)) //if there are at least four slimes in the room and the boss has not spawned
+	
+	//projectile attack
+	if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange)) //if the player is within range and cooldown is over
 	{
-		NearCounter = 0; //counts how many slimes are within merge range
-		for(i = 0; i < instance_number(obj_Slime); i++) //iterate through all the slimes in the room
+		CanAttack = false; //reset the cooldown flag
+		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
+		with(ProjectileID)
 		{
-			if(distance_to_object(instance_find(obj_Slime, i)) < 100) //if the slime is within merge range
-			{
-				NearCounter++; //increase the counter
-			}
+			Damage = other.ProjectileDamage; //sets the projectile's damage
+			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
+			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
+			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
 		}
-		
-		if(NearCounter >= 3) //if there are at least four nearby slimes (counting self)
-		{
-			instance_create_depth(x, y, "Player_Instance", obj_SlimeBoss); //spawn the boss
-		}
+		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 	}
-
 }
