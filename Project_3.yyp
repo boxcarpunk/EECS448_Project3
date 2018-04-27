@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "a8349274-b934-4342-ab94-62ec74510109",
+            "Value": {
+                "id": "3956a3c8-250f-405a-843f-8ffc48dcf555",
+                "resourcePath": "objects\\obj_spellbook\\obj_spellbook.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ac5f79df-65a0-4f72-84ba-241d3c26a7ba",
             "Value": {
                 "id": "84c03994-fc5b-4e94-b3d7-c51cee3bc569",
@@ -851,6 +859,14 @@
             "Value": {
                 "id": "cca1f22a-6ea3-4c6e-b30b-cc2621ab3281",
                 "resourcePath": "objects\\obj_Warp\\obj_Warp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d6eb9f53-d932-4610-9292-aaf59f35c8e6",
+            "Value": {
+                "id": "e45f3588-9f18-4ae5-af5c-c1e97f4eb247",
+                "resourcePath": "objects\\obj_key\\obj_key.yy",
                 "resourceType": "GMObject"
             }
         },

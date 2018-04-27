@@ -1,4 +1,4 @@
 /// @description Insert description here
 
-scr_inventory_add(obj_item, self.itemIndex);
+scr_inventory_add(object_index);
 instance_destroy(self);
