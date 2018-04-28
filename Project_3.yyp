@@ -210,7 +210,7 @@
             "Key": "35d222b2-8636-43d4-8dc1-59eade18f034",
             "Value": {
                 "id": "6bac4ef0-546f-4be3-8858-b4492d73c365",
-                "resourcePath": "sprites\\DrBardas_death_animation\\DrBardas_death_animation.yy",
+                "resourcePath": "sprites\\s1_death_animation\\s1_death_animation.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -491,6 +491,14 @@
             "Value": {
                 "id": "73ed51e3-2819-4aad-a12f-7bf4c5ad792e",
                 "resourcePath": "sprites\\PurpleProjectileSprite\\PurpleProjectileSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7d96d1cb-b484-4878-afba-943cf513c4f0",
+            "Value": {
+                "id": "9d1c8e3f-7e02-4efd-a78f-4da34f199636",
+                "resourcePath": "sprites\\s1_PlayerMovement\\s1_PlayerMovement.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1026,7 +1034,7 @@
             "Key": "f8a4e12b-97c4-43a3-ba07-dab04e66e2d2",
             "Value": {
                 "id": "85b77385-0800-4132-963d-2441d25f9cbf",
-                "resourcePath": "sprites\\DrBardas_death_down\\DrBardas_death_down.yy",
+                "resourcePath": "sprites\\s1_death_down\\s1_death_down.yy",
                 "resourceType": "GMSprite"
             }
         },

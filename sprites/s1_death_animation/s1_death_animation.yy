@@ -2,7 +2,7 @@
     "id": "35d222b2-8636-43d4-8dc1-59eade18f034",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "DrBardas_death_animation",
+    "name": "s1_death_animation",
     "For3D": false,
     "HTile": false,
     "VTile": false,
