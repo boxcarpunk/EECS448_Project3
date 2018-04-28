@@ -93,7 +93,7 @@ mid = true;
 }
 else if (PlayerHealth <= 0 && !dying) //if player died
 {
-	sprite_index = Kurt_death_animation;
+	sprite_index = s_DeathAnimation;
 	dying = true;
 }	
 else if (dying) //after player died
@@ -102,7 +102,7 @@ else if (dying) //after player died
 	{
 		if (image_index > image_number - 1)
 		{
-			sprite_index=Kurt_death_down; //still death sprite
+			sprite_index=s_Death_Down; //still death sprite
 		}
 	}
 }

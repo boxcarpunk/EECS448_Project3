@@ -2,7 +2,7 @@
     "id": "b48c5837-f20e-430e-a9e3-a3ff0d4adc48",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "Kurt_death_animation",
+    "name": "s_DeathAnimation",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -2,7 +2,7 @@
     "id": "f8a4e12b-97c4-43a3-ba07-dab04e66e2d2",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s1_death_down",
+    "name": "s1_Death_Down",
     "For3D": false,
     "HTile": false,
     "VTile": false,
