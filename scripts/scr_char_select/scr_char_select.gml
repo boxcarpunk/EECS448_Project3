@@ -15,7 +15,7 @@ camWidth = camera_get_view_width(view_camera[0])
 camHeight = camera_get_view_height(view_camera[0]) 
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
-players = [s_PlayerMovement, s_Player]
+players = [s1_Player, s_Player]
 playerNames = ["Alex Bardas", "Kurt Slagle"];
 if(!variable_global_exists("char_index"))
 	global.char_index = 0;
