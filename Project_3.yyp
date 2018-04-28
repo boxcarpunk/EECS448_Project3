@@ -911,6 +911,14 @@
             }
         },
         {
+            "Key": "e2306736-17d5-43b0-8c40-483fd3abf4da",
+            "Value": {
+                "id": "8a1d6272-6a7c-4065-80fe-f883735800ca",
+                "resourcePath": "sprites\\LightningProjectileSprite\\LightningProjectileSprite.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e6043717-d369-4c9e-a761-e3ab0b8c1d0b",
             "Value": {
                 "id": "d1e05166-3bd8-4daf-942d-ebd9b99957a7",
