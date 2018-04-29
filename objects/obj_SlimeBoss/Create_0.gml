@@ -5,7 +5,7 @@ FullDamageCooldown = 20;
 CurrentDamageCooldown = FullDamageCooldown;
 
 //movement and ranges
-MoveSpeed = 2; //movement speed (in pixels per step) of the monster
+MoveSpeed = 4; //movement speed (in pixels per step) of the monster
 MovePath = path_add(); //create a new path for the boss
 
 //projectile
@@ -28,5 +28,16 @@ room.BossSpawned = true; //indicate that the boss has spawned
 for(i = 0; i < 4; i++) //iterates 4 times
 {
 	instance_destroy(instance_nearest(self.x, self.y, obj_Slime)); //deletes the nearest slime
+}
+
+//anti-collision upon spawning
+CollisionID = instance_place(self.x, self.y, all); //detect a collision with any other object
+while(CollisionID != noone) //while you are colliding with another object
+{
+	XSign = sign(self.x-CollisionID.x); //find out whether your x is greater than or less than the colliding instance
+	YSign = sign(self.y-CollisionID.y); //find out whether your y is greater than or less than the colliding instance
+	x += XSign*5; //move 5 pixels away from the colliding instance in the x direction
+	y += YSign*5; //move 5 pixels away from the colliding instance in the y direction
+	CollisionID = instance_place(self.x, self.y, all); //detect a collision with any other object
 }
 

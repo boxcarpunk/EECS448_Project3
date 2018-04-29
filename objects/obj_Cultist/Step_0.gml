@@ -46,12 +46,34 @@ if(NearestPlayer != noone)
 	//movement
 	if(Health > 0)
 	{
-		//random teleporting code
+		switch(CultistMovementState)
+		{
+			case CultistMovement.Firing:
+				CanAttack = true; //allow the cultist to fire
+				alarm[0] = TeleportCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the cultist switches to teleport
+				CultistMovementState = CultistMovement.Idle; //switch to idle to wait for the alarm to go off
+			break;
+			
+			case CultistMovement.Teleporting:
+				move_random(1,1); //move to a random place in the room
+				while(place_meeting(self.x, self.y, all)) //while colliding with an object
+				{
+					move_random(1,1); //move to a different place in the room
+				}
+				alarm[1] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the cultist switches to firing
+				CultistMovementState = CultistMovement.Idle; //switch to idle to wait for the alarm to go off
+			break;
+			
+			case CultistMovement.Idle:
+				//do nothing while idle
+			break;
+		}
 	}
 
 	//death condition
 	if(Health <= 0)
 	{
+		/*
 		Health = 0; //sets health back to 0 in case it went below 0
 		//don't let the monster move or attack
 		MoveSpeed = 0;
@@ -68,23 +90,68 @@ if(NearestPlayer != noone)
 		image_speed = 1; //play the animation
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
-		{
+		{*/
 			instance_destroy(); //destroy the monster
-		}
+		//}
 	}
 	
 	//projectile attack
-	if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange)) //if the player is within range and cooldown is over
+	if(CanAttack) //if the  cooldown is over
 	{
 		CanAttack = false; //reset the cooldown flag
 		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
-		with(ProjectileID)
+		var CurrentProjectileType = irandom_range(0,AmountProjectileTypes-1); //get a random number that will coorespond to a projectile type
+		
+		with(ProjectileID) //code within the projectile that was just created
 		{
-			Damage = other.ProjectileDamage; //sets the projectile's damage
-			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
-			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
-			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
+			switch(CurrentProjectileType) //change the projectile based on its type
+			{
+				case ProjectileType.Lightning:
+					Damage = other.ProjectileDamage; //sets the projectile's damage
+					ProjectileSprite = LightningProjectileSprite; //set the projectile's sprite
+					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					speed = 25; //lightning moves faster than regular projectiles
+				break;
+				
+				case ProjectileType.SlowPlayer:
+					Damage = other.ProjectileDamage; //sets the projectile's damage
+					ProjectileSprite = BlueProjectileSprite; //set the projectile's sprite
+					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					Debuff = DebuffType.Slow; //stores the type of debuff to apply
+					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
+				break;
+				
+				case ProjectileType.HealPlayer:
+					Damage = 0; //sets the projectile's damage
+					ProjectileSprite = GreenProjectileSprite; //set the projectile's sprite
+					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					Debuff = DebuffType.Heal; //stores the type of debuff to apply
+					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
+				break;
+				
+				case ProjectileType.PolymorphPlayer:
+					Damage = other.ProjectileDamage; //sets the projectile's damage
+					ProjectileSprite = PurpleProjectileSprite; //set the projectile's sprite
+					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					Debuff = DebuffType.Polymorph; //stores the type of debuff to apply
+					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
+				break;
+				
+				case ProjectileType.PolymorphSelf:
+					instance_destroy(); //delete the projectile
+				break;
+				
+				case ProjectileType.Default:
+					Damage = other.ProjectileDamage; //sets the projectile's damage
+					ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
+					DeathEndFrame = 0; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+				break;
+			}
 		}
-		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
+		
+		if(CurrentProjectileType == ProjectileType.PolymorphSelf) //if the projectile was polymorph self
+		{
+			sprite_index = SlimeSprite; //look like a slime until next teleport
+		}
 	}
 }

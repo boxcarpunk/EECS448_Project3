@@ -93,18 +93,6 @@ if(NearestPlayer != noone)
 			image_xscale = -1; //set the sprite to look left
 		}
 	}
-	
-	//collision
-	CollisionID = instance_place(self.x, self.y, other); //detect a collision with any other object
-	if(CollisionID != noone) //if you are colliding with another object
-	{
-		CollisionDirection = point_direction(CollisionID.x, CollisionID.y, self.x, self.y); //point from the colliding object to the monster
-		motion_set(CollisionDirection, MoveSpeed); //move away from the colliding object
-	}
-	else
-	{
-		motion_set(0,0); //do not move without a path anymore
-	}
 
 	//death condition
 	if(Health <= 0)

@@ -23,8 +23,12 @@ if(DeleteProjectile)
 		image_index = 1; //play from the beginning of the animation
 		image_speed = 1; //play the animation
 	}
-	if(image_index > 5) //if at the end of the animation
+	if(image_index > DestructionEndFrame) //if at the end of the animation
 	{
 		instance_destroy(); //delete the projectile
 	}
+}
+else //if the death animation is not going
+{
+	sprite_index = ProjectileSprite; //make sure you are set to the right sprite
 }

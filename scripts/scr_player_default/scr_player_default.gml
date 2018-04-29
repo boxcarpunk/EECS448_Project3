@@ -20,9 +20,15 @@ if(MoveLeft+MoveRight!=0)
 }
 if((MoveLeft+MoveRight == 0)&&(MoveUp+MoveDown == 0))
 {
-	sprite_index = s_Player;
+	if(sprite_index != SlimeSprite) //if the player is not being polymorphed
+	{
+		sprite_index = s_Player;
+	}
 }
 else
 {
-	sprite_index = s_PlayerMovement;
+	if(sprite_index != SlimeSprite) //if the player is not being polymorphed
+	{
+		sprite_index = s_PlayerMovement;
+	}
 }

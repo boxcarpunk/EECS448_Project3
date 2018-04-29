@@ -4,38 +4,25 @@ MaxHealth = 3; //maximum amount of health the monster has
 FullDamageCooldown = 20;
 CurrentDamageCooldown = FullDamageCooldown;
 
-//movement and ranges
-MoveSpeed = 0; //movement speed (in pixels per step) of the monster 
-AggroRange = 0; //range at which the monster will start engaging the player
-StopRange = 0; //range at which the monster will stop persuing the player and just fire
-FleeRange = 0; //range at which the monster will go get help (or panic)
-CurrentState = MonsterMovementState.AggroState;
+//movement
+enum CultistMovement
+{
+	Firing,
+	Teleporting,
+	Idle
+}
+CultistMovementState = CultistMovement.Firing;
+TeleportCooldown = 3; //amount of time (in seconds) after firing that a cultist will teleport
 
 //attack
 ProjectileDamage = 1; //amount of damage the monster's projectiles do
-ProjectileRange = 0; //range at which the monster will fire projectiles
-ProjectileCooldown = 2; //amount of time (in seconds) between firing a projectile
-
-MeleeDamage = 0; //amount of damage the monster's melee attack does
-MeleeRange = 0; //the range at which the monster will start attempting melee attacks
-MeleeCooldown = 0; //amount of time (in seconds) between melee attacks
-
-CanAttack = true; //flag indicating whether the monster can attack
-
-//sprites
-DeathAnimation = SlimeDeath; //the sprite that the monster will use when it dies
-DeathEndFrame = 7; //the last frame of the death animation
-ProjectileSprite = Slimeball; //the sprite that the monster's projectile will use
-ProjectileDestruction = SlimeballExplosion; //the sprite that the projectile will use upon death
-ProjectileDeathEndFrame = 5; //the last frame in the projectile's death animation
-
-//other
-SearchTime = 0; //amount of time the monster will search for the player (time between disengaging and continuing patrol)
-SearchTimer = false; //a flag that indicates whether the search timer has been set or not
+ProjectileCooldown = 2; //amount of time (in seconds) after teleporting that a cultist will fire
+DebuffTime = 2; //amount of time (in seconds) to apply debuffs for
+CanAttack = false; //flag indicating whether the monster can attack or not
 DamageType = "Ranged"; //the type of damage the monster does, either Ranged or Melee
-myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);
 
 //projectiles
+AmountProjectileTypes = 6; //stores the amount of projectiles the cultist can use
 enum ProjectileType
 {
 	Lightning,
@@ -45,3 +32,9 @@ enum ProjectileType
 	PolymorphSelf,
 	Default
 }
+
+//sprites
+ProjectileSprite = RedProjectileSprite; //the sprite that the monster's projectile will use
+
+//other
+myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);
