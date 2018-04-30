@@ -1,3 +1,8 @@
+enum playerSelect {
+	Kurt,
+	DrBardas
+}
+
 ///Initialize variables
 MoveLeft = 0;
 MoveRight = 0;
@@ -15,3 +20,10 @@ scr_inventory_create(6);
 name = "Kurt Slagle"
 global.item_index = 0;
 //scr_inventory_add(obj_Solid);
+
+currentPlayer = playerSelect.Kurt;
+playerProfile = s_Player;
+playerMoveSpr = s_PlayerMovement;
+playerAttackSpr = s_PlayerAttack;
+playerDyingSpr = s_DeathAnimation;
+playerDeadSpr = s_Death_Down;

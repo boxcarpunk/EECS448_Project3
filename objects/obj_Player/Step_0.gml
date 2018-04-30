@@ -1,3 +1,23 @@
+switch(currentPlayer){
+	
+	case playerSelect.DrBardas:
+		playerProfile = s1_Player
+		playerMoveSpr = s1_PlayerMovement;
+		playerAttackSpr = s1_PlayerAttack;
+		playerDyingSpr = s1_Death_Animation;
+		playerDeadSpr = s1_Death_Down;
+		break;
+		
+	case playerSelect.Kurt:
+	default:
+		playerProfile = s_Player
+		playerMoveSpr = s_PlayerMovement;
+		playerAttackSpr = s_PlayerAttack;
+		playerDyingSpr = s_DeathAnimation;
+		playerDeadSpr = s_Death_Down;
+		break;
+}
+
 if(PlayerHealth>0){ //if the player is not dead
 	dying = false
 	RAttack = mouse_check_button_pressed(mb_right); //right mouse click
@@ -37,10 +57,10 @@ if(PlayerHealth>0){ //if the player is not dead
 	switch(state)
 	{
 		case states.normal:
-			scr_player_default();
+			scr_player_default(playerProfile, playerMoveSpr);
 			break;
 		case states.attack:
-			scr_player_attack();
+			scr_player_attack(playerAttackSpr);
 			break;
 	}
 	
@@ -105,7 +125,7 @@ mid = true;
 }
 else if (PlayerHealth <= 0 && !dying) //if player died
 {
-	sprite_index = s_DeathAnimation;
+	sprite_index = playerDyingSpr;
 	dying = true;
 }	
 else if (dying) //after player died
@@ -114,7 +134,7 @@ else if (dying) //after player died
 	{
 		if (image_index > image_number - 1)
 		{
-			sprite_index=s_Death_Down; //still death sprite
+			sprite_index=playerDeadSpr; //still death sprite
 		}
 	}
 }
