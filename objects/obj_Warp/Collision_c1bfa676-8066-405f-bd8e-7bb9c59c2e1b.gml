@@ -1,15 +1,19 @@
 /// @description Insert description here
 
 NearestPlayer = instance_nearest(self.x, self.y, obj_Player);
+fadeOut = true;
 if(drop)
 {
-	room_goto(targetRoom);
+	//room_goto(targetRoom);
 	//NearestPlayer.x=targetX;
 	//NearestPlayer.y;
 }
 else
 {
-	room_goto(targetRoom);
-	NearestPlayer.x=targetX;
-	NearestPlayer.y=targetY;
+	if(warp)
+	{
+		room_goto(targetRoom);
+		NearestPlayer.x=targetX;
+		NearestPlayer.y=targetY;
+	}
 }

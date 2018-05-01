@@ -32,61 +32,9 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Bridge2_Collision",
-            "id": "8cd94405-03d5-47e5-b518-8fc3fa6450b7",
-            "depth": 0,
-            "grid_x": 68,
-            "grid_y": 68,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_475EA5DF","id": "6b6769ef-8892-4c25-b5f0-fd4655fa2aeb","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_475EA5DF","objId": "5911f521-f8ec-48b5-98cc-3008095ac98e","properties": null,"rotation": 0,"scaleX": 2,"scaleY": 1,"mvc": "1.0","x": 748,"y": 340}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Bridge1_Collision",
-            "id": "9a4f0ebf-a361-486b-a0f1-635185768582",
-            "depth": 100,
-            "grid_x": 68,
-            "grid_y": 68,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_64778883","id": "a987b060-d909-45d1-8b9d-73e6c07d0b01","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_64778883","objId": "5911f521-f8ec-48b5-98cc-3008095ac98e","properties": null,"rotation": 0,"scaleX": 2,"scaleY": 1,"mvc": "1.0","x": 748,"y": 408}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Collision_Instance",
             "id": "6c7db1c5-0ed4-44c3-9392-b698da5fbcb4",
-            "depth": 200,
+            "depth": 0,
             "grid_x": 68,
             "grid_y": 68,
             "hierarchyFrozen": false,
@@ -113,6 +61,58 @@
 {"name": "inst_2B467C40","id": "94b814dc-70bd-44ed-977a-31a8993620f1","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2B467C40","objId": "65e55784-5d24-4baf-9974-b68185380831","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 920,"y": 852},
 {"name": "inst_37DD1092","id": "0004f86e-bba6-4bb8-855b-627a6f136a6c","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_37DD1092","objId": "5911f521-f8ec-48b5-98cc-3008095ac98e","properties": null,"rotation": 0,"scaleX": 2,"scaleY": 2,"mvc": "1.0","x": 884,"y": 340},
 {"name": "inst_5AFA0358","id": "4ea59571-7d63-4684-9b96-69467e307375","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_5AFA0358.gml","creationCodeType": ".gml","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_5AFA0358","objId": "98566563-c3ef-4dcd-8b7a-f748d1bd93ef","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 0.5,"mvc": "1.0","x": 1360,"y": 136}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Bridge2_Collision",
+            "id": "8cd94405-03d5-47e5-b518-8fc3fa6450b7",
+            "depth": 100,
+            "grid_x": 68,
+            "grid_y": 68,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_475EA5DF","id": "6b6769ef-8892-4c25-b5f0-fd4655fa2aeb","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_475EA5DF","objId": "5911f521-f8ec-48b5-98cc-3008095ac98e","properties": null,"rotation": 0,"scaleX": 2,"scaleY": 1,"mvc": "1.0","x": 748,"y": 340}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Bridge1_Collision",
+            "id": "9a4f0ebf-a361-486b-a0f1-635185768582",
+            "depth": 200,
+            "grid_x": 68,
+            "grid_y": 68,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_64778883","id": "a987b060-d909-45d1-8b9d-73e6c07d0b01","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_64778883","objId": "5911f521-f8ec-48b5-98cc-3008095ac98e","properties": null,"rotation": 0,"scaleX": 2,"scaleY": 1,"mvc": "1.0","x": 748,"y": 408}
             ],
             "layers": [
 

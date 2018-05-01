@@ -3,3 +3,8 @@
 
 var targetRoom, targetX, targetY;
 drop = false;
+fadeOut = false;
+fadeIn = true;
+warp = false;
+global.dim = 0.01;
+_fadeStartTime = 0;
