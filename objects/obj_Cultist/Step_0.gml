@@ -73,7 +73,7 @@ if(NearestPlayer != noone)
 	//death condition
 	if(Health <= 0)
 	{
-		/*
+		
 		Health = 0; //sets health back to 0 in case it went below 0
 		//don't let the monster move or attack
 		MoveSpeed = 0;
@@ -90,9 +90,9 @@ if(NearestPlayer != noone)
 		image_speed = 1; //play the animation
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
-		{*/
+		{
 			instance_destroy(); //destroy the monster
-		//}
+		}
 	}
 	
 	//projectile attack
@@ -109,14 +109,16 @@ if(NearestPlayer != noone)
 				case ProjectileType.Lightning:
 					Damage = other.ProjectileDamage; //sets the projectile's damage
 					ProjectileSprite = LightningProjectileSprite; //set the projectile's sprite
-					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					DestructionSprite = LightningProjectileSprite_Explosion; //set the projectile's death sprite
+					DestructionEndFrame = 8; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
 					speed = 25; //lightning moves faster than regular projectiles
 				break;
 				
 				case ProjectileType.SlowPlayer:
 					Damage = other.ProjectileDamage; //sets the projectile's damage
 					ProjectileSprite = BlueProjectileSprite; //set the projectile's sprite
-					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					DestructionSprite = BlueProjectile_Explosion; //set the projectile's death sprite
+					DestructionEndFrame = 6; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
 					Debuff = DebuffType.Slow; //stores the type of debuff to apply
 					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
 				break;
@@ -124,7 +126,8 @@ if(NearestPlayer != noone)
 				case ProjectileType.HealPlayer:
 					Damage = 0; //sets the projectile's damage
 					ProjectileSprite = GreenProjectileSprite; //set the projectile's sprite
-					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					DestructionSprite = GreenProjectileSprite_Explosion; //set the projectile's death sprite
+					DestructionEndFrame = 6; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
 					Debuff = DebuffType.Heal; //stores the type of debuff to apply
 					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
 				break;
@@ -132,7 +135,8 @@ if(NearestPlayer != noone)
 				case ProjectileType.PolymorphPlayer:
 					Damage = other.ProjectileDamage; //sets the projectile's damage
 					ProjectileSprite = PurpleProjectileSprite; //set the projectile's sprite
-					DeathEndFrame = -1; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					DestructionSprite = PurpleFireball_Explosion; //set the projectile's death sprite
+					DestructionEndFrame = 6; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
 					Debuff = DebuffType.Polymorph; //stores the type of debuff to apply
 					DebuffTime = other.DebuffTime; //stores the amount of time the debuff will last
 				break;
@@ -142,9 +146,10 @@ if(NearestPlayer != noone)
 				break;
 				
 				case ProjectileType.Default:
-					Damage = other.ProjectileDamage; //sets the projectile's damage
+					Damage = 2; //sets the projectile's damage
 					ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
-					DeathEndFrame = 0; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
+					DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
+					DestructionEndFrame = 7; //there is no death animation for the cultist's projectiles so just destroy immediately upon collision
 				break;
 			}
 		}

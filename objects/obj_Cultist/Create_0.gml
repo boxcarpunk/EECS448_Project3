@@ -34,7 +34,11 @@ enum ProjectileType
 }
 
 //sprites
+DeathAnimation = clockedFigure_Death; //the sprite that the monster will use when it dies
+DeathEndFrame = 7; //the last frame of the death animation
 ProjectileSprite = RedProjectileSprite; //the sprite that the monster's projectile will use
+ProjectileDestruction = RedProjectileSprite_Explosion; //the sprite that the projectile will use upon death
+ProjectileDeathEndFrame = 5; //the last frame in the projectile's death animation
 
 //other
 myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);

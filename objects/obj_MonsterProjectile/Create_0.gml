@@ -11,6 +11,6 @@ Debuff = noone; //the type of debuff to apply upon collision with a character (i
 DebuffTime = 0; //amount of time (in seconds) to apply the debuff for
 
 //sprites
-ProjectileSprite = Slimeball; //the sprite for the projectile
+ProjectileSprite = noone; //the sprite for the projectile
 DestructionSprite = noone; //the death sprite for the projectile
-DestructionEndFrame = 5; //the last frame in the death sprite animation
+DestructionEndFrame = 0; //the last frame in the death sprite animation
