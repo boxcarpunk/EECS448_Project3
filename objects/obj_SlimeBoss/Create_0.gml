@@ -36,8 +36,8 @@ while(CollisionID != noone) //while you are colliding with another object
 {
 	XSign = sign(self.x-CollisionID.x); //find out whether your x is greater than or less than the colliding instance
 	YSign = sign(self.y-CollisionID.y); //find out whether your y is greater than or less than the colliding instance
-	x += XSign*5; //move 5 pixels away from the colliding instance in the x direction
-	y += YSign*5; //move 5 pixels away from the colliding instance in the y direction
+	x += XSign*1; //move 5 pixels away from the colliding instance in the x direction
+	y += YSign*1; //move 5 pixels away from the colliding instance in the y direction
 	CollisionID = instance_place(self.x, self.y, all); //detect a collision with any other object
 }
 

@@ -1,6 +1,6 @@
 NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the nearest player
 self.direction = point_direction(x, y, NearestPlayer.x, NearestPlayer.y);
-image_angle = point_direction(x, y, NearestPlayer.x, NearestPlayer.y)-32;
+image_angle = point_direction(x, y, NearestPlayer.x, NearestPlayer.y);
 self.speed=15;
 Damage = 0;
 DeleteProjectile = false;

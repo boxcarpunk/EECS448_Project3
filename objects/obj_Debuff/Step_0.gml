@@ -6,8 +6,7 @@ if(!DebuffApplied) //if the debuff has not been applied yet
 			DebuffApplied = true; //the debuff is being applied
 			with(AppliesTo) //code inside the instance the debuff is applied to
 			{
-				other.ResetValue = speed; //store the current player speed
-				speed = other.ResetValue*0.5; //reduce the instance's speed by 50%
+				player_speed = player_speed/2; //reduce the instance's speed by 50%
 			}
 			alarm[0] = DebuffTime*game_get_speed(gamespeed_fps); //set a timer that will reset the instance's speed upon completion
 		break;

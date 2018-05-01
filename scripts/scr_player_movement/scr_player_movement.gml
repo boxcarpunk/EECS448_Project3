@@ -6,7 +6,6 @@ MoveLeft = 0;
 MoveRight = 0;
 MoveUp = 0;
 MoveDown = 0;
-var player_speed = 15;
 if(MLeft)
 {
 	MoveLeft = -player_speed;
