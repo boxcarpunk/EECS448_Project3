@@ -11,6 +11,7 @@ if(instance_place(x, y, obj_Solid) )
 		}
 	}
 }
+
 //death animation
 if(DeleteProjectile)
 {

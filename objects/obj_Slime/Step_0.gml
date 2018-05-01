@@ -14,11 +14,11 @@ if(NearestPlayer != noone)
 		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
 		with(ProjectileID)
 		{
-			Damage = other.ProjectileDamage; //sets the projectile's damage
-			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
-			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
-			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
-			image_angle = point_direction(self.x, self.y, NearestPlayer.x, NearestPlayer.y)*-32;
+			self.Damage = other.ProjectileDamage; //sets the projectile's damage
+			self.ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
+			self.DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
+			self.DestructionEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
+			self.image_angle = point_direction(self.x, self.y, NearestPlayer.x, NearestPlayer.y)*-32;
 		}
 		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 	}
