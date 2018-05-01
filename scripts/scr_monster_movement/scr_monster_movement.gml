@@ -118,7 +118,7 @@ switch(CurrentState)
 		
 		if(distance_to_object(NearestPlayer) > FleeRange) //if the player leaves flee range
 		{
-			CurrentState = MonsterMovementState.SearchState; //move to the stop state
+			CurrentState = MonsterMovementState.SearchState; //move to the search state
 		}
 	break;
 	case MonsterMovementState.GettingHelpState:

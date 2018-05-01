@@ -687,6 +687,14 @@
             }
         },
         {
+            "Key": "900595a9-cb12-451f-bb9c-54ad311c8246",
+            "Value": {
+                "id": "2c92ec0b-f815-4e66-8b31-3b722d2998e0",
+                "resourcePath": "objects\\obj_SpawnNote\\obj_SpawnNote.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90d7a746-f90b-460c-ac1d-53347b10356e",
             "Value": {
                 "id": "94723584-7ed0-421d-889f-be31671a3fec",
@@ -747,6 +755,14 @@
             "Value": {
                 "id": "cc9f58e4-5081-41dc-b527-816420cb22e4",
                 "resourcePath": "objects\\obj_Climb\\obj_Climb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "986fe740-f224-46b2-99b3-bd6fab8e098c",
+            "Value": {
+                "id": "516f1d36-7eb3-4b76-92c4-a85046ac50a6",
+                "resourcePath": "objects\\obj_LockedDoor\\obj_LockedDoor.yy",
                 "resourceType": "GMObject"
             }
         },

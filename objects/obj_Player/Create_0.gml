@@ -20,6 +20,7 @@ scr_inventory_create(6);
 name = "Kurt Slagle"
 global.item_index = 0;
 god = false;
+player_speed = 15;
 
 currentPlayer = playerSelect.Kurt;
 playerProfile = s_Player;
