@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "1a6e5aa5-c0b1-4b9d-838a-ed0c29b1e722",
+            "Value": {
+                "id": "077f2f05-28db-4b05-a090-0180066692ae",
+                "resourcePath": "sprites\\clockedFigure_Death\\clockedFigure_Death.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1bbff06d-ddd3-443d-af32-399afbd8188e",
             "Value": {
                 "id": "d29fde32-f08f-4513-a152-92570c490088",
@@ -243,6 +251,14 @@
             "Value": {
                 "id": "6bac4ef0-546f-4be3-8858-b4492d73c365",
                 "resourcePath": "sprites\\s1_Death_Animation\\s1_Death_Animation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "35e62652-91e4-4408-9283-f0cbe25e750a",
+            "Value": {
+                "id": "e312ea9f-692c-47af-a787-f9e8411ba43c",
+                "resourcePath": "sprites\\RedProjectileSprite_Explosion\\RedProjectileSprite_Explosion.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -671,6 +687,14 @@
             }
         },
         {
+            "Key": "900595a9-cb12-451f-bb9c-54ad311c8246",
+            "Value": {
+                "id": "2c92ec0b-f815-4e66-8b31-3b722d2998e0",
+                "resourcePath": "objects\\obj_SpawnNote\\obj_SpawnNote.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90d7a746-f90b-460c-ac1d-53347b10356e",
             "Value": {
                 "id": "94723584-7ed0-421d-889f-be31671a3fec",
@@ -735,6 +759,14 @@
             }
         },
         {
+            "Key": "986fe740-f224-46b2-99b3-bd6fab8e098c",
+            "Value": {
+                "id": "516f1d36-7eb3-4b76-92c4-a85046ac50a6",
+                "resourcePath": "objects\\obj_LockedDoor\\obj_LockedDoor.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "99b82f7a-2ca0-4f69-86cb-c1cdec515034",
             "Value": {
                 "id": "a638b109-93aa-4686-af3d-b1f4e4827e1c",
@@ -748,6 +780,22 @@
                 "id": "495181e5-a86f-4b20-aeb9-3f52fb978ecb",
                 "resourcePath": "scripts\\scr_help_screen\\scr_help_screen.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9d8deebf-6d28-4e12-acd6-321c496ef1c8",
+            "Value": {
+                "id": "6948197d-1c06-481e-a8c5-75825268901b",
+                "resourcePath": "sprites\\LightningProjectileSprite_Explosion\\LightningProjectileSprite_Explosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9e779f6d-eb94-4f00-8be7-84f745925902",
+            "Value": {
+                "id": "74d7734d-ec5c-4243-ab1e-1d1a07f0fda8",
+                "resourcePath": "sprites\\BlueProjectile_Explosion\\BlueProjectile_Explosion.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1103,6 +1151,22 @@
             }
         },
         {
+            "Key": "e4cb25f5-a935-4fb1-912d-8061d1a89c1b",
+            "Value": {
+                "id": "a07dae48-c55c-46cc-b79d-d5c36cef4d91",
+                "resourcePath": "sprites\\GreenProjectileSprite_Explosion\\GreenProjectileSprite_Explosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e577f88e-a85c-449f-8575-5e109994b025",
+            "Value": {
+                "id": "9b6fd3fd-03a5-4c47-99ef-f13f14ab8c01",
+                "resourcePath": "sprites\\sprite49\\sprite49.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e6043717-d369-4c9e-a761-e3ab0b8c1d0b",
             "Value": {
                 "id": "d1e05166-3bd8-4daf-942d-ebd9b99957a7",
@@ -1228,6 +1292,14 @@
                 "id": "707302f1-660a-4da0-b74f-8fd63707d9d7",
                 "resourcePath": "paths\\Room0LowerPatrol\\Room0LowerPatrol.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "f68b3e19-e87b-4945-9de8-c885e0684aeb",
+            "Value": {
+                "id": "14699ec4-2ed8-43ca-bd83-c987a554410e",
+                "resourcePath": "sprites\\PurpleFireball_Explosion\\PurpleFireball_Explosion.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

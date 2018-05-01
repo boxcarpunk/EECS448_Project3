@@ -11,12 +11,12 @@ enum CultistMovement
 	Teleporting,
 	Idle
 }
-CultistMovementState = CultistMovement.Firing;
-TeleportCooldown = 3; //amount of time (in seconds) after firing that a cultist will teleport
+CultistMovementState = CultistMovement.Teleporting;
+TeleportCooldown = 3+random_range(-.5,.5); //amount of time (in seconds) after firing that a cultist will teleport
 
 //attack
 ProjectileDamage = 1; //amount of damage the monster's projectiles do
-ProjectileCooldown = 2; //amount of time (in seconds) after teleporting that a cultist will fire
+ProjectileCooldown = 2+random_range(-.5,.5); //amount of time (in seconds) after teleporting that a cultist will fire
 DebuffTime = 2; //amount of time (in seconds) to apply debuffs for
 CanAttack = false; //flag indicating whether the monster can attack or not
 DamageType = "Ranged"; //the type of damage the monster does, either Ranged or Melee

@@ -18,6 +18,7 @@ if(NearestPlayer != noone)
 			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
 			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
 			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
+			image_angle = point_direction(self.x, self.y, NearestPlayer.x, NearestPlayer.y)*-32;
 		}
 		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 	}
@@ -102,7 +103,7 @@ if(NearestPlayer != noone)
 		
 		if(NearCounter >= 3) //if there are at least four nearby slimes (counting self)
 		{
-			instance_create_depth(x, y, "Player_Instance", obj_SlimeBoss); //spawn the boss
+			instance_create_depth(1037, 425, "Player_Instance", obj_SlimeBoss); //spawn the boss
 		}
 	}
 
