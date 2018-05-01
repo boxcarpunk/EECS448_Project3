@@ -43,12 +43,6 @@ if(NearestPlayer != noone)
 		image_xscale=1;
 	}
 
-	//movement
-	if(Health > 0)
-	{
-		scr_monster_movement();
-	}
-
 	//death condition
 	if(Health <= 0)
 	{
@@ -73,46 +67,52 @@ if(NearestPlayer != noone)
 		}
 	}
 	
-	//projectile attack
-	if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange) && (DamageType == "Ranged")) //if the player is within range and cooldown is over
+	if(Health > 0)
 	{
-		CanAttack = false; //reset the cooldown flag
-		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
-		with(ProjectileID)
-		{
-			Damage = other.ProjectileDamage; //sets the projectile's damage
-			ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
-			DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
-			DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
-		}
-		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
-	}
+		//movement
+		scr_monster_movement();
 	
-	//melee attack
-	if(CanAttack && (DamageType == "Melee") && (distance_to_object(NearestPlayer) < MeleeRange))
-	{
-		CanAttack = false; //reset the cooldown flag
-		MonsterHitbox = instance_create_depth(x,y,-10000,obj_Enemy_Hitbox); //create a hitbox
-		var AttackingMonster = self; //store the id of the attacking monster into a variable
-		
-		with(MonsterHitbox) //goes into the hitbox code
+		//projectile attack
+		if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange) && (DamageType == "Ranged")) //if the player is within range and cooldown is over
 		{
-			image_xscale = AttackingMonster.image_xscale; //scale the hitbox to the monster
-			PlayerHurtbox = instance_place(x,y,obj_Char_Hurtbox); //checks if the hitbox is colliding with a player's hurtbox and stores the id if so
-			
-			if(PlayerHurtbox) //if there is a collision
+			CanAttack = false; //reset the cooldown flag
+			ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
+			with(ProjectileID)
 			{
-				with(PlayerHurtbox) //goes into the code for the hurtbox being collided with
+				Damage = other.ProjectileDamage; //sets the projectile's damage
+				ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
+				DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
+				DeathEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
+			}
+			alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
+		}
+	
+		//melee attack
+		if(CanAttack && (DamageType == "Melee") && (distance_to_object(NearestPlayer) < MeleeRange))
+		{
+			CanAttack = false; //reset the cooldown flag
+			MonsterHitbox = instance_create_depth(x,y,-10000,obj_Enemy_Hitbox); //create a hitbox
+			var AttackingMonster = self; //store the id of the attacking monster into a variable
+		
+			with(MonsterHitbox) //goes into the hitbox code
+			{
+				image_xscale = AttackingMonster.image_xscale; //scale the hitbox to the monster
+				PlayerHurtbox = instance_place(x,y,obj_Char_Hurtbox); //checks if the hitbox is colliding with a player's hurtbox and stores the id if so
+			
+				if(PlayerHurtbox) //if there is a collision
 				{
-					with(instance_place(x,y,obj_Player)) //goes into the code for the player being attacked
+					with(PlayerHurtbox) //goes into the code for the hurtbox being collided with
 					{
-						PlayerHealth -= AttackingMonster.MeleeDamage;
+						with(instance_place(x,y,obj_Player)) //goes into the code for the player being attacked
+						{
+							PlayerHealth -= AttackingMonster.MeleeDamage;
+						}
 					}
 				}
 			}
-		}
 		
-		instance_destroy(MonsterHitbox); //delete the hitbox
-		alarm[0] = MeleeCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can attack again
+			instance_destroy(MonsterHitbox); //delete the hitbox
+			alarm[0] = MeleeCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can attack again
+		}
 	}
 }
