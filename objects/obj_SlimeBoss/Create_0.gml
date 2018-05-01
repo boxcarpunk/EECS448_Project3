@@ -30,14 +30,3 @@ for(i = 0; i < 4; i++) //iterates 4 times
 	instance_destroy(instance_nearest(self.x, self.y, obj_Slime)); //deletes the nearest slime
 }
 
-//anti-collision upon spawning
-CollisionID = instance_place(self.x, self.y, all); //detect a collision with any other object
-while(CollisionID != noone) //while you are colliding with another object
-{
-	XSign = sign(self.x-CollisionID.x); //find out whether your x is greater than or less than the colliding instance
-	YSign = sign(self.y-CollisionID.y); //find out whether your y is greater than or less than the colliding instance
-	x += XSign*1; //move 5 pixels away from the colliding instance in the x direction
-	y += YSign*1; //move 5 pixels away from the colliding instance in the y direction
-	CollisionID = instance_place(self.x, self.y, all); //detect a collision with any other object
-}
-

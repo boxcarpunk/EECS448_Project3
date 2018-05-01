@@ -103,7 +103,7 @@ if(NearestPlayer != noone)
 		
 		if(NearCounter >= 3) //if there are at least four nearby slimes (counting self)
 		{
-			instance_create_depth(x, y, "Player_Instance", obj_SlimeBoss); //spawn the boss
+			instance_create_depth(1037, 425, "Player_Instance", obj_SlimeBoss); //spawn the boss
 		}
 	}
 
