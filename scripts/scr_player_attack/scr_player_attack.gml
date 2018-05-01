@@ -1,4 +1,4 @@
-sprite_index = s_PlayerAttack;
+sprite_index = argument0;
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {

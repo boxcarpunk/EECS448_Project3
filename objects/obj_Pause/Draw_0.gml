@@ -69,8 +69,8 @@ else
 	
 		//draw player profile
 		draw_rectangle_color(camera_get_view_x(view_camera[0]) + profileOffsetX,camera_get_view_y(view_camera[0]) + profileOffsetY - borderWidth, camera_get_view_x(view_camera[0]) + profileSize + profileOffsetX + borderWidth*2,camera_get_view_y(view_camera[0]) + profileSize + profileOffsetY + borderWidth,borderColor, borderColor,borderColor, borderColor, false);
-		draw_sprite_ext(s_profile, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth, camera_get_view_y(view_camera[0]) + profileOffsetY, profileSize/sprite_get_width(s_Player), profileSize/sprite_get_width(s_Player),0,c_white,1 );
-
+		draw_sprite_ext(player.playerProfile, 0, camera_get_view_x(view_camera[0]) + profileOffsetX +  borderWidth + sprite_get_xoffset(player.playerProfile), camera_get_view_y(view_camera[0]) + profileOffsetY+ sprite_get_yoffset(player.playerProfile), profileSize/sprite_get_width(s_Player), profileSize/sprite_get_width(s_Player),0,c_white,1 );
+	
 		//draw player name
 		playerName = instance_find(obj_Player, 0).name;
 		textOffsetX = 3
@@ -78,7 +78,7 @@ else
 		draw_set_alpha(1);
 		draw_set_font(NameFont);
 		draw_set_halign(fa_left);
-		draw_outlined_text(camera_get_view_x(view_camera[0])+profileSize + healthOffset + textOffsetX,camera_get_view_y(view_camera[0])+profileSize + healthOffset - 10, playerName, c_dkgray, c_ltgray);
+		draw_outlined_text(camera_get_view_x(view_camera[0])+profileSize + healthOffset + textOffsetX,camera_get_view_y(view_camera[0])+profileSize + healthOffset - 10, player.name, c_dkgray, c_ltgray);
 	
 		//draw the player ability icon	
 		abilityBoxSize = 60;

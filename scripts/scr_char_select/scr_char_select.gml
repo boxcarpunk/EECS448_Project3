@@ -1,6 +1,7 @@
 prevAlpha = draw_get_alpha();
 prevColor = draw_get_color();
 
+
 //draw a darker cover over the background
 draw_set_alpha(.75);
 draw_set_color(c_black);
@@ -41,6 +42,13 @@ for(i = 0; i < array_length_1d(players); i++) {
 		draw_set_color(c_black);
 		draw_rectangle(charX- sprite_get_xoffset(players[i]) , charY- sprite_get_yoffset(players[i]), charX - sprite_get_xoffset(players[i])+ sprite_get_width(players[i]), charY- sprite_get_yoffset(players[i]) + sprite_get_height(players[i]), false);
 		draw_set_color(c_yellow);
+		
+		if(i = 0)
+			global.localPlayer.currentPlayer = playerSelect.DrBardas;
+		else if(i = 1)
+			global.localPlayer.currentPlayer = playerSelect.Kurt;
+		else
+			global.localPlayer.currentPlayer = playerSelect.Kurt;
 	}
 	
 	draw_sprite(players[i],0, charX, charY);

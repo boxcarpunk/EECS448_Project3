@@ -1,6 +1,7 @@
 switch(currentPlayer){
 	
 	case playerSelect.DrBardas:
+		name = "Dr. Bardas"
 		playerProfile = s1_Player
 		playerMoveSpr = s1_PlayerMovement;
 		playerAttackSpr = s1_PlayerAttack;
@@ -10,6 +11,7 @@ switch(currentPlayer){
 		
 	case playerSelect.Kurt:
 	default:
+		name = "Kurt Slagle"
 		playerProfile = s_Player
 		playerMoveSpr = s_PlayerMovement;
 		playerAttackSpr = s_PlayerAttack;

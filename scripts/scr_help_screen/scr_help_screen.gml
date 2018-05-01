@@ -14,12 +14,12 @@ draw_text(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[
 	
 draw_set_font(UIFont);
 //--------------Draw Buttons--------------
-images = [s_wasd_keys, s_tab_key, s_left_mouse, s_right_mouse]; 
-imagesx = [camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*11/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*5/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*20/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*25/30];
-imagesy = [camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*20/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30];
+images = [s_wasd_keys, s_tab_key, s_left_mouse, s_right_mouse, s_e_key]; 
+imagesx = [camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*11/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*3/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*20/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*25/30, camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])*13/30];
+imagesy = [camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*20/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])*12/30];
 
 i = 0;
-for(i=0;i < 4; i++){
+for(i=0; i < array_length_1d(images); i++){
 	draw_sprite_ext(images[i], 0,imagesx[i],imagesy[i],0.5,0.5,0,c_white,1);
 	switch(i){
 		case 0:
@@ -33,6 +33,9 @@ for(i=0;i < 4; i++){
 			break;
 		case 3:
 			draw_text(imagesx[i] + sprite_get_width(images[i])/4, imagesy[i] - 30,"Slash");
+			break;
+		case 4:
+			draw_text(imagesx[i] + sprite_get_width(images[i])/4,imagesy[i] - 30,"Interact");
 			break;
 	}
 }
