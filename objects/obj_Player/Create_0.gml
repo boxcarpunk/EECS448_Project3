@@ -19,7 +19,7 @@ myHurtbox = instance_create_depth(x,y,-1000,obj_Char_Hurtbox);//draws player hur
 scr_inventory_create(6);
 name = "Kurt Slagle"
 global.item_index = 0;
-//scr_inventory_add(obj_Solid);
+god = false;
 
 currentPlayer = playerSelect.Kurt;
 playerProfile = s_Player;

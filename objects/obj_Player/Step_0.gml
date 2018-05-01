@@ -139,6 +139,15 @@ else if (dying) //after player died
 	}
 }
 
+if(keyboard_check_pressed((ord("G"))))
+{
+	god = !god;
+}
+
+if(god)
+{
+	PlayerHealth = MaxPlayerHealth;
+}
 
 /*
 with(instance_place(x,y,obj_Char_Hurtbox))

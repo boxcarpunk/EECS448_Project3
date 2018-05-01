@@ -1,4 +1,7 @@
 /// @description Insert description here
 
-Message = "test";
-
+if(run)
+{
+	room_goto(room1);
+	
+}
