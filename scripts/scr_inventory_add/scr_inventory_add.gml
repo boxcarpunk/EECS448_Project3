@@ -30,6 +30,7 @@ for(var i = 0; i < array_length_1d(global.inventory); i++)
 				
 			}
 		}
+		inv_item.persistent = true; //make the item persistent so it doesn't despawn in inv between rooms
 		global.inventory[i] = inv_item;//add the item to the open inventory slot
 		//global.inventory[i].itemIndex = _selfSprite;
 		break;//break out of loop to avoid filling all slots with duplicates

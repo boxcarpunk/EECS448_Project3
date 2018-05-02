@@ -42,6 +42,7 @@ if(NearestPlayer != noone)
 		CurrentDamageCooldown++;
 	}
 
+/*
 	//layer monster and character correctly
 	if(NearestPlayer.y < self.y)
 	{
@@ -59,6 +60,7 @@ if(NearestPlayer != noone)
 	{
 		image_xscale=1;
 	}
+*/
 
 	//movement
 	if(Health > 0)
