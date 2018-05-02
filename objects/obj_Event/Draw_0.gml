@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Draws the message to the screen
 
 draw_set_color(c_white);
 draw_set_alpha(1);

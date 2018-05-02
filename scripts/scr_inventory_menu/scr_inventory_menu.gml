@@ -23,27 +23,26 @@ var _y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[
 
 if(keyboard_check_pressed(ord("D")))
 {
-	//MLeft = !MLeft;
-	global.item_index = min(global.item_index+1, array_length_1d(global.inventory)-1);
+	global.item_index = min(global.item_index+1, array_length_1d(global.inventory)-1);//select the slot to the right
 }
 if(keyboard_check_pressed(ord("A")))
 {
-	//MRight = !MRight;
-	global.item_index = max(global.item_index-1, 0);
+	global.item_index = max(global.item_index-1, 0);//select the slot to the left
 }
 
 if(keyboard_check(vk_enter))
 {
-	if(global.inventory[global.item_index] = obj_spellbook)
+	//show_message(global.inventory[global.item_index]);
+	if(object_get_name(global.inventory[global.item_index].object_index) == "obj_spellbook")//if the selected item is a spellbook
 	{
-		global.equippedItem = global.inventory[global.item_index];
+		global.equippedItem = global.inventory[global.item_index];//equip the item
 	}
 }
 else if(keyboard_check(vk_backspace))
 {
-	if(global.inventory[global.item_index] = global.equippedItem)
+	if(global.inventory[global.item_index] = global.equippedItem)//if the selected item is the equipped item
 	{
-		global.equippedItem = noone;
+		global.equippedItem = noone;//unequip the item
 	}
 }
 
@@ -59,29 +58,28 @@ for(var i=0; i< array_length_1d(global.inventory); i++)//for each slot in array
 	
 	if(global.inventory[i] != noone)//if item exists (and is not deactivated)
 	{
-		draw_sprite(global.inventory[i].sprite_index,0, box_x, box_y);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
+		draw_sprite(global.inventory[i].sprite_index,0, box_x, box_y);//draw the sprite of the object
 	}
 	
 	if(i == global.item_index)
 	{
-		draw_sprite(InventoryCursor, image_index/8, box_x, box_y);
+		draw_sprite(InventoryCursor, image_index/8, box_x, box_y);//draw the inventory cursor
 		
 		if(instance_exists(global.inventory[i]))
 		{
-			draw_set_font(HeadingFont-20);
-			draw_text(_x+4, _y+48, global.inventory[i].description);
-			//var desc_height = string_height(global.item_index.description);
+			draw_set_font(HeadingFont-20);//set the font size
+			draw_text(_x+4, _y+48, global.inventory[i].description);//draw the description of the item 
 		}
 	}
 	
-	draw_sprite(s_inventory_box, 0, _x, _y-64);
-	if(global.equippedItem == noone)//if item exists (and is not deactivated)
+	draw_sprite(s_inventory_box, 0, _x, _y-64);//draw the equipped item slot
+	if(global.equippedItem == noone)//if item is empty
 	{
-		draw_sprite(emptySpellbook,0, _x, _y-64);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
+		draw_sprite(emptySpellbook,0, _x, _y-64);//draw the emptySpellboom sprite
 	}
-	else if(instance_exists(global.equippedItem))
+	else if(instance_exists(global.equippedItem))//if an item is equipped
 	{
-		draw_sprite(global.equippedItem.sprite_index, 0, _x, _y-64);
+		draw_sprite(global.equippedItem.sprite_index, 0, _x, _y-64);//draw the sprite of the equipped item
 	}
 	
 }

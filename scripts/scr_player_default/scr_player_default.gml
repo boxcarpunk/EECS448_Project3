@@ -2,8 +2,11 @@
 LAttack = mouse_check_button_pressed(mb_left);
 if((LAttack)&&(ProjCount == 0))
 {
-	var Proj = instance_create_depth(x,y,inst_78C8041E.depth,obj_PlayerProjectile);
-	ProjCount++;
+	if(global.equippedItem != noone)//if an item is equipped
+	{
+		var Proj = instance_create_depth(x,y,inst_78C8041E.depth,obj_PlayerProjectile);//create a projectile
+		ProjCount++;//increment projectile count
+	}
 }
 else if(ProjCount == MaxProjCount)
 {

@@ -6,17 +6,18 @@ if(NearestPlayer != noone)
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
 	myHurtbox.y = y;
-	with(instance_place(x,y,myHurtbox))
+with(instance_place(x,y,myHurtbox))
 	{
 		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
 		{
 			with(instance_place(x,y,obj_PlayerProjectile))
 			{
+				global.temp_damage = damage; //sets the damage to the damage of the projectile
 				instance_destroy(); //destroy character projectile
 			}
 			with(instance_place(x,y,obj_Monster))
 			{
-				Health--; //take one damage
+				Health-=global.temp_damage; //take damage
 			}
 		}
 	}

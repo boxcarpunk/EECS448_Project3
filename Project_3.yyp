@@ -855,14 +855,6 @@
             }
         },
         {
-            "Key": "a7ddde67-2e91-4409-aebc-a8cbe7174d5f",
-            "Value": {
-                "id": "4001a9ff-d546-47f2-a8d2-8056d39ef774",
-                "resourcePath": "scripts\\scr_lighting\\scr_lighting.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "a8349274-b934-4342-ab94-62ec74510109",
             "Value": {
                 "id": "3956a3c8-250f-405a-843f-8ffc48dcf555",
@@ -1135,6 +1127,14 @@
             }
         },
         {
+            "Key": "d97d554a-847b-42c9-a419-b8d610d060c9",
+            "Value": {
+                "id": "10915c95-5230-4327-b7ed-1ce6cca777f9",
+                "resourcePath": "sprites\\s_greaterSpellbook\\s_greaterSpellbook.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d9de701c-96e2-49da-a8d4-12d5ffa952e6",
             "Value": {
                 "id": "87946c12-ef77-4558-8144-27938d9a481c",
@@ -1395,7 +1395,6 @@
         "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
         "99b82f7a-2ca0-4f69-86cb-c1cdec515034",
         "45f0fb53-1b4d-460e-ab22-5e8e8572408b",
-        "a7ddde67-2e91-4409-aebc-a8cbe7174d5f",
         "c8ddb4e7-be1a-4962-b7f1-8d7fdd8c95bf",
         "72d36aaf-0c66-4a9d-8eaf-529b6b304b9e",
         "f4508ba4-03ae-44a3-a452-da770d5ed2d7",
