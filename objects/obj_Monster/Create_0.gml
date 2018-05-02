@@ -43,5 +43,5 @@ ProjectileDeathEndFrame = 5; //the last frame in the projectile's death animatio
 SearchTime = 2; //amount of time the monster will search for the player (time between disengaging and continuing patrol)
 SearchTimer = false; //a flag that indicates whether the search timer has been set or not
 DamageType = "Ranged"; //the type of damage the monster does, either Ranged or Melee
-myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);
+myHurtbox = instance_create_depth(x,y,"Player_Instance",obj_Enemy_Hurtbox);
 

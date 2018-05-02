@@ -30,19 +30,18 @@ if(keyboard_check_pressed(ord("A")))
 	global.item_index = max(global.item_index-1, 0);//select the slot to the left
 }
 
-if(keyboard_check(vk_enter))
+if(keyboard_check_pressed(ord("E")))
 {
-	//show_message(global.inventory[global.item_index]);
-	if(object_get_name(global.inventory[global.item_index].object_index) == "obj_spellbook")//if the selected item is a spellbook
+	if(global.inventory[global.item_index] != noone)
 	{
-		global.equippedItem = global.inventory[global.item_index];//equip the item
-	}
-}
-else if(keyboard_check(vk_backspace))
-{
-	if(global.inventory[global.item_index] = global.equippedItem)//if the selected item is the equipped item
-	{
-		global.equippedItem = noone;//unequip the item
+		if(global.inventory[global.item_index] = global.equippedItem)//if the selected item is the equipped item
+		{
+			global.equippedItem = noone;//unequip the item
+		}
+		else if(object_get_name(global.inventory[global.item_index].object_index) == "obj_spellbook")//if the selected item is a spellbook
+		{
+			global.equippedItem = global.inventory[global.item_index];//equip the item
+		}
 	}
 }
 
