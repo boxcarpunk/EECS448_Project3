@@ -167,7 +167,7 @@ obj_MonsterProjectile
 ///@description The boss' projectile, inherits from obj_MonsterProjectile
 obj_SlimeBossProjectile
 
-///@description
+///@description The debuff object that is applied to the player when hit by a projectile that is associated with a debuff (slow, heal, polymorph)
 obj_Debuff
 
 ///@description The pause object that controls all interfaces and the HUD
