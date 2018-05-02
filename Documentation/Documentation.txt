@@ -1,14 +1,14 @@
-/*@description If the player hitbox collides with the enemy hurtbox, the enemy health is decreased
-*@param none
-*@return none
-*/
-scr_player_attack()
-
 /*@description Handles player fireball shooting and changes sprites when the player turns around.
 *@param none
 *@return none
 */
 scr_player_default()
+
+/*@description If the player hitbox collides with the enemy hurtbox, the enemy health is decreased
+*@param none
+*@return none
+*/
+scr_player_attack()
 
 /*@description Handles player speed, movement, and collision.
 *@param none
@@ -16,36 +16,11 @@ scr_player_default()
 */
 scr_player_movement()
 
-/*@description Draws the pause menu the its buttons.
-*@param none
-*@return none
-*/
-scr_pause_menu
-
 /*@description Draws the player health bar
 *@param none
 *@return none
 */
 scr_slider()
-
-/*@description Handles monster sprites and movement paths
-*@param none
-*@return none
-*/
-scr_monster_movement()
-
-/*@description Draws the inventory menu, centered at the given coordinates
-*@param x coordinate
-*@param y coordinate
-*@return none
-*/
-scr_inventory_menu()
-
-/*@description Creates an inventory array of the given size 
-*@param size
-*@return none
-*/
-scr_inventory_create()
 
 /*@description Controls the cooldown box for the player's fireball ability
 *@param center x
@@ -70,12 +45,6 @@ scr_cooldown_box()
 */
 scr_button()
 
-/*@description Creates the title menu and its buttons
-*@param none
-*@return none
-*/
-scr_title_menu()
-
 /*@description Draws text on the screen at the specified coordinates
 *@param x coordinate
 *@param y coordinate
@@ -86,11 +55,72 @@ scr_title_menu()
 */
 scr_draw_outlined_text
 
+/*@description Handles monster sprites and movement paths
+*@param none
+*@return none
+*/
+scr_monster_movement()
+
+/*@description
+*@param 
+*@return 
+*/
+scr_inventory_add
+
+/*@description Creates an inventory array of the given size 
+*@param size
+*@return none
+*/
+scr_inventory_create()
+
+/*@description Draws the inventory menu, centered at the given coordinates
+*@param x coordinate
+*@param y coordinate
+*@return none
+*/
+scr_inventory_menu()
+
+/*@description Creates the title menu and its buttons
+*@param none
+*@return none
+*/
+scr_title_menu()
+
+/*@description
+*@param
+*@return
+*/
+scr_char_select()
+
+/*@description Draws the pause menu the its buttons.
+*@param none
+*@return none
+*/
+scr_pause_menu
+
+/*@description
+*@param
+*@return
+*/
+scr_help_screen()
+
 /*@description Darkens the screen the draws the death screen and its buttons
 *@param none
 *@return none
 */
 scr_death_menu()
+
+/*@description
+*@param
+*@return
+*/
+scr_bridge()
+
+/*@description
+*@param
+*@return
+*/
+scr_room_transition()
 
 ///@description A solid collision object
 obj_Solid
@@ -98,26 +128,80 @@ obj_Solid
 ///@description Warps the player to the desired room
 obj_Warp
 
-///@description The enemy monster object
-obj_Monster
-
 ///@description The players hitbox where damage is dealt
 obj_Hitbox
-
-///@description The players fireball projectile
-obj_PlayerProjectile
-
-///@description The player object
-obj_Player
 
 ///@description The players hurtbox where damage is taken
 obj_Char_Hurtbox
 
-///@description The monsters slimeball projectile
+///@description The monsters hitbox where melee damage is dealt
+obj_Enemy_Hitbox
+
+///@description The monsters hurtbox where damage is taken
+obj_Enemy_Hurtbox
+
+///@description The player object
+obj_Player
+
+///@description The players fireball projectile
+obj_PlayerProjectile
+
+///@description The enemy monster object
+obj_Monster
+
+///@description The enemy slime object, inherits from obj_Monster
+obj_Slime
+
+///@description The enemy slime boss object, inherits from obj_Monster
+obj_SlimeBoss
+
+///@description The enemy frankenstein object, inherits from obj_Monster
+obj_Frankenstein
+
+///@description The enemy cultist object, inherits from obj_Monster
+obj_Cultist
+
+///@description The monsters projectile, changes based on which monster spawns it
 obj_MonsterProjectile
+
+///@description The boss' projectile, inherits from obj_MonsterProjectile
+obj_SlimeBossProjectile
+
+///@description
+obj_Debuff
 
 ///@description The pause object that controls all interfaces and the HUD
 obj_Pause
 
-///@description The monsters hurtbox where damage is taken
-obj_Enemy_Hurtbox
+///@description
+obj_Lighting
+
+///@description
+obj_TorchGlow
+
+///@description
+obj_Event
+
+///@description
+obj_Bridge
+
+///@description
+obj_Climb
+
+///@description The object that creates the on-screen text to tell the player how to spawn the boss, inherits from obj_Event
+obj_SpawnNote
+
+///@description The object that creates the on-screen text to tell the player that the door in the boss room is locked, inherits from obj_Event
+obj_LockedDoor
+
+///@description The object that spawns the monsters in the test room, never used in the proper game, inherits from obj_Event
+obj_SpawnEnemy
+
+///@description
+obj_item
+
+///@description
+obj_key
+
+///@description
+obj_spellbook

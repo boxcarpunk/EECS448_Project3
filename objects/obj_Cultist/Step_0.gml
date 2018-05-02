@@ -100,7 +100,7 @@ with(instance_place(x,y,myHurtbox))
 	if(CanAttack) //if the  cooldown is over
 	{
 		CanAttack = false; //reset the cooldown flag
-		ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
+		ProjectileID = instance_create_depth(x, y, "Player_Instance", obj_MonsterProjectile); //makes the projectile and stores its id
 		var CurrentProjectileType = irandom_range(0,AmountProjectileTypes-1); //get a random number that will coorespond to a projectile type
 		
 		with(ProjectileID) //code within the projectile that was just created

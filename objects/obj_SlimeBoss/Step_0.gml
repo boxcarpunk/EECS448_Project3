@@ -16,7 +16,7 @@ if(NearestPlayer != noone)
 		ProjectileAngle = irandom_range(0,45); //the angle that the projectile will fire, starts at a random angle between 0 and 45
 		for(i = 0; i < 8; i++) //shoot 8 projectiles
 		{
-			ProjectileID = instance_create_depth(x, y, -10000, obj_SlimeBossProjectile); //makes the projectile and stores its id
+			ProjectileID = instance_create_depth(x, y, "Player_Instance", obj_SlimeBossProjectile); //makes the projectile and stores its id
 			ProjectileID.Damage = ProjectileDamage; //sets the projectile's damage
 			ProjectileID.ProjectileSprite = ProjectileSprite; //set the projectile's sprite
 			ProjectileID.DestructionSprite = ProjectileDestruction; //set the projectile's death sprite
