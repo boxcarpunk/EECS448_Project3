@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "33c20428-0dcf-45b6-88a5-fc9fd6d6fac1",
+            "Value": {
+                "id": "56785e40-fa37-4beb-b05c-277624bf6b96",
+                "resourcePath": "paths\\TestPath\\TestPath.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "33e81488-f690-4241-8326-0bd8b16972f4",
             "Value": {
                 "id": "4623d47b-bbc8-421c-888e-ad3f7e9f4e54",
@@ -652,6 +660,14 @@
                 "id": "3bb36115-d54d-484b-b339-cf7494389916",
                 "resourcePath": "views\\86f0f688-64db-49b9-a53a-de83c0008c1a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "892e619b-ae9d-4f9e-99f0-03324f9fa430",
+            "Value": {
+                "id": "2390b2a5-cd0f-4717-ba94-d104161bbe1b",
+                "resourcePath": "objects\\obj_SpawnEnemy\\obj_SpawnEnemy.yy",
+                "resourceType": "GMObject"
             }
         },
         {
