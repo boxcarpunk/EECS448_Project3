@@ -8,3 +8,4 @@ fadeIn = true;
 warp = false;
 global.dim = 0.01;
 _fadeStartTime = 0;
+_tempSpeed = 0;

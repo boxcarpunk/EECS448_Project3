@@ -106,3 +106,11 @@ else
 		}
 	}
 }
+
+	if(global.testRoom && instance_exists(obj_Player))
+	{
+		room_goto(room5);
+		inst_78C8041E.x = 607;
+		inst_78C8041E.y = 714;
+		global.testRoom = false;
+	}
