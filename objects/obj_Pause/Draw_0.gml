@@ -94,14 +94,15 @@ else
 		if(instance_find(obj_Player,0).PlayerHealth > 0){
 			//draw all monster health bars
 			monsterHealthXOffset = -10;
-			monsterHealthYOffset = -35;
+			monsterHealthYOffset = -5;
 			monsterHealthLength = 30;
 			monsterHealthHeight = 5;
 			monsterBorderWidth = 1;
 			for (i = 0; i < instance_number(obj_Monster); i += 1)
 			{
 				monster = instance_find(obj_Monster,i);
-				scr_slider(monster.x+monsterHealthXOffset, monster.y+monsterHealthYOffset, monsterBorderWidth, monsterHealthLength, monsterHealthHeight, monster.Health/monster.MaxHealth, c_black, c_red, c_green);
+				currentMonsterHealthLength = monsterHealthLength * monster.MaxHealth / 3;
+				scr_slider(monster.x-sprite_get_xoffset(monster.sprite_index) + sprite_get_width(monster.sprite_index)/2 - currentMonsterHealthLength/2, monster.y+monsterHealthYOffset-sprite_get_yoffset(monster.sprite_index), monsterBorderWidth,currentMonsterHealthLength, monsterHealthHeight, monster.Health/monster.MaxHealth, c_black, c_red, c_green);
 			}
 		}
 	}
