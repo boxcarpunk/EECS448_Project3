@@ -21,18 +21,30 @@ var boxSize = 64;//size of inventory box
 var _x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2 - (array_length_1d(global.inventory)-1)/2 * boxSize;
 var _y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])/2;
 
-MLeft = keyboard_check(ord("A"));
-MRight = keyboard_check(ord("D"));
-
 if(keyboard_check_pressed(ord("D")))
 {
-	MLeft = !MLeft;
+	//MLeft = !MLeft;
 	global.item_index = min(global.item_index+1, array_length_1d(global.inventory)-1);
 }
 if(keyboard_check_pressed(ord("A")))
 {
-	MRight = !MRight;
+	//MRight = !MRight;
 	global.item_index = max(global.item_index-1, 0);
+}
+
+if(keyboard_check(vk_enter))
+{
+	if(global.inventory[global.item_index] = obj_spellbook)
+	{
+		global.equippedItem = global.inventory[global.item_index];
+	}
+}
+else if(keyboard_check(vk_backspace))
+{
+	if(global.inventory[global.item_index] = global.equippedItem)
+	{
+		global.equippedItem = noone;
+	}
 }
 
 for(var i=0; i< array_length_1d(global.inventory); i++)//for each slot in array
@@ -53,8 +65,28 @@ for(var i=0; i< array_length_1d(global.inventory); i++)//for each slot in array
 	if(i == global.item_index)
 	{
 		draw_sprite(InventoryCursor, image_index/8, box_x, box_y);
+		
+		if(instance_exists(global.inventory[i]))
+		{
+			draw_set_font(HeadingFont-20);
+			draw_text(_x+4, _y+48, global.inventory[i].description);
+			//var desc_height = string_height(global.item_index.description);
+		}
+	}
+	
+	draw_sprite(s_inventory_box, 0, _x, _y-64);
+	if(global.equippedItem == noone)//if item exists (and is not deactivated)
+	{
+		draw_sprite(emptySpellbook,0, _x, _y-64);//draw the sprite of the object -- NEEDS UPDATED WHEN ITEMS ARE ADDED
+	}
+	else if(instance_exists(global.equippedItem))
+	{
+		draw_sprite(global.equippedItem.sprite_index, 0, _x, _y-64);
 	}
 	
 }
+
+
+
 
 
