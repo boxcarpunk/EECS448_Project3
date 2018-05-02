@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "51bd7646-7c68-49e8-b87f-c17eb081ca49",
+            "Value": {
+                "id": "cdc2c7a1-6c1e-4b65-a253-91ca5b3672c6",
+                "resourcePath": "paths\\Room4RightPatrol\\Room4RightPatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "51fbe2b1-6e28-4ba9-a1e0-19c888a6b5d1",
             "Value": {
                 "id": "5e8ee809-c83c-4ed5-8feb-4a2035f2d49c",
@@ -751,6 +759,14 @@
             }
         },
         {
+            "Key": "984ffda4-6593-426f-8798-2e6d9666701b",
+            "Value": {
+                "id": "c55967a7-15d1-453e-a204-82b155442145",
+                "resourcePath": "paths\\Room4LeftPatrol\\Room4LeftPatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "98566563-c3ef-4dcd-8b7a-f748d1bd93ef",
             "Value": {
                 "id": "cc9f58e4-5081-41dc-b527-816420cb22e4",
@@ -807,6 +823,14 @@
             }
         },
         {
+            "Key": "a406a0f5-a8f2-4448-b8b4-f09853de5c7f",
+            "Value": {
+                "id": "c1b2a334-fa8d-4ddb-a8f1-0ca1e27ad646",
+                "resourcePath": "paths\\Room4MiddlePatrol\\Room4MiddlePatrol.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "a4ceeb77-b24b-4898-b9db-115512826885",
             "Value": {
                 "id": "3d465697-5193-43db-bfc6-02ec704723fd",
@@ -844,6 +868,14 @@
                 "id": "84c03994-fc5b-4e94-b3d7-c51cee3bc569",
                 "resourcePath": "sprites\\sprite10\\sprite10.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ae4a8b0a-3ea6-47fe-bf58-d00c155c3a5b",
+            "Value": {
+                "id": "7ea187c6-e190-4d74-b321-d24f4b8dc80b",
+                "resourcePath": "views\\ae4a8b0a-3ea6-47fe-bf58-d00c155c3a5b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1268,6 +1300,14 @@
                 "id": "bdf8abb0-4042-4489-b561-544616af7a91",
                 "resourcePath": "sprites\\SlimeSprite\\SlimeSprite.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f2f107a5-d587-431e-9544-78dbb51dd645",
+            "Value": {
+                "id": "0ccc7922-1449-4964-985e-0a78905409fb",
+                "resourcePath": "paths\\Room4WallPatrol\\Room4WallPatrol.yy",
+                "resourceType": "GMPath"
             }
         },
         {

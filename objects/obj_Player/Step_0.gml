@@ -52,6 +52,7 @@ if(PlayerHealth>0){ //if the player is not dead
 						CurrentDebuffType = other.Debuff; //store the type of debuff this is
 						DebuffTime = other.DebuffTime; //store the amount of time the debuff will last
 					}
+					Debuff = noone; //do not apply the debuff again
 				}
 			}
 		}

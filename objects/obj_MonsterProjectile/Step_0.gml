@@ -19,6 +19,7 @@ if(DeleteProjectile)
 	{
 		speed = 0; //do not move
 		Damage = 0; //do not do damage
+		Debuff = noone; //do not apply a debuff
 		
 		sprite_index = DestructionSprite; //switch to the death animation
 		image_index = 1; //play from the beginning of the animation
