@@ -26,6 +26,7 @@ with(instance_place(x,y,myHurtbox))
 		CurrentDamageCooldown++;
 	}
 
+/*
 	//layer monster and character correctly
 	if(NearestPlayer.y < self.y)
 	{
@@ -43,6 +44,7 @@ with(instance_place(x,y,myHurtbox))
 	{
 		image_xscale=1;
 	}
+*/
 
 	//movement
 	if(Health > 0)
