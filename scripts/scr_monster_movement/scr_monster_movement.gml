@@ -74,7 +74,7 @@ switch(CurrentState)
 		mp_potential_path(AggroPath, NearestPlayer.x, NearestPlayer.y, MoveSpeed, 4, 0); //set a path toward the player
 		path_start(AggroPath, MoveSpeed, path_action_stop, 0); //start along that path
 		
-		if((distance_to_object(NearestPlayer) < StopRange) && (DamageType == "Ranged")) //if the player is within stop range
+		if(distance_to_object(NearestPlayer) < StopRange) //if the player is within stop range
 		{
 			CurrentState = MonsterMovementState.StopState; //move to the stop state
 		}
@@ -87,7 +87,7 @@ switch(CurrentState)
 	case MonsterMovementState.StopState:
 	
 		path_end(); //stop moving along the path
-		if(distance_to_object(NearestPlayer) < FleeRange) //if the player is within flee range
+		if((distance_to_object(NearestPlayer) < FleeRange) && (DamageType == "Ranged")) //if the player is within flee range
 		{
 			CurrentState = MonsterMovementState.FleeState; //move to the flee state
 		}
