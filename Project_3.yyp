@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "656669fd-5eef-4f60-b0c7-7507359f11ad",
+            "Value": {
+                "id": "29a99d23-db50-48ca-a4e7-e4e8df899a34",
+                "resourcePath": "sprites\\hitbox1\\hitbox1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "65e55784-5d24-4baf-9974-b68185380831",
             "Value": {
                 "id": "b2ab1a60-80f1-4ea2-84bc-43ba7c1a76d8",
