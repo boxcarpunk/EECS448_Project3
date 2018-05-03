@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-damage = 1;
-description = "A standard spellbook.";
+damage = 3;
+description = "A very powerful spellbook.";

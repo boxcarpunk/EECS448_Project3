@@ -94,18 +94,18 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
-			if(irandom_range(0,1) == 0)
+			if(room_get_name(room) == "room4")
 			{
-				sp = instance_create_layer(x,y, "Player_Instance",obj_spellbook)
-				if(room_get_name(room) == "room4")
+				if(irandom_range(0,1) == 0)
 				{
-					sp.CurrentState = SpellbookType.GreaterSpellbook
-					sp.Damage = 3;
-					sp.image_index = 1;
+					instance_create_layer(x,y,"Player_Instance",obj_greaterSpellbook);
 				}
-				else
+			}
+			else
+			{
+				if(irandom_range(0,1) == 0)
 				{
-					sp.CurrentState = SpellbookType.StandardSpellbook
+					instance_create_layer(x,y,"Player_Instance",obj_spellbook);
 				}
 			}
 			instance_destroy(); //destroy the monster
