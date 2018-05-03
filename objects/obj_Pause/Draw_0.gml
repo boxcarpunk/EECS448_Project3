@@ -116,4 +116,3 @@ if(global.testRoom && instance_exists(obj_Player))
 	inst_78C8041E.y = 714;
 	global.testRoom = false;
 }
-draw_text(camera_get_view_x(view_camera[0]) + 100,camera_get_view_y(view_camera[0])+ 100, string(room_get_name(room) == "room4"))
