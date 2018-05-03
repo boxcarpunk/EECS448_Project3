@@ -8,3 +8,6 @@ if(global.equippedItem != noone)//if the equip slot is not empty
 {
 	damage = global.equippedItem.damage;//projectile damage is set to the damage of the equipped item
 }
+imageDamageScale = 3
+image_xscale = damage/imageDamageScale + (imageDamageScale-1)/imageDamageScale
+image_yscale = damage/imageDamageScale + (imageDamageScale-1)/imageDamageScale
