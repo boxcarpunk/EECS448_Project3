@@ -45,6 +45,7 @@ if(global.fade >= 1)
 	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Respawn")) {
 		instance_activate_object(inst_78C8041E);
 		inst_78C8041E.PlayerHealth = inst_78C8041E.MaxPlayerHealth;
+		inst_78C8041E.player_speed = inst_78C8041E.MaxPlayerSpeed;
 		if(room_get_name(room) == "room5")
 		{
 			room_goto(room5);
