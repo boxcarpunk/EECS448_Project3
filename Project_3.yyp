@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "11055102-799a-4df7-a9d5-8a742fa0ffa6",
+            "Value": {
+                "id": "23e3cd77-457b-4be7-917b-ed25e4e02f80",
+                "resourcePath": "sprites\\s_FireBall_Explosion\\s_FireBall_Explosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "12cc6f73-9e59-4d2a-8a3d-27bfd87a0dac",
             "Value": {
                 "id": "a275bfa6-21ba-4d93-b621-e92845d18687",
@@ -180,6 +188,14 @@
                 "id": "6160204f-b0d6-4f91-bfc4-f403d148fba1",
                 "resourcePath": "paths\\Room1LowerLeftPatrol\\Room1LowerLeftPatrol.yy",
                 "resourceType": "GMPath"
+            }
+        },
+        {
+            "Key": "2875c7c5-61f7-4be9-83ba-f99c66de6b55",
+            "Value": {
+                "id": "8ce117f9-9051-4c14-b66f-c9673d778b5c",
+                "resourcePath": "sprites\\Frank_Attack\\Frank_Attack.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1068,14 +1084,6 @@
                 "id": "ce79bb4a-3ca9-403e-94f5-e66d1d910542",
                 "resourcePath": "views\\cc6792ab-3c40-4651-b402-a4aba94452d5.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "cc79c9df-003b-425e-b73a-a85a80f1d409",
-            "Value": {
-                "id": "fd05ac8b-c48a-4767-9109-8a65af906462",
-                "resourcePath": "sprites\\sprite52\\sprite52.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
