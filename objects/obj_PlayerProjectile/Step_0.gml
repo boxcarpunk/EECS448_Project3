@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+var me = self;
 if(instance_place(x, y, obj_Solid))//if colliding with collision object
 {
 	with(instance_place(x, y, obj_Solid))
@@ -8,7 +8,7 @@ if(instance_place(x, y, obj_Solid))//if colliding with collision object
 		if(isWater == false)
 		{
 			with(instance_place(x,y, obj_PlayerProjectile)){
-				DeleteProjectile = true; //destroys the projectile if the collision object is not water
+				me.DeleteProjectile = true; //destroys the projectile if the collision object is not water
 			}
 		}
 	}
