@@ -22,7 +22,7 @@ switch(currentPlayer){
 
 if(PlayerHealth>0){ //if the player is not dead
 	dying = false
-	RAttack = mouse_check_button_pressed(mb_right); //right mouse click
+	RAttack = mouse_check_button_pressed(mb_right) && sprite_get_name(sprite_index) != "SlimeSprite"; //right mouse click
 	if(RAttack)//enters attack state
 	{
 		image_index = 0;
