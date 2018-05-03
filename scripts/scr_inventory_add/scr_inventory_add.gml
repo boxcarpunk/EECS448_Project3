@@ -7,7 +7,25 @@ var _self = argument1;//item on the ground
 
 for(var i = 0; i < array_length_1d(global.inventory); i++)
 {
-	if(global.inventory[i] == noone) //if inventory slot is empty
+	current_item = global.inventory[i];
+	if(current_item != noone)
+	{
+		if(current_item.object_index == asset_get_index("obj_spellbook"))
+		{
+			if(object_get_name(_item) == "obj_spellbook")//if the item is a spellbook
+			{
+				break;
+			}
+		}
+		else if(current_item.object_index == asset_get_index("obj_greaterSpellbook"))
+		{
+			if(object_get_name(_item) == "obj_greaterSpellbook")
+			{
+				break;
+			}
+		}
+	}
+	else if(current_item == noone) //if inventory slot is empty
 	{
 		inv_item = instance_create_depth(0,0,0,_item);//create an instance of the object
 		inv_item.sprite_index = _self.sprite_index;//copies the sprite from the object on the ground
