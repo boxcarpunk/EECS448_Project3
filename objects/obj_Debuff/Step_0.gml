@@ -29,12 +29,19 @@ if(!DebuffApplied) //if the debuff has not been applied yet
 	
 		case DebuffType.Polymorph:
 			DebuffApplied = true; //the debuff is being applied
-			with(AppliesTo) //code inside the instance the debuff is applied to
+			if(AppliesTo.sprite_index != SlimeSprite) //only polymorph if the player isn't already polymorphed
 			{
-				other.ResetValue = sprite_index; //store the current player sprite
-				sprite_index = SlimeSprite; //make the player look like a slime
+				with(AppliesTo) //code inside the instance the debuff is applied to
+				{
+					other.ResetValue = sprite_index; //store the current player sprite
+					sprite_index = SlimeSprite; //make the player look like a slime
+				}
+				alarm[1] = DebuffTime*game_get_speed(gamespeed_fps); //set a timer that will reset the instance's sprite upon completion
 			}
-			alarm[1] = DebuffTime*game_get_speed(gamespeed_fps); //set a timer that will reset the instance's sprite upon completion
+			else
+			{
+				instance_destroy(); //delete the debuff object
+			}
 		break;
 	}
 }
