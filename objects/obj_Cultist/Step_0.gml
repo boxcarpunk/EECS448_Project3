@@ -6,7 +6,7 @@ if(NearestPlayer != noone)
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
 	myHurtbox.y = y;
-with(instance_place(x,y,myHurtbox))
+	with(instance_place(x,y,myHurtbox))
 	{
 		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
 		{
@@ -94,14 +94,17 @@ with(instance_place(x,y,myHurtbox))
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
-			if(irandom_range(0,1) == 0){
+			if(irandom_range(0,1) == 0)
+			{
 				sp = instance_create_layer(x,y, "Player_Instance",obj_spellbook)
-				if(room_get_name(room) == "room4"){
+				if(room_get_name(room) == "room4")
+				{
 					sp.CurrentState = SpellbookType.GreaterSpellbook
 					sp.Damage = 3;
 					sp.image_index = 1;
 				}
-				else{
+				else
+				{
 					sp.CurrentState = SpellbookType.StandardSpellbook
 				}
 			}
