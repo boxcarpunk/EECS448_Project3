@@ -22,6 +22,7 @@ global.equippedItem = noone;
 global.item_index = 0;
 god = false;
 player_speed = 15;
+MaxPlayerSpeed = 15;
 
 name = "Kurt Slagle"
 currentPlayer = playerSelect.Kurt;

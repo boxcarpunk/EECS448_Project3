@@ -20,7 +20,7 @@ if(fadeOut)
 			NearestPlayer.y=targetY;
 		}
 		NearestPlayer = instance_nearest(self.x, self.y, obj_Player);
-		NearestPlayer.player_speed = _tempSpeed;
+		NearestPlayer.player_speed = NearestPlayer.MaxPlayerSpeed;
 		
 	}
 }

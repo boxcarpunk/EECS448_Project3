@@ -45,10 +45,20 @@ if(global.fade >= 1)
 	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Respawn")) {
 		instance_activate_object(inst_78C8041E);
 		inst_78C8041E.PlayerHealth = inst_78C8041E.MaxPlayerHealth;
-		room_goto(room0);
-		inst_78C8041E.x = 612;
-		inst_78C8041E.y = 1428;
-		global.fade = 0.01;
+		if(room_get_name(room) == "room5")
+		{
+			room_goto(room5);
+			inst_78C8041E.x = 640;
+			inst_78C8041E.y = 750;
+			global.fade = 0.01;
+		}
+		else
+		{
+			room_goto(room0);
+			inst_78C8041E.x = 612;
+			inst_78C8041E.y = 1428;
+			global.fade = 0.01;
+		}
 	}
 	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Quit")) {
 		game_end();
