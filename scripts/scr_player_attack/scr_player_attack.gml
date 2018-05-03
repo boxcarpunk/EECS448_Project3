@@ -1,4 +1,6 @@
-sprite_index = argument0;
+if(sprite_get_name(sprite_index) != sprite_get_name(argument0)){
+	sprite_index = argument0;
+}
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {
@@ -7,6 +9,7 @@ if(MoveLeft+MoveRight!=0)
 if(image_index <=4)
 {
 	obj = instance_create_depth(x,y,-10000,obj_Hitbox);
+	var me = self;
 	with(obj)
 	{
 		image_xscale = inst_78C8041E.image_xscale;
@@ -16,10 +19,11 @@ if(image_index <=4)
 			{
 				with(instance_place(x,y,obj_Monster))
 				{
-					if(CurrentDamageCooldown==FullDamageCooldown)
+					if(CurrentDamageCooldown==FullDamageCooldown || mouse_check_button_pressed(mb_right) && CurrentDamageCooldown >= 8)
 					{
 						Health--;
 						CurrentDamageCooldown = 0;
+						me.sprite_index = argument0;
 					}
 				}
 			}

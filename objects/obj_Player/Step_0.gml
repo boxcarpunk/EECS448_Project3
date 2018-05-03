@@ -67,7 +67,7 @@ if(PlayerHealth>0){ //if the player is not dead
 			break;
 	}
 	
-mid = true;
+	mid = true;
 
 
 	if(x-370 < 0 && y-280 < 0)

@@ -35,7 +35,7 @@ for(i=0; i < array_length_1d(images); i++){
 			draw_text(imagesx[i] + sprite_get_width(images[i])/4, imagesy[i] - 30,"Slash");
 			break;
 		case 4:
-			draw_text(imagesx[i] + sprite_get_width(images[i])/4,imagesy[i] - 30,"Interact");
+			draw_text(imagesx[i] + sprite_get_width(images[i])/4,imagesy[i] - 35,"Interact/\nEquip");
 			break;
 	}
 }
