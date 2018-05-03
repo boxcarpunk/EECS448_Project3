@@ -12,14 +12,7 @@ if((LAttack)&&(ProjCount == 0))
 		ProjCount++;//increment projectile count
 	}
 }
-else if(ProjCount == MaxProjCount)
-{
-	ProjCount = 0;
-}
-else if(ProjCount != 0)
-{
-	ProjCount++;
-}
+
 //Turn Around
 if(MoveLeft+MoveRight!=0)
 {

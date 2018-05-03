@@ -151,9 +151,11 @@ if(god)
 {
 	PlayerHealth = MaxPlayerHealth;
 }
-
-/*
-with(instance_place(x,y,obj_Char_Hurtbox))
+if(ProjCount >= MaxProjCount)
 {
-	instance_destroy();//destroys player hurtbox
-}*/
+	ProjCount = 0;
+}
+else if(ProjCount != 0)
+{
+	ProjCount++;
+}

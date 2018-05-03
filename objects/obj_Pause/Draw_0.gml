@@ -81,15 +81,16 @@ else
 		draw_outlined_text(camera_get_view_x(view_camera[0])+profileSize + healthOffset + textOffsetX,camera_get_view_y(view_camera[0])+profileSize + healthOffset - 10, player.name, c_dkgray, c_ltgray);
 	
 		//draw the player ability icon	
-		abilityBoxSize = 60;
-		abilityBackgroundColor = c_gray;
-		ability1X = camera_get_view_x(view_camera[0]) - abilityBoxSize/2 + 100;
-		ability1Y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])- abilityBoxSize/2 - 30;
-		draw_rectangle_color(ability1X - abilityBoxSize/2,ability1Y - abilityBoxSize/2,ability1X + abilityBoxSize/2,ability1Y + abilityBoxSize/2, borderColor,borderColor,borderColor,borderColor,false);
-		draw_rectangle_color(ability1X - abilityBoxSize/2+2,ability1Y - abilityBoxSize/2+2,ability1X + abilityBoxSize/2-2,ability1Y + abilityBoxSize/2-2, abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,false);
-		draw_sprite(s_FireBall,0,ability1X+2,ability1Y+4);
-		scr_cooldown_box(ability1X, ability1Y, abilityBoxSize, abilityBoxSize, (player.MaxProjCount - player.ProjCount)/player.MaxProjCount, 1);
-	
+		if(global.equippedItem != noone){
+			abilityBoxSize = 60;
+			abilityBackgroundColor = c_gray;
+			ability1X = camera_get_view_x(view_camera[0]) - abilityBoxSize/2 + 100;
+			ability1Y = camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])- abilityBoxSize/2 - 30;
+			draw_rectangle_color(ability1X - abilityBoxSize/2,ability1Y - abilityBoxSize/2,ability1X + abilityBoxSize/2,ability1Y + abilityBoxSize/2, borderColor,borderColor,borderColor,borderColor,false);
+			draw_rectangle_color(ability1X - abilityBoxSize/2+2,ability1Y - abilityBoxSize/2+2,ability1X + abilityBoxSize/2-2,ability1Y + abilityBoxSize/2-2, abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,abilityBackgroundColor,false);
+			draw_sprite(s_FireBall,0,ability1X+2,ability1Y+4);
+			scr_cooldown_box(ability1X, ability1Y, abilityBoxSize, abilityBoxSize, (player.MaxProjCount - player.ProjCount)/player.MaxProjCount, 1);
+		}
 	
 		if(instance_find(obj_Player,0).PlayerHealth > 0){
 			//draw all monster health bars
