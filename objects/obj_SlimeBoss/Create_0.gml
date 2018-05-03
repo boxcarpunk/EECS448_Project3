@@ -21,7 +21,7 @@ ProjectileDestruction = SlimeballExplosion; //the sprite that the projectile wil
 ProjectileDeathEndFrame = 5; //the last frame in the projectile's death animation
 
 //other
-myHurtbox = instance_create_depth(x,y,"Player_Instance",obj_Enemy_Hurtbox);
+myHurtbox = instance_create_layer(x,y,"Player_Instance",obj_Enemy_Hurtbox);
 room.BossSpawned = true; //indicate that the boss has spawned
 
 //delete the slimes in the room

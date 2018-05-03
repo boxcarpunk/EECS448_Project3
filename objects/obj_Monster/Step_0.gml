@@ -83,7 +83,7 @@ if(NearestPlayer != noone)
 		if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange) && (DamageType == "Ranged")) //if the player is within range and cooldown is over
 		{
 			CanAttack = false; //reset the cooldown flag
-			ProjectileID = instance_create_depth(x, y, -10000, obj_MonsterProjectile); //makes the projectile and stores its id
+			ProjectileID = instance_create_layer(x, y, "Player_Instance", obj_MonsterProjectile); //makes the projectile and stores its id
 			with(ProjectileID)
 			{
 				Damage = other.ProjectileDamage; //sets the projectile's damage
@@ -98,7 +98,7 @@ if(NearestPlayer != noone)
 		if(CanAttack && (DamageType == "Melee") && (distance_to_object(NearestPlayer) < MeleeRange))
 		{
 			CanAttack = false; //reset the cooldown flag
-			MonsterHitbox = instance_create_depth(x,y,-10000,obj_Enemy_Hitbox); //create a hitbox
+			MonsterHitbox = instance_create_layer(x,y,"Player_Instance",obj_Enemy_Hitbox); //create a hitbox
 			var AttackingMonster = self; //store the id of the attacking monster into a variable
 		
 			with(MonsterHitbox) //goes into the hitbox code

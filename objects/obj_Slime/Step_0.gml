@@ -11,7 +11,7 @@ if(NearestPlayer != noone)
 	if(CanAttack && (distance_to_object(NearestPlayer) < ProjectileRange)) //if the player is within range and cooldown is over
 	{
 		CanAttack = false; //reset the cooldown flag
-		ProjectileID = instance_create_depth(x, y, "Player_Instance", obj_MonsterProjectile); //makes the projectile and stores its id
+		ProjectileID = instance_create_layer(x, y, "Player_Instance", obj_MonsterProjectile); //makes the projectile and stores its id
 		with(ProjectileID)
 		{
 			self.Damage = other.ProjectileDamage; //sets the projectile's damage
@@ -106,7 +106,7 @@ if(NearestPlayer != noone)
 		
 		if(NearCounter >= 3) //if there are at least four nearby slimes (counting self)
 		{
-			instance_create_depth(1037, 425, "Player_Instance", obj_SlimeBoss); //spawn the boss
+			instance_create_layer(1037, 425, "Player_Instance", obj_SlimeBoss); //spawn the boss
 		}
 	}
 
