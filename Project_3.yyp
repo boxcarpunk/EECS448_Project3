@@ -823,6 +823,14 @@
             }
         },
         {
+            "Key": "99c2d145-cf2b-4879-9a5e-e3fc3f06e46b",
+            "Value": {
+                "id": "4af2bc37-2c90-496f-96b4-124a10267181",
+                "resourcePath": "sprites\\Frank_Death_Animation\\Frank_Death_Animation.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "99d137ad-4b8a-43df-b130-fb9fb4372158",
             "Value": {
                 "id": "a1ed3949-274b-4e69-9259-a78b007e0abd",
