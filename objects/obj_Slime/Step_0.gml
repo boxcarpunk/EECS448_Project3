@@ -93,7 +93,7 @@ if(NearestPlayer != noone)
 	}
 
 	//boss spawn condition
-	if((instance_number(obj_Slime) > 3) && (room.BossSpawned == false)) //if there are at least four slimes in the room and the boss has not spawned
+	if((instance_number(obj_Slime) > 3) && (room.BossSpawned == false) && (room_get_name(room) == "room1")) //if there are at least four slimes in the room, the boss has not spawned, and you are in the boss room
 	{
 		NearCounter = 0; //counts how many slimes are within merge range
 		for(i = 0; i < instance_number(obj_Slime); i++) //iterate through all the slimes in the room

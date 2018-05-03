@@ -41,4 +41,4 @@ ProjectileDestruction = RedProjectileSprite_Explosion; //the sprite that the pro
 ProjectileDeathEndFrame = 5; //the last frame in the projectile's death animation
 
 //other
-myHurtbox = instance_create_depth(x,y,-1000,obj_Enemy_Hurtbox);
+myHurtbox = instance_create_depth(x,y,"Player_Instance",obj_Enemy_Hurtbox);

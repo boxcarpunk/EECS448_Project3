@@ -61,8 +61,9 @@ scr_draw_outlined_text
 */
 scr_monster_movement()
 
-/*@description
-*@param 
+/*@description Adds an item the the player's inventory array
+*@param object_index - The object index of the item being added
+*@param self - A copy of the item that the player collided with
 *@return 
 */
 scr_inventory_add
@@ -86,9 +87,9 @@ scr_inventory_menu()
 */
 scr_title_menu()
 
-/*@description
-*@param
-*@return
+/*@description Draws the character selection screen and allows the user to select one
+*@param buttonPressed index
+*@return none
 */
 scr_char_select()
 
@@ -98,27 +99,27 @@ scr_char_select()
 */
 scr_pause_menu
 
-/*@description
-*@param
-*@return
+/*@description Displays all of the user controls.
+*@param none
+*@return none
 */
 scr_help_screen()
 
-/*@description Darkens the screen the draws the death screen and its buttons
+/*@description Darkens the screen the draws the death screen and its buttons.
 *@param none
 *@return none
 */
 scr_death_menu()
 
-/*@description
-*@param
-*@return
+/*@description Deactivates the lowest bridge collision layer and activates the lowest bridge tile layer.
+*@param none
+*@return none
 */
 scr_bridge()
 
-/*@description
-*@param
-*@return
+/*@description Fades out and fades back in as the player leaves one room and enters another.
+*@param none
+*@return none
 */
 scr_room_transition()
 
@@ -167,25 +168,25 @@ obj_MonsterProjectile
 ///@description The boss' projectile, inherits from obj_MonsterProjectile
 obj_SlimeBossProjectile
 
-///@description
+///@description The debuff object that is applied to the player when hit by a projectile that is associated with a debuff (slow, heal, polymorph)
 obj_Debuff
 
 ///@description The pause object that controls all interfaces and the HUD
 obj_Pause
 
-///@description
+///@description Creates a surface that covers the room to darken it
 obj_Lighting
 
-///@description
+///@description Adds a "glowing" affect around the tiles it is placed on - meant to be placed on torches
 obj_TorchGlow
 
-///@description
+///@description A parent object from which all interactable environment objects inherit
 obj_Event
 
-///@description
+///@description A child of obj_Event that creates on-screen text and calls scr_bridge() when interacted with
 obj_Bridge
 
-///@description
+///@description A child of obj_Event that creates on-screen text and creates an instance of obj_warp at its location - room and coordinates are specified in the instance creation code
 obj_Climb
 
 ///@description The object that creates the on-screen text to tell the player how to spawn the boss, inherits from obj_Event
@@ -197,11 +198,11 @@ obj_LockedDoor
 ///@description The object that spawns the monsters in the test room, never used in the proper game, inherits from obj_Event
 obj_SpawnEnemy
 
-///@description
+///@description A parent object from which all inventory items inherit
 obj_item
 
-///@description
+///@description A child of obj_item that is used with the locked door in the boss room - can be picked up and placed in inventory
 obj_key
 
-///@description
+///@description A child of obj_item that allows the user to cast spells when the item is equipped. Damage variable should be defined when an instance is created
 obj_spellbook
