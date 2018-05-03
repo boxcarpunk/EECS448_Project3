@@ -11,3 +11,8 @@ if(global.equippedItem != noone)//if the equip slot is not empty
 imageDamageScale = 3
 image_xscale = damage/imageDamageScale + (imageDamageScale-1)/imageDamageScale
 image_yscale = damage/imageDamageScale + (imageDamageScale-1)/imageDamageScale
+
+//animation related variables
+DeleteProjectile = false; //a flag signalling the beginning of the explosion animation
+DestructionSprite = s_FireBall_Explosion; //the projectile's death animation
+DestructionEndFrame = 6; //the last frame in the projectile's death animation

@@ -1295,6 +1295,14 @@
             }
         },
         {
+            "Key": "ee944ed6-63b0-477a-a424-c4e8963794df",
+            "Value": {
+                "id": "91c4076e-e0c9-4ccb-9040-fc999de568ba",
+                "resourcePath": "objects\\obj_greaterSpellbook\\obj_greaterSpellbook.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eef2ccc2-cec1-4ac2-9847-307813f3f072",
             "Value": {
                 "id": "0ce457a8-7581-4714-aed3-b193267c6552",

@@ -38,7 +38,7 @@ if(keyboard_check_pressed(ord("E")))
 		{
 			global.equippedItem = noone;//unequip the item
 		}
-		else if(object_get_name(global.inventory[global.item_index].object_index) == "obj_spellbook")//if the selected item is a spellbook
+		else if(object_get_name(global.inventory[global.item_index].object_index) == "obj_spellbook" || object_get_name(global.inventory[global.item_index].object_index) == "obj_greaterSpellbook")//if the selected item is a spellbook
 		{
 			global.equippedItem = global.inventory[global.item_index];//equip the item
 		}

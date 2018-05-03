@@ -17,7 +17,7 @@ if(NearestPlayer != noone)
 			{
 				global.temp_damage = damage;
 				//show_message(temp_damage);
-				instance_destroy(); //destroy character projectile
+				DeleteProjectile = true; //destroy character projectile
 			}
 			with(instance_place(x,y,obj_Monster))
 			{
