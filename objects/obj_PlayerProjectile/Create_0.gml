@@ -1,7 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_angle = point_direction(x, y, mouse_x, mouse_y);
-self.direction=point_direction(x, y, mouse_x, mouse_y);
+if(gamepad_is_connected(0))
+{
+	image_angle = obj_Arrow.image_angle;
+	direction = obj_Arrow.direction;
+}
+else
+{
+	image_angle = point_direction(x, y, mouse_x, mouse_y);
+	self.direction=point_direction(x, y, mouse_x, mouse_y);
+}
 self.speed=15;
 
 if(global.equippedItem != noone)//if the equip slot is not empty

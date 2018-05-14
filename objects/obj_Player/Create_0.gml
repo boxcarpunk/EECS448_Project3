@@ -15,6 +15,9 @@ state=states.normal;
 MaxPlayerHealth = 10;
 PlayerHealth = MaxPlayerHealth;
 dying = false;
+gamepad_set_axis_deadzone(0,0.25);
+if(gamepad_is_connected(0))
+	instance_create_depth(x,y,0,obj_Arrow);
 myHurtbox = instance_create_depth(x,y,-1000,obj_Char_Hurtbox);//draws player hurtbox
 scr_inventory_create(6);
 global.equippedItem = noone;

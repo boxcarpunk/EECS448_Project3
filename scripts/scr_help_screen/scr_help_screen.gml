@@ -41,7 +41,7 @@ for(i=0; i < array_length_1d(images); i++){
 }
 
 buttonOffset = 15;
-if(scr_button(camera_get_view_x(view_camera[0]) +155/2 +buttonOffset, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) -55 -buttonOffset,155, 55, 0, argument0,"Back"))
+if(scr_button(camera_get_view_x(view_camera[0]) +155/2 +buttonOffset, camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]) -55 -buttonOffset,155, 55, 0, argument0,"Back")||gamepad_button_check_pressed(0,gp_face2))
 	global.help = false;
 
 draw_set_alpha(prevAlpha);

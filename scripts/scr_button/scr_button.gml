@@ -35,12 +35,14 @@ if(mouse_x > buttonX - buttonWidth/2 && mouse_x < buttonX + buttonWidth/2 && mou
 	draw_roundrect_color(buttonX - buttonWidth/2 + mediumOffset, buttonY - buttonHeight/2 + mediumOffset, buttonX + buttonWidth/2 - mediumOffset, buttonY + buttonHeight/2 - mediumOffset, mediumGreen, mediumGreen, false);
 		
 	//if the mouse is pressed, draw the inside of the button a dark color
-	if(mouse_check_button(1)){
+	if(mouse_check_button(1))
+	{
 		draw_roundrect_color(buttonX - buttonWidth/2 + innerOffset, buttonY - buttonHeight/2 + innerOffset, buttonX + buttonWidth/2- innerOffset, buttonY + buttonHeight/2- innerOffset, darkGreen, darkGreen, false);
 		buttonPressed = buttonIndex;
 	}
 	//if the mouse isn't pressed, draw the inside of the button a light color
-	else {
+	else 
+	{
 		draw_roundrect_color(buttonX - buttonWidth/2 + innerOffset, buttonY - buttonHeight/2 + innerOffset, buttonX + buttonWidth/2- innerOffset, buttonY + buttonHeight/2- innerOffset, lightGreen, lightGreen, false);
 		//run the functions for the button
 		if(buttonPressed == buttonIndex)
@@ -51,7 +53,8 @@ if(mouse_x > buttonX - buttonWidth/2 && mouse_x < buttonX + buttonWidth/2 && mou
 	}
 }
 //if the mouse isn't hovered over the button
-else{
+else
+{
 	if(buttonPressed == buttonIndex)
 		buttonPressed = -1;
 	draw_roundrect_color(buttonX - buttonWidth/2, buttonY - buttonHeight/2, buttonX + buttonWidth/2, buttonY + buttonHeight/2,darkGrey, darkGrey, false);

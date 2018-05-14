@@ -42,7 +42,8 @@ if(global.fade >= 1)
 	
 	//button vars
 	buttonPressed = argument0;
-	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Respawn")) {
+	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Respawn")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==1))) 
+	{
 		instance_activate_object(inst_78C8041E);
 		inst_78C8041E.PlayerHealth = inst_78C8041E.MaxPlayerHealth;
 		inst_78C8041E.player_speed = inst_78C8041E.MaxPlayerSpeed;
@@ -60,9 +61,26 @@ if(global.fade >= 1)
 			inst_78C8041E.y = 1428;
 			global.fade = 0.01;
 		}
+		CursorIndex = 2;
 	}
-	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Quit")) {
+	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Quit")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==0)))  
+	{
 		game_end();
+	}
+	//xbox cursor
+	if(gamepad_is_connected(0))
+	{
+		draw_sprite(MainMenuCursor, image_index/8, camera_get_view_x(view_camera[0])+1/2*camera_get_view_width(view_camera[0]), buttonY-CursorIndex*buttonOffset);
+		if((gamepad_axis_value(0,gp_axislv)<0)&&(CursorIndex!=1)&&(alarm[10]==-1))
+		{
+			alarm[10]=5;
+			CursorIndex++;
+		}
+		else if((gamepad_axis_value(0,gp_axislv)>0)&&(CursorIndex!=0)&&(alarm[10]==-1))
+		{
+			alarm[10]=5;
+			CursorIndex--;
+		}
 	}
 }
 draw_set_alpha(prevAlpha);

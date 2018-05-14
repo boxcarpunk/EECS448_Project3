@@ -338,7 +338,7 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Player_Instance",
             "id": "54155693-49a6-46d6-92bc-1d46d2942b91",
-            "depth": 0,
+            "depth": 10,
             "grid_x": 68,
             "grid_y": 68,
             "hierarchyFrozen": false,
@@ -363,7 +363,7 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
-            "userdefined_depth": false,
+            "userdefined_depth": true,
             "visible": true
         },
         {

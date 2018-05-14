@@ -1,7 +1,7 @@
-MLeft = keyboard_check(ord("A"));
-MRight = keyboard_check(ord("D"));
-MUp = keyboard_check(ord("W"));
-MDown = keyboard_check(ord("S"));
+MLeft = (keyboard_check(ord("A"))||(gamepad_axis_value(0,gp_axislh)<0));
+MRight = (keyboard_check(ord("D"))||(gamepad_axis_value(0,gp_axislh)>0));
+MUp = (keyboard_check(ord("W"))||(gamepad_axis_value(0,gp_axislv)<0));
+MDown = (keyboard_check(ord("S"))||(gamepad_axis_value(0,gp_axislv)>0));
 MoveLeft = 0;
 MoveRight = 0;
 MoveUp = 0;

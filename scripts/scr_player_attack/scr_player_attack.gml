@@ -1,4 +1,5 @@
-if(sprite_get_name(sprite_index) != sprite_get_name(argument0)){
+if(sprite_get_name(sprite_index) != sprite_get_name(argument0))
+{
 	sprite_index = argument0;
 }
 //Turn Around

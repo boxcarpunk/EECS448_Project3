@@ -6,14 +6,15 @@ depth = -300;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-if(keyboard_check_pressed(vk_escape) && !dead && !global.inventoryIsOpened)//if escape key is pressed and no other interface is open
+if((keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)) && !dead && !global.inventoryIsOpened)//if escape key is pressed and no other interface is open
 {
 	global.pause = not(global.pause);
-	if(!global.pause){
+	if(!global.pause)
+	{
 		global.help = false;
 	}
 }
-else if(keyboard_check_pressed(vk_tab) && !dead)//if tab key is pressed and no other interface is open
+else if(((keyboard_check_pressed(vk_tab))||(gamepad_button_check_pressed(0,gp_face4))) && !dead)//if tab key is pressed and no other interface is open
 {
 	global.inventoryIsOpened = !global.inventoryIsOpened;
 }
@@ -29,7 +30,8 @@ else if(global.pause)
 	scr_pause_menu(buttonPressed);//displays pause menu
 	
 }
-else if(global.inventoryIsOpened){
+else if(global.inventoryIsOpened)
+{
 	instance_deactivate_all(global.inventoryIsOpened);//deactivates all objects
 	for(var i = 0; i < array_length_1d(global.inventory); i++)
 	{
@@ -39,6 +41,11 @@ else if(global.inventoryIsOpened){
 }
 else if(dead)//if player has died
 {
+	if(Counter == 0)
+	{
+		CursorIndex = 1;
+		Counter++;
+	}
 	//fade to black screen
 	if(fadeStartTime == 0)
 	{
