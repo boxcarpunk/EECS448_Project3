@@ -5,9 +5,10 @@ dead = inst_78C8041E.PlayerHealth <=0;
 depth = -300;
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-
+//show_message(string(Counter));
 if((keyboard_check_pressed(vk_escape)||gamepad_button_check_pressed(0,gp_start)) && !dead && !global.inventoryIsOpened)//if escape key is pressed and no other interface is open
 {
+	Counter = 0;
 	global.pause = not(global.pause);
 	if(!global.pause)
 	{
@@ -21,14 +22,23 @@ else if(((keyboard_check_pressed(vk_tab))||(gamepad_button_check_pressed(0,gp_fa
 
 if(global.displayTitleMenu)
 {
+	if(Counter == 0)
+	{
+		CursorIndex = 2;
+		Counter++;
+	}
 	instance_deactivate_all(global.displayTitleMenu);//deactivates all objects
 	scr_title_menu(buttonPressed);//displays title menu
 }
 else if(global.pause)
 {
+	if(Counter == 0)
+	{
+		CursorIndex = 2;
+		Counter++;
+	}
 	instance_deactivate_all(global.pause);//deactivates all objects
 	scr_pause_menu(buttonPressed);//displays pause menu
-	
 }
 else if(global.inventoryIsOpened)
 {
@@ -41,6 +51,7 @@ else if(global.inventoryIsOpened)
 }
 else if(dead)//if player has died
 {
+	//show_message(string(Counter))
 	if(Counter == 0)
 	{
 		CursorIndex = 1;
@@ -88,7 +99,8 @@ else
 		draw_outlined_text(camera_get_view_x(view_camera[0])+profileSize + healthOffset + textOffsetX,camera_get_view_y(view_camera[0])+profileSize + healthOffset - 10, player.name, c_dkgray, c_ltgray);
 	
 		//draw the player ability icon	
-		if(global.equippedItem != noone){
+		if(global.equippedItem != noone)
+		{
 			abilityBoxSize = 60;
 			abilityBackgroundColor = c_gray;
 			ability1X = camera_get_view_x(view_camera[0]) - abilityBoxSize/2 + 100;

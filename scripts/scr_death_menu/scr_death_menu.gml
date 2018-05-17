@@ -61,7 +61,7 @@ if(global.fade >= 1)
 			inst_78C8041E.y = 1428;
 			global.fade = 0.01;
 		}
-		CursorIndex = 2;
+		Counter = 0;
 	}
 	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Quit")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==0)))  
 	{

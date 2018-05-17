@@ -9,7 +9,8 @@ prevAlpha = draw_get_alpha();
 prevColor = draw_get_color();
 //-----------Draw Cooldown Cycle------------
 //find the cooldown for the ability
-if(cooldownTimeLeft > 0 && cooldownTimeLeft < 1) {
+if(cooldownTimeLeft > 0 && cooldownTimeLeft < 1) 
+{
 		
 	//draw the cooldown box
 	draw_set_color(c_black);

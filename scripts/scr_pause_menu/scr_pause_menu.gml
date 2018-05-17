@@ -27,11 +27,13 @@ if(!variable_global_exists("help") || !global.help)
 	buttonPressed = argument0;
 	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 1, buttonPressed, "Resume")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==2)))
 	{
+		Counter = 0;
 		global.pause = false;
 	}
 
 	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 2, buttonPressed, "Help")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==1)))
 	{
+		Counter = 0;
 		global.help = true;
 	}
 	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 0, buttonPressed, "Quit")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==0)))

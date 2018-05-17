@@ -67,6 +67,7 @@ for(i = 0; i < array_length_1d(players); i++)
 }
 if((scr_button(camx + camWidth/2, camy + camHeight * 9/10 - buttonHeight, buttonWidth, buttonHeight, 0, buttonPressed, "Play"))||(gamepad_button_check_pressed(0,gp_face1)))
 {
+	Counter = 0;
 	global.charSelect = false
 	global.displayTitleMenu = false;
 }

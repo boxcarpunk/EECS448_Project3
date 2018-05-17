@@ -1,4 +1,5 @@
-enum playerSelect {
+enum playerSelect
+{
 	Kurt,
 	DrBardas
 }

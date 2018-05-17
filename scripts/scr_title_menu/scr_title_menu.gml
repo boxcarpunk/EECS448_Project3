@@ -27,11 +27,13 @@ if(!variable_global_exists("charSelect") || global.charSelect = false)
 	//draw_sprite(MainMenuCursor,0, buttonX, buttonY-2*buttonOffset);
 	if(scr_button(buttonX, buttonY, buttonWidth, buttonHeight, 0, buttonPressed, "Play")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==2)))
 	{
+		Counter = 0;
 		global.charSelect = true
 		//global.displayTitleMenu = false;
 	}
 	if(scr_button(buttonX, buttonY + buttonOffset, buttonWidth, buttonHeight, 1, buttonPressed, "Test Room")||(gamepad_button_check_pressed(0,gp_face1)&&(CursorIndex==1))) 
 	{
+		Counter = 0;
 		global.charSelect = true
 		global.testRoom = true;
 	}

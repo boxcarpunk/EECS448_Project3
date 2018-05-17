@@ -11,7 +11,6 @@ if(NearestPlayer != noone)
 	{
 		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
 		{
-			
 			//show_message(temp_damage);
 			with(instance_place(x,y,obj_PlayerProjectile))
 			{
@@ -40,6 +39,7 @@ if(NearestPlayer != noone)
 	{
 		depth=0;
 	}
+*/
 	if(NearestPlayer.x < self.x)
 	{
 		image_xscale=-1;
@@ -48,7 +48,7 @@ if(NearestPlayer != noone)
 	{
 		image_xscale=1;
 	}
-*/
+
 
 	//death condition
 	if(Health <= 0)
