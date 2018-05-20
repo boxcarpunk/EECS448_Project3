@@ -7,23 +7,6 @@ if(NearestPlayer != noone)
 	myHurtbox.x = x;
 	myHurtbox.y = y;
 	global.temp_damage = 0;
-	with(instance_place(x,y,myHurtbox))
-	{
-		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
-		{
-			//show_message(temp_damage);
-			with(instance_place(x,y,obj_PlayerProjectile))
-			{
-				global.temp_damage = damage;
-				//show_message(temp_damage);
-				DeleteProjectile = true; //destroy character projectile
-			}
-			with(instance_place(x,y,obj_Monster))
-			{
-				Health-=global.temp_damage; //take one damage
-			}
-		}
-	}
 	if(CurrentDamageCooldown!=FullDamageCooldown)
 	{
 		CurrentDamageCooldown++;

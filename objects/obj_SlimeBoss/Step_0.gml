@@ -29,21 +29,7 @@ if(NearestPlayer != noone)
 		
 		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 	}
-	with(instance_place(x,y,myHurtbox))
-	{
-		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
-		{
-			with(instance_place(x,y,obj_PlayerProjectile))
-			{
-				global.temp_damage = damage; //sets the damage to the damage of the projectile
-				DeleteProjectile = true; //destroy character projectile
-			}
-			with(instance_place(x,y,obj_Monster))
-			{
-				Health-=global.temp_damage; //take one damage
-			}
-		}
-	}
+
 	if(CurrentDamageCooldown!=FullDamageCooldown)
 	{
 		CurrentDamageCooldown++;

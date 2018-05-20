@@ -33,31 +33,9 @@ if(PlayerHealth>0)//if the player is not dead
 	//instance_create_depth(x,y,-1000,obj_Char_Hurtbox);
 	myHurtbox.image_xscale = image_xscale;
 	var ThisPlayer = self; //stores the id of the current player
-	with(instance_place(x,y,myHurtbox))
-	{
-		if(place_meeting(x, y, obj_MonsterProjectile)) //if colliding with the player
-		{
-			 //take one damage
-			with(instance_place(x,y,obj_MonsterProjectile))
-			{
-				inst_78C8041E.PlayerHealth -= Damage;
-				Damage = 0;
-				DeleteProjectile = true;
-				
-				if(Debuff != noone) //if there is a debuff to apply
-				{
-					DebuffID = instance_create_depth(x, y, -10000, obj_Debuff) //create a debuff object and store its ID
-					with(DebuffID) //code in the debuff object just created
-					{
-						AppliesTo = ThisPlayer; //store the id of the player this debuff is being applied to
-						CurrentDebuffType = other.Debuff; //store the type of debuff this is
-						DebuffTime = other.DebuffTime; //store the amount of time the debuff will last
-					}
-					Debuff = noone; //do not apply the debuff again
-				}
-			}
-		}
-	}
+	//------------
+	
+	//----------
 	switch(state)
 	{
 		case states.normal:

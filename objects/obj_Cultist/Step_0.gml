@@ -6,6 +6,7 @@ if(NearestPlayer != noone)
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
 	myHurtbox.y = y;
+	/*
 	with(instance_place(x,y,myHurtbox))
 	{
 		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
@@ -21,6 +22,7 @@ if(NearestPlayer != noone)
 			}
 		}
 	}
+	*/
 	if(CurrentDamageCooldown!=FullDamageCooldown)
 	{
 		CurrentDamageCooldown++;
