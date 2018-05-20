@@ -1,7 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 var me = self;
-if(instance_place(x, y, obj_Solid))//if colliding with collision object
+if(place_meeting(x,y,obj_Enemy_Hurtbox))
+{
+	global.temp_damage = damage;
+	//show_message(temp_damage);
+	DeleteProjectile = true; //destroy character projectile
+	with(instance_nearest(x,y,obj_Monster))
+	{
+		Health-=global.temp_damage; //take one damage
+	}
+}
+//------
+else if(instance_place(x, y, obj_Solid))//if colliding with collision object
 {
 	with(instance_place(x, y, obj_Solid))
 	{
