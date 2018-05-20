@@ -7,24 +7,6 @@ if(NearestPlayer != noone)
 	myHurtbox.x = x;
 	myHurtbox.y = y;
 	global.temp_damage = 0;
-	with(instance_place(x,y,myHurtbox))
-	{
-		if(place_meeting(x, y, obj_PlayerProjectile)) //if colliding with character projectile
-		{
-			
-			//show_message(temp_damage);
-			with(instance_place(x,y,obj_PlayerProjectile))
-			{
-				global.temp_damage = damage;
-				//show_message(temp_damage);
-				other.DeleteProjectile = true; //destroy character projectile
-			}
-			with(instance_place(x,y,obj_Monster))
-			{
-				Health-=global.temp_damage; //take one damage
-			}
-		}
-	}
 	if(CurrentDamageCooldown!=FullDamageCooldown)
 	{
 		CurrentDamageCooldown++;
@@ -40,6 +22,7 @@ if(NearestPlayer != noone)
 	{
 		depth=0;
 	}
+*/
 	if(NearestPlayer.x < self.x)
 	{
 		image_xscale=-1;
@@ -48,7 +31,7 @@ if(NearestPlayer != noone)
 	{
 		image_xscale=1;
 	}
-*/
+
 
 	//death condition
 	if(Health <= 0)
@@ -70,6 +53,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 		}
 	}

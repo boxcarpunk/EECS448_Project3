@@ -18,7 +18,7 @@ if(NearestPlayer != noone)
 			self.ProjectileSprite = other.ProjectileSprite; //set the projectile's sprite
 			self.DestructionSprite = other.ProjectileDestruction; //set the projectile's death sprite
 			self.DestructionEndFrame = other.ProjectileDeathEndFrame; //set the last frame in the projectile's death animation
-			self.image_angle = point_direction(self.x, self.y, NearestPlayer.x, NearestPlayer.y)*-32;
+			self.image_angle = point_direction(self.x, self.y, NearestPlayer.x, NearestPlayer.y)-32;
 		}
 		alarm[0] = ProjectileCooldown*game_get_speed(gamespeed_fps); //sets the cooldown until the monster can shoot again
 	}
@@ -52,6 +52,7 @@ if(NearestPlayer != noone)
 	{
 		depth=0;
 	}
+*/
 	if(NearestPlayer.x < self.x)
 	{
 		image_xscale=-1;
@@ -60,7 +61,7 @@ if(NearestPlayer != noone)
 	{
 		image_xscale=1;
 	}
-*/
+
 
 	//movement
 	if(Health > 0)
@@ -88,6 +89,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 		}
 	}

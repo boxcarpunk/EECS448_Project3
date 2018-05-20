@@ -59,6 +59,7 @@ if(NearestPlayer != noone)
 	{
 		depth=0;
 	}
+*/
 	if(NearestPlayer.x < self.x)
 	{
 		image_xscale=-1;
@@ -67,7 +68,7 @@ if(NearestPlayer != noone)
 	{
 		image_xscale=1;
 	}
-*/
+
 
 	//movement
 	if(Health > 0)
@@ -118,6 +119,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 			instance_create_layer(x, y, "Player_Instance", obj_key); //drop the key
 		}

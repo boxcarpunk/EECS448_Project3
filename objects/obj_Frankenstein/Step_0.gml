@@ -70,6 +70,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 		}
 	}
