@@ -38,12 +38,11 @@ if(NearestPlayer != noone)
 			}
 		}
 	}
-	
+*/
 	if(CurrentDamageCooldown!=FullDamageCooldown)
 	{
 		CurrentDamageCooldown++;
 	}
-
 /*
 	//layer monster and character correctly
 	if(NearestPlayer.y < self.y)
