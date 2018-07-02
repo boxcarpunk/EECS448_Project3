@@ -46,19 +46,20 @@ if(NearestPlayer != noone)
 		depth=0;
 	}
 */
-	if(NearestPlayer.x < self.x)
-	{
-		image_xscale=-1;
-	}
-	else if(NearestPlayer.x > self.x)
-	{
-		image_xscale=1;
-	}
 
 
 	//movement
 	if(Health > 0)
 	{
+		if(NearestPlayer.x < self.x)
+		{
+			image_xscale=-1;
+		}
+		else if(NearestPlayer.x > self.x)
+		{
+			image_xscale=1;
+		}
+
 		mp_potential_path(MovePath, NearestPlayer.x, NearestPlayer.y, MoveSpeed, 4, 0); //move toward the player
 		path_start(MovePath, MoveSpeed, path_action_stop, 0); //move along the path
 		

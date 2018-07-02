@@ -42,14 +42,7 @@ if(NearestPlayer != noone)
 		depth=0;
 	}
 */
-	if(NearestPlayer.x < self.x)
-	{
-		image_xscale=-1;
-	}
-	else if(NearestPlayer.x > self.x)
-	{
-		image_xscale=1;
-	}
+
 
 
 	//death condition
@@ -72,6 +65,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			global.MonsterNumber--;
 			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 		}
@@ -79,6 +73,14 @@ if(NearestPlayer != noone)
 	
 	if(Health > 0)
 	{
+		if(NearestPlayer.x < self.x)
+		{
+			image_xscale=-1;
+		}
+		else if(NearestPlayer.x > self.x)
+		{
+			image_xscale=1;
+		}
 		//movement
 		scr_monster_movement();
 	

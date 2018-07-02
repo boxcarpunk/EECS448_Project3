@@ -4,11 +4,11 @@ if((LAttack)&&(ProjCount == 0))
 {
 	if(global.equippedItem != noone)//if an item is equipped
 	{
-		offset = 35;
-		hypot = sqrt(power(mouse_x - x, 2) + power(mouse_y - y, 2))
-		myX = x + sprite_get_width(sprite_index)/2 * (mouse_x - x)/hypot - sprite_get_xoffset(sprite_index) + sprite_get_width(sprite_index)/2;
-		myY = y + sprite_get_height(sprite_index)/2 * (mouse_y - y)/hypot - sprite_get_yoffset(sprite_index) + sprite_get_height(sprite_index)/2
-		var Proj = instance_create_layer(myX, myY,"Player_Instance",obj_PlayerProjectile);//create a projectile
+		//offset = 35;
+		//hypot = sqrt(power(mouse_x - x, 2) + power(mouse_y - y, 2))
+		//myX = x + sprite_get_width(sprite_index)/2 * (mouse_x - x)/hypot - sprite_get_xoffset(sprite_index) + sprite_get_width(sprite_index)/2;
+		//myY = y + sprite_get_height(sprite_index)/2 * (mouse_y - y)/hypot - sprite_get_yoffset(sprite_index) + sprite_get_height(sprite_index)/2
+		var Proj = instance_create_layer(x, y,"Player_Instance",obj_PlayerProjectile);//create a projectile
 		ProjCount++;//increment projectile count
 	}
 }

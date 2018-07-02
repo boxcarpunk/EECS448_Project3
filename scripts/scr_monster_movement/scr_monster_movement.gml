@@ -10,7 +10,7 @@ else
 {
 	image_speed = 1; //loop the animation
 }
-
+/*
 //sprite direction
 if(direction == 0) //if looking right
 {
@@ -20,7 +20,7 @@ if(direction == 180) //if looking left
 {
 	image_xscale = -1; //set the sprite to look left
 }
-
+*/
 //hitbox collision
 if(instance_place(x, y, obj_Hitbox))
 {

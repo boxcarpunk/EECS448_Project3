@@ -4,24 +4,51 @@ if(!DebuffApplied) //if the debuff has not been applied yet
 	{
 		case DebuffType.Slow:
 			DebuffApplied = true; //the debuff is being applied
-			with(AppliesTo) //code inside the instance the debuff is applied to
+			if(Target)
 			{
-				player_speed = player_speed/2; //reduce the instance's speed by 50%
+				with(AppliesTo) //code inside the instance the debuff is applied to
+				{
+					player_speed = player_speed/2; //reduce the instance's speed by 50%
+				}
+			}
+			else
+			{
+				with(AppliesTo) //code inside the instance the debuff is applied to
+				{
+					MoveSpeed = MoveSpeed/2; //reduce the instance's speed by 50%
+				}
 			}
 			alarm[0] = DebuffTime*game_get_speed(gamespeed_fps); //set a timer that will reset the instance's speed upon completion
 		break;
 	
 		case DebuffType.Heal:
 			DebuffApplied = true; //the debuff is being applied
-			with(AppliesTo) //code inside the instance the debuff is applied to
+			if(Target)
 			{
-				if((PlayerHealth+(PlayerHealth*0.1)) <= MaxPlayerHealth) //if healing the player by 10% will not heal over their max health
+				with(AppliesTo) //code inside the instance the debuff is applied to
 				{
-					PlayerHealth = PlayerHealth+(PlayerHealth*0.1); //heal the player by 10%
+					if((PlayerHealth+(PlayerHealth*0.1)) <= MaxPlayerHealth) //if healing the player by 10% will not heal over their max health
+					{
+						PlayerHealth = PlayerHealth+(PlayerHealth*0.1); //heal the player by 10%
+					}
+					else //if healing by 10% would go over the max health
+					{
+						PlayerHealth = MaxPlayerHealth; //heal the player to max
+					}
 				}
-				else //if healing by 10% would go over the max health
+			}
+			else
+			{
+				with(AppliesTo) //code inside the instance the debuff is applied to
 				{
-					PlayerHealth = MaxPlayerHealth; //heal the player to max
+					if((Health+(Health*0.1)) <= MaxHealth) //if healing the player by 10% will not heal over their max health
+					{
+						Health = Health+(Health*0.1); //heal the player by 10%
+					}
+					else //if healing by 10% would go over the max health
+					{
+						Health = MaxHealth; //heal the player to max
+					}
 				}
 			}
 			instance_destroy(); //delete the debuff
