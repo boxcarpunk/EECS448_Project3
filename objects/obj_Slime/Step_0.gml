@@ -3,7 +3,6 @@ NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the neares
 //the monster will only do something if there is a player
 if(NearestPlayer != noone)
 {
-
 	//projectile attack
 	myHurtbox.image_xscale = image_xscale
 	myHurtbox.x = x;
@@ -54,19 +53,20 @@ if(NearestPlayer != noone)
 		depth=0;
 	}
 */
-	if(NearestPlayer.x < self.x)
-	{
-		image_xscale=-1;
-	}
-	else if(NearestPlayer.x > self.x)
-	{
-		image_xscale=1;
-	}
+
 
 
 	//movement
 	if(Health > 0)
 	{
+		if(NearestPlayer.x < self.x)
+		{
+			image_xscale=-1;
+		}
+		else if(NearestPlayer.x > self.x)
+		{
+			image_xscale=1;
+		}
 		scr_monster_movement();
 	}
 
@@ -90,6 +90,7 @@ if(NearestPlayer != noone)
 	
 		if(image_index > DeathEndFrame) //if the animation is done playing
 		{
+			global.MonsterNumber--;
 			instance_destroy(myHurtbox);
 			instance_destroy(); //destroy the monster
 		}

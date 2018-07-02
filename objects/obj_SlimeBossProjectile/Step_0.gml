@@ -17,7 +17,7 @@ if(place_meeting(x, y, obj_Char_Hurtbox)) //if colliding with the player
 		Debuff = noone; //do not apply the debuff again
 	}
 }
-if(instance_place(x, y, obj_Solid) )
+if(instance_place(x, y, obj_Solid))
 {
 	with(instance_place(x, y, obj_Solid))
 	{

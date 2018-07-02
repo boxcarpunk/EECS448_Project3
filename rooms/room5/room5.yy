@@ -134,7 +134,7 @@
             "depth": 300,
             "grid_x": 68,
             "grid_y": 68,
-            "hierarchyFrozen": true,
+            "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,

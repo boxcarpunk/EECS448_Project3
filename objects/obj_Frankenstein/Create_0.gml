@@ -8,7 +8,6 @@ StopRange = 10; //the range at which the monster will stop following the player
 
 MeleeDamage = 2; //amount of damage the monster's melee attack does
 DamageType = "Melee"; //the type of damage the monster does, either Ranged or Melee
-
 DefaultSprite = Frank_Movement; //the sprite that the monster will use by default
 AttackAnimation = Frank_Attack; //the sprite that the monster will use when melee attacking
 AttackEndFrame = 6; //the last frame of the attack animation

@@ -6,6 +6,7 @@ CurrentDamageCooldown = FullDamageCooldown;
 
 //movement and ranges
 MoveSpeed = 4; //movement speed (in pixels per step) of the monster 
+MaxMoveSpeed = 4;
 AggroRange = 250; //range at which the monster will start engaging the player
 StopRange = 100; //range at which the monster will stop persuing the player and just fire
 FleeRange = 50; //range at which the monster will go get help (or panic)

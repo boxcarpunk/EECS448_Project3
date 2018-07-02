@@ -22,15 +22,37 @@ switch(currentPlayer)
 
 if(PlayerHealth>0)//if the player is not dead
 {
+	if(deflectCoolDown<20)
+		deflectCoolDown++;
+	if(TankCooldown<30)
+	{
+		sprite_index=s_PlayerTank;
+		TankCooldown++;
+		if(TankCooldown==30)
+		{
+			var Proj = instance_create_layer(x, y,"Player_Instance",obj_PlayerTankProjectile);//create a projectile
+		}
+	}
 	dying = false
+	Deflect = (keyboard_check_pressed(ord("E"))||(gamepad_button_check_pressed(0,gp_shoulderl)));
 	RAttack = (mouse_check_button_pressed(mb_right)||(gamepad_button_check_pressed(0,gp_face1))) && sprite_get_name(sprite_index) != "SlimeSprite"; //right mouse click
+	Tank = (keyboard_check_pressed(ord("R"))||(gamepad_button_check_pressed(0,gp_shoulderr)))
+	if((Deflect)&&(deflectCoolDown==20))
+	{
+		deflectCoolDown=0;
+		state=states.deflect;
+	}
 	if(RAttack)//enters attack state
 	{
 		image_index = 0;
 		state=states.attack;
 	}
+	if((Tank)&&(TankCooldown==30))//enters tank state
+	{
+		PreviousHealth = PlayerHealth;
+		TankCooldown=0;
+	}
 	scr_player_movement(); //movement script
-	//instance_create_depth(x,y,-1000,obj_Char_Hurtbox);
 	myHurtbox.image_xscale = image_xscale;
 	var ThisPlayer = self; //stores the id of the current player
 	//------------
@@ -41,6 +63,10 @@ if(PlayerHealth>0)//if the player is not dead
 		case states.normal:
 			scr_player_default(playerProfile, playerMoveSpr);
 			break;
+		case states.deflect:
+			scr_player_deflect(playerAttackSpr);
+			break;
+		break;
 		case states.attack:
 			scr_player_attack(playerAttackSpr);
 			break;
@@ -70,7 +96,7 @@ if(PlayerHealth>0)//if the player is not dead
 		mid = false;
 	}
 	else
-		{
+	{
 		if(x-370 < 0)
 		{
 			camera_set_view_pos(view_camera[0], 0, y-280);

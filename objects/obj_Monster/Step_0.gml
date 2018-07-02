@@ -3,7 +3,7 @@ NearestPlayer = instance_nearest(self.x, self.y, obj_Player); //finds the neares
 //the monster will only do something if there is a player
 if(NearestPlayer != noone)
 {
-	myHurtbox.image_xscale = image_xscale
+	myHurtbox.image_xscale = image_xscale;
 	myHurtbox.x = x;
 	myHurtbox.y = y;
 	global.temp_damage = 0;
@@ -23,19 +23,12 @@ if(NearestPlayer != noone)
 		depth=0;
 	}
 */
-	if(NearestPlayer.x < self.x)
-	{
-		image_xscale=-1;
-	}
-	else if(NearestPlayer.x > self.x)
-	{
-		image_xscale=1;
-	}
 
 
 	//death condition
 	if(Health <= 0)
 	{
+		room.MonsterNumber--;
 		Health = 0; //sets health back to 0 in case it went below 0
 		//don't let the monster move or attack
 		MoveSpeed = 0;
@@ -60,6 +53,14 @@ if(NearestPlayer != noone)
 	
 	if(Health > 0)
 	{
+		if(NearestPlayer.x < self.x)
+		{
+			image_xscale=-1;
+		}
+		else if(NearestPlayer.x > self.x)
+		{
+			image_xscale=1;
+		}
 		//movement
 		scr_monster_movement();
 	

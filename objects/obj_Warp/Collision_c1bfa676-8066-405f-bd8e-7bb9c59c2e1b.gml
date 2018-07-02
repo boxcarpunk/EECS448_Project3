@@ -23,6 +23,5 @@ else
 		room_goto(targetRoom);
 		NearestPlayer.x=targetX;
 		NearestPlayer.y=targetY;
-		
 	}
 }

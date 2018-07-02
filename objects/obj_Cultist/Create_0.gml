@@ -3,7 +3,8 @@ Health = 3; //amount of health the monster has
 MaxHealth = 3; //maximum amount of health the monster has
 FullDamageCooldown = 20;
 CurrentDamageCooldown = FullDamageCooldown;
-
+MoveSpeed = 0;
+MaxMoveSpeed = 0;
 //movement
 enum CultistMovement
 {
